@@ -23,8 +23,8 @@ const ROOT_DOCUMENTS = new Set([
 const PREFIXES = new Set([
   "shared", "conteudos",
   "bolsa-fivecred", "consignado-fivecred", "contemplada.fivecred.com.br",
-  "fivecred-afiliados", "fivecred-landing-page", "fivecred-marketplace-imoveis",
-  "fivecred-marketplace-veiculos", "fivecred-next", "imovel-fivecred",
+  "fivecred-afiliados", "fivecred-landing-page",
+  "fivecred-next", "imovel-fivecred",
   "luz-fivecred", "veiculo-fivecred", "lp-venda-carta-contemplada",
 ]);
 const PRIVATE_PARTS = new Set([
@@ -49,7 +49,7 @@ const CSP = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data:",
   "font-src 'self'",
-  "connect-src 'self' https://hook.us1.make.celonis.com https://api.fivecred.online https://parallelum.com.br",
+  "connect-src 'self' https://hook.us1.make.celonis.com",
   "object-src 'none'",
   "base-uri 'self'",
   "frame-src 'none'",

@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "forms": 10,
+  "forms": 8,
   "results": [
     {
       "slug": "fivecred-next",
@@ -49,16 +49,6 @@
       "native": true,
       "form": 1,
       "endpoint": "https://hook.us1.make.celonis.com/0b1d6blfvvj1ay2qkf3yi62v7w7e04uk"
-    },
-    {
-      "slug": "fivecred-marketplace-imoveis",
-      "native": false,
-      "endpoint": "https://api.fivecred.online/leads"
-    },
-    {
-      "slug": "fivecred-marketplace-veiculos",
-      "native": false,
-      "endpoint": "https://api.fivecred.online/leads"
     }
   ],
   "errors": [],

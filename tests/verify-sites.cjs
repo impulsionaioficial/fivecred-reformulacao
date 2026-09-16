@@ -13,6 +13,9 @@ for(const file of files){
  assert.equal(d.querySelectorAll('h1').length,1,file+' h1');
  assert(d.querySelector('meta[name=description]')?.content,file+' description');
  assert(d.querySelector('meta[name=robots]')?.content.includes('noindex'));
+ const footerTargets=[...d.querySelectorAll('footer a[href]')].map(a=>new URL(a.getAttribute('href'),'http://127.0.0.1:4174/'+file).pathname);
+ for(const page of manifest.filter(p=>p.type!=='marketplace'))assert(footerTargets.includes('/'+page.slug+'/index.html'),file+' footer missing '+page.slug);
+ assert(![...d.querySelectorAll('a[href]')].some(a=>/fivecred-marketplace-/.test(a.getAttribute('href'))),file+' marketplace link');
  const ids=[...d.querySelectorAll('[id]')].map(el=>el.id);assert.equal(new Set(ids).size,ids.length,file+' ids');
  for(const el of d.querySelectorAll('[aria-controls],[aria-labelledby],[aria-describedby]'))for(const attr of ['aria-controls','aria-labelledby','aria-describedby'])for(const id of (el.getAttribute(attr)||'').split(/\s+/).filter(Boolean))assert(d.getElementById(id),file+' missing '+id);
  for(const el of d.querySelectorAll('label[for]'))assert(d.getElementById(el.htmlFor));
@@ -31,11 +34,10 @@ for(const file of files){
 }
 const css=postcss.parse(read('shared/site.css'));let rules=0;css.walkRules(()=>rules++);
 for(const script of ['shared/site.js','shared/journey.js']){new Function(read(script));assert(!/\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|window\.open\s*\(/.test(read(script)),script+' network/persistence');}
-const market=manifest.find(p=>p.type==='marketplace');
-const dom=new JSDOM(read(market.slug+'/index.html'),{url:'http://127.0.0.1:4174/'+market.slug+'/index.html',runScripts:'outside-only',pretendToBeVisual:true});const w=dom.window,d=w.document;
+assert.equal(manifest.length,10,'Ten active LPs');
+assert(!manifest.some(p=>p.type==='marketplace'),'No marketplace generated');
+const dom=new JSDOM(read('fivecred-next/index.html'),{url:'http://127.0.0.1:4174/fivecred-next/index.html',runScripts:'outside-only',pretendToBeVisual:true});const w=dom.window,d=w.document;
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};w.eval(read('shared/whatsapp-contact.js'));w.eval(read('shared/site.js'));d.dispatchEvent(new w.Event('DOMContentLoaded'));
-const search=d.querySelector('[name=busca]');search.value='zzzz-nao-existe';search.dispatchEvent(new w.Event('input'));assert.equal(d.querySelectorAll('.listing:not([hidden])').length,0);assert(!d.querySelector('[data-catalog-empty]').hidden);d.querySelector('[data-clear-filters]').click();assert.equal(d.querySelectorAll('.listing:not([hidden])').length,9);
-const type=d.querySelector('[name=tipo]');type.value='Apartamento';type.dispatchEvent(new w.Event('input'));assert([...d.querySelectorAll('.listing:not([hidden])')].every(c=>c.dataset.type==='Apartamento'));
-d.querySelector('[data-listing]').click();assert(d.getElementById('shared-dialog').open);assert(d.getElementById('dialog-note').textContent.includes('exemplo'));d.getElementById('dialog-whatsapp').click();assert(d.getElementById('whatsapp-contact-dialog').open);assert(d.getElementById('wa-contact-name').required);assert(d.getElementById('wa-contact-email').required);d.querySelector('[data-wa-close]').click();
-d.querySelector('[data-close-dialog]').click();assert(!d.getElementById('shared-dialog').open);d.querySelector('.menu-toggle').click();assert(d.getElementById('main-nav').classList.contains('is-open'));d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape'}));assert(!d.getElementById('main-nav').classList.contains('is-open'));dom.window.close();
-console.log(JSON.stringify({result:'PASS',pages:files.length,siteCount:manifest.length,localLinks:anchors,assets,cssRules:rules,catalog:'filter, empty state, reset, item detail and WhatsApp contact step passed',navigation:'menu, Escape and dialog passed'},null,2));
+d.querySelector('.header [data-whatsapp]').click();assert(d.getElementById('whatsapp-contact-dialog').open);assert(d.getElementById('wa-contact-name').required);assert(d.getElementById('wa-contact-email').required);d.querySelector('[data-wa-close]').click();
+d.querySelector('.menu-toggle').click();assert(d.getElementById('main-nav').classList.contains('is-open'));d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape'}));assert(!d.getElementById('main-nav').classList.contains('is-open'));dom.window.close();
+console.log(JSON.stringify({result:'PASS',pages:files.length,siteCount:manifest.length,localLinks:anchors,assets,cssRules:rules,footer:'Every active LP linked from every footer',marketplaces:'Excluded from active pages and links',navigation:'Menu, Escape and contact passed'},null,2));

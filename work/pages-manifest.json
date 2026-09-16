@@ -4,8 +4,7 @@
     "type": "home",
     "title": "Fivecred | Encontre opções de crédito para seu momento",
     "description": "Preencha seus dados, conte seu perfil e informe o crédito que procura. A Fivecred orienta você sobre as possibilidades e as condições da análise.",
-    "aliases": [],
-    "catalogItems": 0
+    "aliases": []
   },
   {
     "slug": "bolsa-fivecred",
@@ -14,8 +13,7 @@
     "description": "Informe seus dados e as informações do benefício para simular uma possibilidade. O resultado é ilustrativo e não representa crédito aprovado. A disponibilidade depende da análise da instituição financeira.",
     "aliases": [
       "emprestimo-bolsa-familia.html"
-    ],
-    "catalogItems": 0
+    ]
   },
   {
     "slug": "consignado-fivecred",
@@ -24,8 +22,7 @@
     "description": "Informe seus dados, o tipo e o valor do benefício para uma simulação inicial. Conheça as condições e avalie como as parcelas cabem no seu planejamento.",
     "aliases": [
       "emprestimo-consignado-inss.html"
-    ],
-    "catalogItems": 0
+    ]
   },
   {
     "slug": "luz-fivecred",
@@ -34,8 +31,7 @@
     "description": "Preencha seus dados e as informações da conta de energia para simular. A disponibilidade depende da região, da distribuidora e da análise da instituição financeira.",
     "aliases": [
       "emprestimo-conta-de-luz.html"
-    ],
-    "catalogItems": 0
+    ]
   },
   {
     "slug": "imovel-fivecred",
@@ -44,63 +40,41 @@
     "description": "Conte sobre você e seu imóvel para uma simulação inicial. A equipe explica avaliação, custos e condições antes de você decidir.",
     "aliases": [
       "emprestimo-garantia-imovel.html"
-    ],
-    "catalogItems": 0
+    ]
   },
   {
     "slug": "veiculo-fivecred",
     "type": "credit",
     "title": "Empréstimo com garantia de veículo | Fivecred",
     "description": "Informe seus dados e as características do veículo para simular. Entenda avaliação, valores e condições antes de escolher o próximo passo.",
-    "aliases": [],
-    "catalogItems": 0
+    "aliases": []
   },
   {
     "slug": "fivecred-landing-page",
     "type": "home",
     "title": "Encontre um caminho para o seu crédito | Fivecred",
     "description": "Informe seu CPF, WhatsApp e perfil para experimentar o formulário desta campanha. A equipe Fivecred pode orientar você sobre as modalidades e condições.",
-    "aliases": [],
-    "catalogItems": 0
-  },
-  {
-    "slug": "fivecred-marketplace-imoveis",
-    "type": "marketplace",
-    "title": "Imóveis: encontre opções para sua próxima compra | Fivecred",
-    "description": "Explore exemplos de casas, apartamentos, terrenos e espaços comerciais. Conte à Fivecred o que procura e consulte disponibilidade e formas de compra.",
-    "aliases": [],
-    "catalogItems": 9
-  },
-  {
-    "slug": "fivecred-marketplace-veiculos",
-    "type": "marketplace",
-    "title": "Veículos: explore opções para sua próxima compra | Fivecred",
-    "description": "Compare exemplos de veículos por tipo e valor. Selecione o que procura e converse com a Fivecred sobre disponibilidade e possibilidades de compra.",
-    "aliases": [],
-    "catalogItems": 9
+    "aliases": []
   },
   {
     "slug": "contemplada.fivecred.com.br",
     "type": "buyer",
     "title": "Comprar carta contemplada para imóvel ou veículo | Fivecred",
     "description": "Quer comprar uma carta de consórcio contemplada? Entenda entrada, saldo a pagar e transferência antes de consultar opções com a Fivecred.",
-    "aliases": [],
-    "catalogItems": 0
+    "aliases": []
   },
   {
     "slug": "fivecred-afiliados",
     "type": "affiliate",
     "title": "Programa de afiliados: conheça a parceria Fivecred",
     "description": "Quer indicar pessoas à Fivecred? Conheça o programa de afiliados, consulte as regras de participação e converse com a equipe sobre a parceria.",
-    "aliases": [],
-    "catalogItems": 0
+    "aliases": []
   },
   {
     "slug": "lp-venda-carta-contemplada",
     "type": "seller",
     "title": "Venda sua carta contemplada para a Fivecred | Solicite uma proposta",
     "description": "A Fivecred compra cartas contempladas de quem deseja vender a própria cota. Solicite avaliação, entenda valor, pagamento e transferência antes de decidir.",
-    "aliases": [],
-    "catalogItems": 0
+    "aliases": []
   }
 ]

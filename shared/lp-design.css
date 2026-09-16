@@ -51,3 +51,6 @@
 @media(max-width:699px){.lp-page .hero-grid,.lp-page .catalog-hero>.container{padding-block:30px 29px;gap:23px}.lp-page .hero-label{font-size:14px;margin-bottom:17px}.lp-page .hero h1,.lp-page .catalog-hero h1{font-size:40px;line-height:1.13;letter-spacing:-1.1px}.lp-page .hero-intro{font-size:18px;line-height:1.6;margin-top:17px}.lp-hero-notes{margin-top:24px;gap:14px}.lp-hero-notes strong{font-size:16px}.lp-hero-notes p{font-size:15px}.lp-hero-notes .icon{width:21px;height:21px}.lp-page .section{padding-block:47px}.lp-page .section h2{font-size:35px}.lp-page .closing h2{font-size:33px}.lp-page .catalog-section{padding-block:47px}.restored-secondary-form{padding-block:47px}}
 @media(max-width:599px){.header .logo{width:min(220px,calc(100vw - 150px))}}
 @media(max-width:359px){.lp-page .hero h1,.lp-page .catalog-hero h1{font-size:36px}.lp-page .section h2{font-size:32px}}
+
+/* Complete LP navigation with comfortable touch targets. */
+.footer .footer-links a{font-size:16px;min-height:44px}

@@ -1,10 +1,10 @@
 # Fivecred — sites reformulados
 
-As 12 páginas usam a identidade aprovada: logo oficial maior, navbar na mesma altura, seções brancas e beges, laranja nas ações e texto azul-marinho. Sem banner no topo. Os 11 projetos originais permanecem intactos na pasta superior; a LP de venda da própria carta mantém o fluxo local aprovado.
+As 10 páginas usam a identidade aprovada: logo oficial maior, navbar na mesma altura, seções brancas e beges, laranja nas ações e texto azul-marinho. Sem banner no topo. Os 11 projetos originais permanecem intactos na pasta superior; a LP de venda da própria carta mantém o fluxo local aprovado.
 
 ## Abrir as versões locais
 
-Nesta pasta, execute `python -m http.server 4174 --bind 127.0.0.1 --directory .` e abra http://127.0.0.1:4174/. O índice reúne as 12 páginas. Não houve deploy.
+Nesta pasta, execute `python -m http.server 4174 --bind 127.0.0.1 --directory .` e abra http://127.0.0.1:4174/. O índice reúne as 10 páginas. Não houve deploy.
 
 ## Formulários e destinos preservados
 
@@ -13,7 +13,6 @@ Nesta pasta, execute `python -m http.server 4174 --bind 127.0.0.1 --directory .`
 | fivecred-next | Três etapas originais: dados pessoais, perfil e solicitação. POST JSON para o webhook Make original. |
 | fivecred-afiliados | Cadastro original completo de parceiros e webhook Make original. |
 | contemplada.fivecred.com.br | Formulários de compra de carta no topo e no CTA, mantendo campos, webhook, source de cada posição e WhatsApp original. |
-| fivecred-marketplace-imoveis / veiculos | Dados, seleção do item e estimativa. POST para https://api.fivecred.online/leads com o schema original, inclusive a chave vehicle para imóveis. |
 | bolsa / consignado / luz / imovel / veiculo-fivecred | Campos, três etapas, máscaras, opções e cálculos originais. Os cinco arquivos anteriores enviavam pelo WhatsApp; não continham webhook. |
 | fivecred-landing-page | Nome, CPF, WhatsApp e perfil. O original apenas exibia alerta local e limpava os campos; continua sem integração de envio. |
 | lp-venda-carta-contemplada | Fluxo aprovado para vender a própria carta à Fivecred. Continua demonstrativo, com continuação pelo formulário e sem WhatsApp dentro dele. |
@@ -22,7 +21,7 @@ A hospedagem é local, mas confirmar um formulário conectado pode transmitir da
 
 Não há armazenamento de leads no navegador. Estados de erro de envio são visíveis e permitem tentar novamente; o clique repetido durante uma requisição não duplica o POST. Na home, o redirecionamento para o número fictício 5500000000000 não foi reativado. Foi corrigida uma máscara de nascimento que impedia o preenchimento do ano completo.
 
-As estimativas preservam fórmulas de referência antigas, sem fabricar score ou aprovação. O endpoint dos catálogos aparece comentado como mock no original. Sua disponibilidade real não foi validada. Os testes interceptam as requisições e não criam leads nem enviam mensagens.
+As estimativas preservam fórmulas de referência antigas, sem fabricar score ou aprovação. Os testes interceptam as requisições e não criam leads nem enviam mensagens.
 
 ## Edição e geração
 
@@ -30,7 +29,6 @@ As estimativas preservam fórmulas de referência antigas, sem fabricar score ou
 - Visual comum: shared/site.css e shared/lp-design.css. Logo fornecida: shared/assets/logo-navbar.png.
 - Formulários estáticos: work/build-original-static-forms.cjs e shared/original-forms/.
 - Formulários React: work/connected-form-src/; gerar assets com `node work/connected-form-src/build.cjs`.
-- Catálogos: work/catalog-original-form.cjs e shared/catalog-original-form.js/.css.
 - Contato antes do WhatsApp: shared/whatsapp-contact.js/.css e markup comum em work/build-sites.cjs. Validação, fechamento com Escape, foco de volta ao botão, captura dos links dinâmicos e mensagens com contexto.
 - Integração de assets: work/form-assets.cjs. Nova LP vendedora: work/seller-page.cjs, shared/seller.css e shared/journey.js.
 
@@ -45,10 +43,13 @@ fivecred-next, fivecred-afiliados e contemplada.fivecred.com.br preservam execu�
 - Estrutura e navegação: `node tests/verify-sites.cjs`.
 - Cinco produtos e campanha: `node work/test-original-static-forms.cjs` e `node work/check-original-static-forms-browser.cjs`.
 - Home, parceiros e compra de carta: `node work/connected-form-src/verify.cjs`.
-- Catálogos: `node tests/catalog-original-form-contract.cjs`.
 - Layout conjunto: `node tests/standardization-browser.cjs`.
 - Etapa de contato WhatsApp: `node tests/whatsapp-contact.test.cjs` e `node tests/whatsapp-contact-browser.cjs`.
 - Integração nas páginas completas e Next: `node tests/standardization-integration.cjs` (requer a prévia na porta 4174 e builds Next prontos).
 - LP vendedora: `node tests/journey.test.cjs`.
 
-Contratos detalhados e limitações: work/original-static-forms-report.md, work/connected-form-src/README.md e docs/catalog-original-form.md. Capturas em tests/screenshots/; resultados conjuntos em tests/standardization-browser-results.json.
+
+
+## Rodapé completo e retirada dos marketplaces — 16/09/2026
+
+Todos os rodapés dão acesso às dez LPs: home, campanha, Bolsa Família, consignado INSS, conta de luz, garantia de imóvel, garantia de veículo, compra de carta, venda da própria carta e afiliados. Os dois marketplaces foram retirados do índice, dos links, dos dados do gerador e das rotas locais Next. Suas pastas foram excluídas do controle de versão e da publicação, permanecendo como cópias locais. As páginas de garantia de imóvel e de veículo continuam ativas. Os formulários e webhooks das LPs restantes não foram alterados.
