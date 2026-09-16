@@ -6,7 +6,7 @@ const postcss=require('C:/Users/auror/Downloads/fivecred.com.br-main/node_module
 const root=path.resolve(__dirname,'..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json'),'utf8'));
 const read=(file)=>fs.readFileSync(path.join(root,file),'utf8');
-const files=['index.html','conteudos/index.html',...manifest.flatMap(p=>[p.slug+'/index.html',p.slug+'/politica-de-privacidade.html',p.slug+'/termos-de-uso.html',...p.aliases.map(a=>p.slug+'/'+a)])];
+const files=['index.html','conteudos/index.html',...manifest.flatMap(p=>[p.slug+'/index.html',p.slug+'/simulacao.html',p.slug+'/politica-de-privacidade.html',p.slug+'/termos-de-uso.html',...p.aliases.map(a=>p.slug+'/'+a)])];
 let anchors=0,assets=0;
 for(const file of files){
  const d=new JSDOM(read(file),{url:'http://127.0.0.1:4174/'+file}).window.document;
@@ -30,7 +30,8 @@ for(const file of files){
   const src=el.getAttribute('src')||el.getAttribute('href');assert(!/^https?:/i.test(src),file+' external asset '+src);
   const target=path.join(root,decodeURIComponent(new URL(src,'http://127.0.0.1:4174/'+file).pathname));assert(fs.existsSync(target),file+' missing asset '+src);assets++;
  }
- assert(d.querySelector('.floating-whatsapp')?.getAttribute('aria-label'));
+ if(!file.endsWith('/simulacao.html'))assert(d.querySelector('.floating-whatsapp')?.getAttribute('aria-label'));
+ else assert(d.querySelector('.simulation-back'));
 }
 const css=postcss.parse(read('shared/site.css'));let rules=0;css.walkRules(()=>rules++);
 for(const script of ['shared/site.js','shared/journey.js']){new Function(read(script));assert(!/\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|window\.open\s*\(/.test(read(script)),script+' network/persistence');}

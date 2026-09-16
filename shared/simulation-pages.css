@@ -1,0 +1,43 @@
+/* A single invitation on each LP, with the original form on its own page. */
+.simulation-cta{background:#fff;border:1px solid #e3d8cc;border-top:4px solid #ff6b00;border-radius:16px;padding:36px;box-shadow:0 12px 30px #16314808;min-width:0;color:#163148}
+.simulation-cta-icon{display:grid;place-items:center;background:#fff0e3;color:#9b470f;width:52px;height:52px;border-radius:12px;margin-bottom:22px}
+.simulation-cta-icon .icon{width:27px;height:27px}
+.brand-page .simulation-cta h2{font-size:32px;line-height:1.18;font-weight:550;letter-spacing:-.02em;max-width:22ch;margin:0}
+.simulation-cta-description{color:#4a5968;font-size:18px;line-height:1.6;margin:18px 0 26px;max-width:44ch}
+.simulation-cta .simulation-cta-button{display:flex;width:100%;min-height:56px;gap:14px;background:#ff6b00;border-color:#ff6b00;color:#10283c;font-size:18px;font-weight:550;text-decoration:none}
+.simulation-cta .simulation-cta-button:hover{background:#ec6200;border-color:#ec6200}
+.simulation-cta-note{display:flex;align-items:flex-start;gap:9px;margin:18px 0 0;color:#536171;font-size:15px;line-height:1.5}
+.simulation-cta-note .icon{flex:none;width:20px;height:20px;margin-top:1px;color:#69796e}
+.asset-card{text-decoration:none}
+.simulation-page{background:#f5ebdf;padding:36px var(--page-gutter) 48px;min-height:calc(100svh - var(--header-height));color:#163148}
+.simulation-container{max-width:740px;margin-inline:auto;min-width:0}
+.simulation-heading{margin-bottom:26px}
+.simulation-heading h1{font-size:32px;line-height:1.2;font-weight:550;letter-spacing:-.02em;margin:0}
+.simulation-heading p{color:#4a5968;font-size:17px;line-height:1.6;margin:12px 0 0;max-width:52ch}
+.simulation-header .header-inner{justify-content:space-between;gap:20px}
+.simulation-back{display:inline-flex;align-items:center;gap:10px;min-height:48px;color:#163148;text-decoration:none;font-size:16px;line-height:1.4;padding:10px 0}
+.simulation-back>.icon{transform:rotate(180deg);width:20px;height:20px;flex:none}
+.simulation-back:hover{text-decoration:underline;text-underline-offset:4px}
+.simulation-back:focus-visible,.simulation-cta a:focus-visible,.simulation-privacy a:focus-visible{outline:3px solid #a84000;outline-offset:5px;border-radius:4px}
+.simulation-privacy{display:flex;align-items:flex-start;justify-content:center;gap:8px;color:#536171;font-size:15px;line-height:1.6;margin:24px 0 0}
+.simulation-privacy>.icon{width:20px;height:20px;flex:none;margin-top:2px}
+.simulation-privacy a{color:#163148;text-decoration:underline;text-underline-offset:3px}
+.simulation-page .j-card{margin:0}
+@media(max-width:699px){
+ .simulation-cta{padding:24px;border-radius:12px}
+ .simulation-cta-icon{width:44px;height:44px;margin-bottom:18px}
+ .brand-page .simulation-cta h2{font-size:27px;line-height:1.22}
+ .simulation-cta-description{font-size:17px;line-height:1.6;margin-block:16px 22px}
+ .simulation-cta-note{font-size:14px}
+ .simulation-page{padding-block:28px 36px}
+ .simulation-heading{margin-bottom:22px}
+ .simulation-heading h1{font-size:27px;line-height:1.25}
+ .simulation-heading p{font-size:16px}
+ .simulation-back-detail{display:none}
+ .simulation-privacy{justify-content:flex-start;font-size:14px}
+}
+@media(max-width:359px){
+ .simulation-header .header-inner{gap:12px}
+ .simulation-back{gap:6px;font-size:15px}
+ .simulation-cta{padding:22px 20px}
+}

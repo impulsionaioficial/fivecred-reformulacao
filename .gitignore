@@ -20,3 +20,5 @@ node_modules/
 /tests/screenshots/viewport-*.png
 
 /tests/screenshots/brand-*.png
+
+/tests/screenshots/simulation-*.png

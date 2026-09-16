@@ -1,12 +1,12 @@
 {
   "result": "PASS",
-  "htmlPages": 43,
+  "htmlPages": 53,
   "viewports": [
     320,
     390,
     1440
   ],
-  "root": "General LP with original working form",
+  "root": "General LP with CTA to the original form on a dedicated page",
   "placeholders": "Photo/design slots preserved",
   "homeWebhook": "HTTP error and retry checked with intercepted requests",
   "pendingForms": "Blocked until dedicated webhooks are provided",

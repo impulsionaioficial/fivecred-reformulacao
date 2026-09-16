@@ -1,5 +1,5 @@
-module.exports = function sellerPage({page, prefix, icon, esc, widget, visualSlot, visual}) {
-  const action=(label,secondary=false)=>`<a class="button ${secondary?'s-button-outline':''}" href="#simulacao">${label}${icon('arrow')}</a>`;
+module.exports = function sellerPage({page, prefix, icon, esc, visualSlot, visual, simulation}) {
+  const action=(label,secondary=false)=>`<a class="button ${secondary?'s-button-outline':''}" data-simulation-link href="${simulation.href(page,prefix)}">${label}${icon('arrow')}</a>`;
   const art=(type)=>type==='home'?`<svg viewBox="0 0 420 230" class="s-property-art" aria-hidden="true"><ellipse cx="220" cy="209" rx="166" ry="11" fill="#efd7c5"/><path d="M61 118 191 29l134 89" fill="#ff8a3d"/><path d="M83 114 192 41l108 74v91H83Z" fill="#fff"/><path d="m73 119 119-83 121 83" fill="none" stroke="#14243a" stroke-width="9" stroke-linejoin="round"/><path d="M178 207v-70h46v70" fill="#ff6b00"/><path d="M108 126h43v41h-43zm142 0h28v41h-28z" fill="#e0edf0" stroke="#14243a" stroke-width="4"/><path d="M129 127v39m-20-20h41m112-19v39" stroke="#14243a" stroke-width="3"/><circle cx="213" cy="177" r="3" fill="#14243a"/><path d="M330 206v-63" stroke="#14243a" stroke-width="6"/><path d="M331 102c-44 0-46 66 0 65 41-1 40-65 0-65" fill="#ed7a35"/><path d="M50 204v-35m0 12-14-12m14 5 14-13" fill="none" stroke="#52705b" stroke-width="5" stroke-linecap="round"/></svg>`:`<svg viewBox="0 0 420 230" class="s-property-art" aria-hidden="true"><ellipse cx="211" cy="203" rx="166" ry="11" fill="#efd7c5"/><path d="m57 143 41-16 42-62h124l52 65 43 17 8 42H49Z" fill="#ff7b20" stroke="#14243a" stroke-width="5" stroke-linejoin="round"/><path d="m127 126 27-44h96l35 44Z" fill="#d9eced" stroke="#14243a" stroke-width="4"/><path d="M209 84v44m-11 5v54" stroke="#14243a" stroke-width="4"/><path d="M222 145h19" stroke="#14243a" stroke-width="5" stroke-linecap="round"/><rect x="52" y="153" width="34" height="13" rx="5" fill="#fff5d7"/><rect x="334" y="151" width="25" height="12" rx="4" fill="#fff5d7"/><circle cx="115" cy="188" r="29" fill="#14243a"/><circle cx="115" cy="188" r="13" fill="#fff"/><circle cx="299" cy="188" r="29" fill="#14243a"/><circle cx="299" cy="188" r="13" fill="#fff"/><path d="M59 40h68m-93 19h55" stroke="#edb18a" stroke-width="5" stroke-linecap="round"/></svg>`;
   return `<div class="seller-page brand-page">
 <section class="s-hero" aria-labelledby="seller-title">
@@ -10,7 +10,7 @@ module.exports = function sellerPage({page, prefix, icon, esc, widget, visualSlo
     <p class="s-lead">${esc(page.intro)}</p>${visual.highlights(page,icon,esc)}
    </div>
   </div>
-  <div class="s-hero-form">${widget(page)}</div>
+  <div class="s-hero-form">${simulation.card(page,prefix,icon,esc)}</div>
  </div>
 </section>
 <div class="s-reassurance"><div class="container s-reassurance-grid">

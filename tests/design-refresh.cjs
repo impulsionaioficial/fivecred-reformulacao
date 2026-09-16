@@ -6,8 +6,11 @@ const hash=s=>crypto.createHash('sha256').update(s.replaceAll('\r\n','\n')).dige
 let forms=0,slots=0;
 for(const [file,expected] of Object.entries(baseline.forms)){
  const d=new JSDOM(fs.readFileSync(path.join(root,file),'utf8')).window.document;
- const actual=[...d.querySelectorAll('.original-form,.connected-form-mount,.j-card')].map(e=>hash(e.outerHTML));
- assert.deepEqual(actual,expected,'Original form preserved: '+file);forms+=actual.length;
+ const formFile=file==='index.html'?'fivecred-next/simulacao.html':file.replace('index.html','simulacao.html');
+ const fd=new JSDOM(fs.readFileSync(path.join(root,formFile),'utf8')).window.document;
+ const actual=[...fd.querySelectorAll('.original-form,.connected-form-mount,.j-card')].map(e=>hash(e.outerHTML));
+ assert.deepEqual(actual,[expected[0]],'Original primary form preserved on dedicated page: '+file);forms+=actual.length;
+ assert.equal(d.querySelectorAll('main form,[data-journey]').length,0,'LP has no embedded questionnaire');
  for(const kind of ['context','team']){
   const slot=d.querySelector('[data-image-slot="'+kind+'"]');
   assert(slot,file+' needs a marked '+kind+' image slot');

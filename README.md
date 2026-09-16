@@ -1,6 +1,6 @@
 # Fivecred — site e landing pages
 
-A página inicial (`/`) abre a LP geral da Fivecred com o formulário original conectado. As outras soluções ficam disponíveis pelo menu e pelos links do rodapé. Não há portal de apresentação das LPs. Os espaços reservados para fotos ou designs oficiais permanecem por solicitação da Fivecred.
+A página inicial (`/`) abre a LP geral da Fivecred com uma caixa de chamada para a simulação. O formulário original conectado fica em `fivecred-next/simulacao.html`. As outras soluções ficam disponíveis pelo menu e pelos links do rodapé. Não há portal de apresentação das LPs. Os espaços reservados para fotos ou designs oficiais permanecem por solicitação da Fivecred.
 
 ## Publicação na Vercel
 
@@ -11,6 +11,8 @@ O caminho antigo `/fivecred-next/index.html` redireciona para `/` na Vercel. Os 
 Referência da configuração: https://vercel.com/docs/project-configuration/vercel-json
 
 ## Formulários
+
+Cada LP leva a uma página própria em `<pasta-da-lp>/simulacao.html`. A abertura usa uma caixa com chamada e botão **Simule aqui**; venda de carta e afiliados usam chamadas específicas. Os campos, etapas e scripts de envio foram movidos sem alterações. A página de formulário tem navegação de retorno e não apresenta botão flutuante. O cadastro de nome e e-mail para WhatsApp permanece no diálogo de contato. Veja o [mapa dos formulários](docs/paginas-de-simulacao.md).
 
 - **LP geral (`/`) e `fivecred-next`:** campos, etapas e webhook Make originais preservados.
 - **Afiliados e compra de carta:** formulários, payloads e webhooks originais preservados.
@@ -38,7 +40,7 @@ O conteúdo está em `work/content/visual-direction.json`, a renderização dos 
 
 ## Desenvolvimento
 
-1. Edite conteúdo em `work/content/`, textos de formulário em `work/form-copy.cjs`, templates em `work/build-sites.cjs`, `work/seller-page.cjs` e `work/legal-pages.cjs`.
+1. Edite conteúdo em `work/content/`, textos de formulário em `work/form-copy.cjs`, chamadas e links em `work/simulation-pages.cjs`, templates em `work/build-sites.cjs`, `work/seller-page.cjs` e `work/legal-pages.cjs`.
 2. Execute `node work/build-sites.cjs` para atualizar as páginas e entradas Next. A geração local usa as dependências já instaladas.
 3. Execute `node work/build-production.cjs` para montar a saída estática de publicação, sem dependências externas.
 4. Para conferir a mesma saída publicada: `python -m http.server 4175 --bind 127.0.0.1 --directory public-site`.
@@ -49,10 +51,13 @@ Os três projetos Next mantêm entradas para execução local. Após mover a pas
 
 ## Verificações
 
+- Formulários separados, rotas e preservação exata de campos/scripts: `node tests/simulation-pages.cjs`.
+- Navegação, retorno, teclado e formulários em 50 combinações de tela: `node tests/simulation-pages-browser.cjs`.
+
 - Preservação de formulários e espaços de imagem: `node tests/design-refresh.cjs`.
 - Composição, contraste e tópicos no navegador: `node tests/brand-refresh-browser.cjs` (44 combinações e inserção de imagem simulada apenas durante o teste).
 - Altura disponível e tópicos: `node tests/viewport-height.cjs` (88 combinações, seção completa no computador, tópicos por toque/teclado no celular, sem cortes ou rolagem interna).
-- Layout responsivo: `node tests/responsive-layout.cjs` (110 combinações de página/largura, menus em telas baixas, ancoragem e ausência de sobreposição do WhatsApp; rode o build estático antes).
+- Layout responsivo: `node tests/responsive-layout.cjs` (110 combinações de página/largura, menus em telas baixas, acesso à simulação e ausência de sobreposição do WhatsApp; rode o build estático antes).
 - Estrutura, links e acessibilidade básica: `node tests/verify-sites.cjs`.
 - Saída de produção, raiz, versões mobile/desktop, erro e nova tentativa do webhook geral: `node tests/production-browser.cjs` (rode o build estático antes).
 - Contato WhatsApp e destinos originais: `node tests/whatsapp-contact-browser.cjs`.

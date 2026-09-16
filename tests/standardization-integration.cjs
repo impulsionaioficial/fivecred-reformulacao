@@ -41,14 +41,15 @@ try{
 for(const slug of ['fivecred-next','fivecred-afiliados','contemplada.fivecred.com.br']){
 const nextBase=await startNext(slug);
 for(const native of [false,true]){
-const url=native?nextBase+'/':'http://127.0.0.1:4174/'+slug+'/index.html';await browserPage.goto(url);await browserPage.waitForFunction(()=>document.querySelector('[data-connected-form]')?.dataset.formReady==='true');
+const url=native?nextBase+'/':'http://127.0.0.1:4174/'+slug+'/index.html';await browserPage.goto(url);
 await browserPage.locator('.header [data-whatsapp]').click();const gate=browserPage.locator('#whatsapp-contact-dialog');await gate.waitFor({state:'visible'});await browserPage.keyboard.press('Escape');await gate.waitFor({state:'hidden'});
-const n=slug==='contemplada.fivecred.com.br'?2:1;
+await browserPage.locator('.simulation-cta [data-simulation-link]').click();await browserPage.waitForURL('**/'+slug+'/simulacao.html');await browserPage.waitForFunction(()=>document.querySelector('[data-connected-form]')?.dataset.formReady==='true');
+const n=1;
 for(let i=0;i<n;i++){
 page=browserPage.locator('[data-connected-form]').nth(i);const before=records.length;
 if(slug==='fivecred-next')await fillHome();else if(slug==='fivecred-afiliados')await fillAffiliate();else await fillBuyer();
-await page.locator('form').evaluate(f=>f.requestSubmit());await page.locator('.cf-success').waitFor();assert.equal(records.length,before+1,'Exactly one original POST on full page');assert.equal(records.at(-1).method,'POST');if(n===2)assert.equal(records.at(-1).payload.source,i===0?'FiveCred Contemplada - Hero':'FiveCred Contemplada - CTA');
-if(n===2){await gate.waitFor({state:'visible'});assert.equal(await gate.locator('[name=nome]').inputValue(),'Teste Carta');await gate.locator('[name=email]').fill('carta@example.com');await gate.locator('[type=submit]').click();await gate.waitFor({state:'hidden'});assert((await browserPage.evaluate(()=>window.__opened)).startsWith('https://wa.me/5511961614215?text='));assert(!Object.hasOwn(records.at(-1).payload,'email'));}
+await page.locator('form').evaluate(f=>f.requestSubmit());await page.locator('.cf-success').waitFor();assert.equal(records.length,before+1,'Exactly one original POST on full page');assert.equal(records.at(-1).method,'POST');if(slug==='contemplada.fivecred.com.br')assert.equal(records.at(-1).payload.source,'FiveCred Contemplada - Hero');
+if(slug==='contemplada.fivecred.com.br'){await gate.waitFor({state:'visible'});assert.equal(await gate.locator('[name=nome]').inputValue(),'Teste Carta');await gate.locator('[name=email]').fill('carta@example.com');await gate.locator('[type=submit]').click();await gate.waitFor({state:'hidden'});assert((await browserPage.evaluate(()=>window.__opened)).startsWith('https://wa.me/5511961614215?text='));assert(!Object.hasOwn(records.at(-1).payload,'email'));}
 results.push({slug,native,form:i,endpoint:records.at(-1).url});
 }
 assert.equal(await browserPage.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);

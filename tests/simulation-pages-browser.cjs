@@ -1,0 +1,31 @@
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/auror/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site'),manifest=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json')));
+(async()=>{
+ const server=http.createServer((req,res)=>{const u=new URL(req.url,'http://local'),f=path.join(output,u.pathname+(u.pathname.endsWith('/')?'index.html':''));fs.readFile(f,(e,b)=>{if(e){res.writeHead(404);return res.end();}res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.woff2':'font/woff2','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'})[path.extname(f)]||'application/octet-stream');res.end(b);});});
+ await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;
+ const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true}),ctx=await browser.newContext({reducedMotion:'reduce'}),page=await ctx.newPage(),errors=[],posts=[];let checks=0;
+ await ctx.route('**/*',r=>{const u=new URL(r.request().url());if(u.hostname==='127.0.0.1')return r.continue();if(u.hostname==='hook.us1.make.celonis.com'){posts.push({url:u.href,payload:r.request().postDataJSON()});return r.fulfill({status:200,body:'Accepted'});}errors.push('Unexpected external request '+u.origin);return r.abort();});
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(new URL(r.url()).hostname==='127.0.0.1'&&r.status()>=400)errors.push(r.status()+' '+r.url());});
+ try{
+  for(const item of manifest)for(const [width,height] of [[320,568],[390,844],[768,600],[1280,600],[1440,900]]){
+   await page.setViewportSize({width,height});await page.goto(base+'/'+item.slug+'/index.html');await page.evaluate(()=>document.fonts.ready);
+   assert.equal(await page.locator('main form,[data-journey]').count(),0);
+   const card=page.locator('.simulation-cta');assert(await card.isVisible());const a=card.locator('[data-simulation-link]');
+   if(item.slug==='fivecred-next'&&[390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/simulation-landing-'+width+'.png')});
+   if(width===320){await a.focus();await page.keyboard.press('Enter');}else await a.click();
+   await page.waitForURL('**/'+item.slug+'/simulacao.html');await page.evaluate(()=>document.fonts.ready);
+   if(await page.locator('[data-connected-form]').count())await page.waitForFunction(()=>document.querySelector('[data-connected-form]').dataset.formReady==='true');
+   assert.equal(await page.locator('main form').count(),1,item.slug+' one form');
+   const layout=await page.evaluate(()=>{const header=document.querySelector('.header').getBoundingClientRect(),h=document.querySelector('h1').getBoundingClientRect(),form=document.querySelector('main form').getBoundingClientRect(),back=document.querySelector('.simulation-back').getBoundingClientRect();return{overflow:document.documentElement.scrollWidth>innerWidth+1,headHeight:header.height,titleBelowHeader:h.top>=header.bottom,formFits:form.left>=0&&form.right<=innerWidth,backFits:back.left>=0&&back.right<=innerWidth,inputMinFont:Math.min(...[...document.querySelectorAll('main input:not([type=radio]):not([type=checkbox]),main select')].filter(e=>e.getBoundingClientRect().height).map(e=>parseFloat(getComputedStyle(e).fontSize)))};});
+   assert(!layout.overflow&&layout.titleBelowHeader&&layout.formFits&&layout.backFits,item.slug+' '+width+' '+JSON.stringify(layout));assert(layout.inputMinFont>=16,item.slug+' avoid mobile input zoom');assert.equal(layout.headHeight,width<600?75:width<960?83:91);
+   assert.equal(await page.locator('.floating-whatsapp').count(),0);
+   if(['fivecred-next','lp-venda-carta-contemplada','imovel-fivecred','fivecred-afiliados'].includes(item.slug)&&[390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/simulation-'+item.slug+'-'+width+'.png'),fullPage:false});
+   await page.locator('.simulation-back').click();assert.equal(new URL(page.url()).pathname,item.slug==='fivecred-next'?'/index.html':'/'+item.slug+'/index.html');checks++;
+  }
+  await page.goto(base+'/fivecred-afiliados/simulacao.html');await page.waitForFunction(()=>document.querySelector('[data-connected-form]').dataset.formReady==='true');
+  const form=page.locator('[data-connected-form]');await form.getByLabel('Nome completo',{exact:true}).fill('Afiliado Teste');await form.getByLabel('WhatsApp (com DDD)',{exact:true}).fill('11987654321');await form.getByLabel('E-mail',{exact:true}).fill('afiliado@example.com');await form.getByLabel('Cidade / Estado',{exact:true}).fill('São Paulo / SP');await form.locator('[name=trabalhaVendas][value=Sim]').check();await form.locator('[name=canais][value=WhatsApp]').check();await form.locator('[name=cnpj][value="Não"]').check();await form.locator('[name=volume][value="1 a 5"]').check();await form.getByLabel('Como conheceu o Programa de Afiliados Fivecred?',{exact:true}).fill('Teste de interface');await form.locator('[name=aceite]').check();await form.locator('form').evaluate(f=>f.requestSubmit());await form.locator('.cf-success').waitFor();
+  assert.equal(posts.length,1);assert.equal(posts[0].url,'https://hook.us1.make.celonis.com/m4ln9sg12wotrfm5nejxgtge8qfpg2kd');assert.equal(posts[0].payload.origem,'landing-afiliados');assert.equal(posts[0].payload.canais,'WhatsApp');assert(posts[0].payload.pagina.endsWith('/fivecred-afiliados/simulacao.html'));
+  assert.deepEqual(errors,[]);const report={result:'PASS',dedicatedPages:manifest.length,navigationViewportChecks:checks,widths:[320,390,768,1280,1440],keyboardActivation:true,formScriptsPreserved:true,affiliateWebhook:'Intercepted; original destination and payload retained',realExternalSubmissions:0,errors};fs.writeFileSync(path.join(root,'tests/simulation-pages-browser-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+ }finally{await browser.close();await new Promise(r=>server.close(r));}
+})().catch(e=>{console.error(e);process.exit(1)});

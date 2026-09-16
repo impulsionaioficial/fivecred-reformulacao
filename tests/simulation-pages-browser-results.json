@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "dedicatedPages": 10,
+  "navigationViewportChecks": 50,
+  "widths": [
+    320,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "keyboardActivation": true,
+  "formScriptsPreserved": true,
+  "affiliateWebhook": "Intercepted; original destination and payload retained",
+  "realExternalSubmissions": 0,
+  "errors": []
+}
