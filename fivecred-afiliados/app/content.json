@@ -6,11 +6,12 @@
     "/shared/whatsapp-contact.css?v=20260915-1",
     "/shared/responsive.css?v=20260916-height",
     "/shared/brand-refresh.css?v=20260916-editorial",
-    "/shared/simulation-pages.css?v=20260916-green"
+    "/shared/simulation-pages.css?v=20260916-amount"
   ],
   "scripts": [
     "/shared/content-panels.js?v=20260916-editorial",
     "/shared/whatsapp-contact.js?v=20260915-1",
-    "/shared/site.js?v=20260916-production"
+    "/shared/site.js?v=20260916-production",
+    "/shared/simulation-amount.js?v=20260916"
   ]
 }

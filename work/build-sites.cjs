@@ -63,7 +63,7 @@ function simulationPage(page) {
  const back=page.slug==='fivecred-next'?prefix+'index.html':'index.html';
  const form=page.type==='seller'?widget(page):formFor(page,prefix);
  const top=`<a class="skip" href="#conteudo">Ir para o conteúdo</a><header class="header simulation-header"><div class="container header-inner"><a class="logo" href="${prefix}index.html" aria-label="Fivecred, página inicial"><img src="${prefix}shared/assets/logo-navbar.png?v=825ef632" width="672" height="130" alt="Fivecred"></a><a class="simulation-back" href="${back}">${icon('arrow')}<span>Voltar<span class="simulation-back-detail"> para a página</span></span></a></div></header>`;
- const body=top+`<main id="conteudo" tabindex="-1" class="simulation-page"><div class="simulation-container"><div class="simulation-heading"><h1>${esc(c.heading)}</h1><p>Preencha no seu ritmo. Confira suas informações antes de continuar.</p></div>${form}<p class="simulation-privacy">${icon('lock')}<span>Saiba como usamos suas informações na <a href="politica-de-privacidade.html">Política de privacidade</a>.</span></p></div></main>`+footer(prefix,page.type)+dialogs(false);
+ const body=top+`<main id="conteudo" tabindex="-1" class="simulation-page"><div class="simulation-container"><div class="simulation-heading"><h1>${esc(c.heading)}</h1><p>Preencha no seu ritmo. Confira suas informações antes de continuar.</p></div>${simulation.selection(page,prefix)}${form}<p class="simulation-privacy">${icon('lock')}<span>Saiba como usamos suas informações na <a href="politica-de-privacidade.html">Política de privacidade</a>.</span></p></div></main>`+footer(prefix,page.type)+dialogs(false);
  return html({...page,formPage:true,title:c.heading+' | Fivecred',description:c.description},body,prefix);
 }
 

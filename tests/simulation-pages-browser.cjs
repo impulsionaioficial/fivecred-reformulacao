@@ -14,7 +14,7 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site'),man
    const card=page.locator('.simulation-cta');assert(await card.isVisible());const a=card.locator('[data-simulation-link]');
    if(item.slug==='fivecred-next'&&[390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/simulation-landing-'+width+'.png')});
    if(width===320){await a.focus();await page.keyboard.press('Enter');}else await a.click();
-   await page.waitForURL('**/'+item.slug+'/simulacao.html');await page.evaluate(()=>document.fonts.ready);
+   await page.waitForURL(url=>url.pathname==='/'+item.slug+'/simulacao.html');await page.evaluate(()=>document.fonts.ready);
    if(await page.locator('[data-migrated-form]').count())await page.waitForFunction(()=>document.querySelector('[data-migrated-form]').dataset.formReady==='true');
    if(await page.locator('[data-connected-form]').count())await page.waitForFunction(()=>document.querySelector('[data-connected-form]').dataset.formReady==='true');
    assert.equal(await page.locator('main form').count(),1,item.slug+' one form');
