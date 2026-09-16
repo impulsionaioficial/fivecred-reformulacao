@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "layouts": [
+    {
+      "width": 320,
+      "formStable": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "formStable": true,
+      "overflow": false
+    },
+    {
+      "width": 534,
+      "formStable": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "formStable": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "formStable": true,
+      "overflow": false
+    }
+  ],
+  "autoplay": true,
+  "pause": true,
+  "reducedMotion": true,
+  "formUnchanged": true,
+  "changed": [
+    "lp-venda-carta-contemplada/index.html"
+  ],
+  "errors": [],
+  "external": [],
+  "failed": [],
+  "desktopAndMobileImageSources": true,
+  "fullImagesWithoutCropping": true,
+  "singleImageStatic": true,
+  "pauseOnFormFocus": true
+}

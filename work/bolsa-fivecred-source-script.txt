@@ -1,0 +1,408 @@
+
+        // Form wizard steps transitions
+        function clearErrors() {
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('border-red-500', 'bg-red-50');
+            });
+            document.querySelectorAll('p[id^="error-"]').forEach(p => {
+                p.classList.add('hidden');
+                p.innerText = '';
+            });
+        }
+
+        function showFieldError(fieldId, message) {
+            const input = document.getElementById(fieldId);
+            if (input) {
+                input.classList.add('border-red-500', 'bg-red-50');
+            }
+            const p = document.getElementById(`error-${fieldId.replace('_', '-')}`);
+            if (p) {
+                p.classList.remove('hidden');
+                p.innerText = message;
+            }
+        }
+
+        function nextStep(step) {
+            clearErrors();
+            if (step === 2) {
+                const nome = document.getElementById('nome').value.trim();
+                const whatsapp = document.getElementById('whatsapp').value.trim();
+                const cpf = document.getElementById('cpf').value.trim();
+                const nascimento = document.getElementById('nascimento').value.trim();
+                const cep = document.getElementById('cep').value.trim();
+                const endereco = document.getElementById('endereco').value.trim();
+                const email = document.getElementById('email').value.trim();
+                
+                let hasError = false;
+
+                if (nome.length < 3) {
+                    showFieldError('nome', 'Por favor, insira seu nome completo.');
+                    hasError = true;
+                }
+                if (whatsapp.length < 14) {
+                    showFieldError('whatsapp', 'Insira seu número de celular com DDD válido.');
+                    hasError = true;
+                }
+                if (cpf.length < 14) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
+                    hasError = true;
+                }
+                if (nascimento.length < 10) {
+                    showFieldError('nascimento', 'Insira sua data de nascimento.');
+                    hasError = true;
+                }
+                if (cep.length < 9) {
+                    showFieldError('cep', 'Insira um CEP válido.');
+                    hasError = true;
+                }
+                if (endereco.length < 5) {
+                    showFieldError('endereco', 'Por favor, insira o seu endereço completo.');
+                    hasError = true;
+                }
+                if (email.length > 0 && (email.length < 5 || !email.includes('@'))) {
+                    showFieldError('email', 'Por favor, insira um e-mail válido.');
+                    hasError = true;
+                }
+
+                if (hasError) return;
+                
+                // Hide step 1, show step 2 with transition
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+                s1.classList.add('hidden');
+                s2.classList.remove('hidden');
+                s2.classList.add('animate-step-in');
+                
+                // Update Progress Header
+                document.getElementById('step-title').innerText = 'Seu Benefício Bolsa Família';
+                document.getElementById('step-subtitle').innerText = 'Preencha as informações de recebimento do seu benefício';
+                document.getElementById('step-badge').innerText = 'Etapa 2/3';
+            }
+        }
+
+        function prevStep(step) {
+            clearErrors();
+            if (step === 1) {
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+                s2.classList.add('hidden');
+                s1.classList.remove('hidden');
+                s1.classList.add('animate-step-in');
+                
+                document.getElementById('step-title').innerText = 'Seus Dados Pessoais';
+                document.getElementById('step-subtitle').innerText = 'Preencha os campos básicos da solicitação';
+                document.getElementById('step-badge').innerText = 'Etapa 1/3';
+            } else if (step === 2) {
+                const s2 = document.getElementById('step-2');
+                const s3 = document.getElementById('step-3');
+                s3.classList.add('hidden');
+                s2.classList.remove('hidden');
+                s2.classList.add('animate-step-in');
+                
+                document.getElementById('step-title').innerText = 'Seu Benefício Bolsa Família';
+                document.getElementById('step-subtitle').innerText = 'Preencha as informações de recebimento do seu benefício';
+                document.getElementById('step-badge').innerText = 'Etapa 2/3';
+            }
+        }
+
+        function parseMoneyString(value) {
+            return parseFloat(value.replace(/[^0-9,-]/g, '').replace(',', '.')) || 0;
+        }
+
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function calculateSimulation() {
+            clearErrors();
+            const valBeneficioStr = document.getElementById('valor_beneficio').value;
+            const valBeneficio = parseMoneyString(valBeneficioStr);
+            const nis = document.getElementById('nis').value.trim();
+
+            let hasError = false;
+
+            if (!valBeneficio || valBeneficio <= 0) {
+                showFieldError('valor_beneficio', 'Por favor, insira o valor do seu Bolsa Família.');
+                hasError = true;
+            } else if (valBeneficio < 600) {
+                showFieldError('valor_beneficio', 'O valor do benefício Bolsa Família deve ser de pelo menos R$ 600,00.');
+                hasError = true;
+            }
+
+            if (nis.length < 14) {
+                showFieldError('nis', 'Por favor, insira um NIS válido (11 dígitos).');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // Calculations: Max credit is up to 2.5x average benefit value, capped at R$ 2.000,00
+            let estimatedCredit = Math.min(valBeneficio * 2.5, 2000);
+            
+            // Round credit to nearest 50 BRL
+            estimatedCredit = Math.round(estimatedCredit / 50) * 50;
+
+            // Monthly installment (over 24 months fixed)
+            // Coefficient for 24 months in microcredit is approx 0.067 (interest rate ~2.5% a.m.)
+            // So if R$ 1.500 -> R$ 100,50 installment
+            const coefficient = 0.067;
+            const installment = estimatedCredit * coefficient;
+
+            // Display results
+            document.getElementById('res-credito').innerText = formatBRL(estimatedCredit);
+            document.getElementById('res-parcela').innerText = formatBRL(installment);
+
+            // Configure WhatsApp proposals
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const cpf = document.getElementById('cpf').value;
+            const cep = document.getElementById('cep').value;
+            const endereco = document.getElementById('endereco').value;
+            
+            const message = `Olá! Acabei de realizar uma simulação de Empréstimo Bolsa Família no site.
+*Nome:* ${nome}
+*CPF:* ${cpf}
+*WhatsApp:* ${whatsapp}
+*CEP / Endereço:* ${cep} (${endereco})
+*NIS:* ${nis}
+*Valor do Benefício:* ${valBeneficioStr}
+*Crédito Estimado:* ${formatBRL(estimatedCredit)} em 24 parcelas
+*Parcela Descontada no Benefício:* ${formatBRL(installment)}`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waLink = `https://wa.me/5511989956521?text=${encodedMessage}`;
+            document.getElementById('btn-envio-whatsapp').href = waLink;
+
+            // Show step 3, hide step 2 with animation
+            const s2 = document.getElementById('step-2');
+            const s3 = document.getElementById('step-3');
+            s2.classList.add('hidden');
+            s3.classList.remove('hidden');
+            s3.classList.add('animate-step-in');
+
+            // Update Progress Header
+            document.getElementById('step-title').innerText = 'Simulação Concluída';
+            document.getElementById('step-subtitle').innerText = 'Confira as condições calculadas para desconto em folha';
+            document.getElementById('step-badge').innerText = 'Etapa 3/3';
+        }
+
+        // Input Masking Helpers
+        document.addEventListener('DOMContentLoaded', () => {
+            const telInput = document.getElementById('whatsapp');
+            telInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+                
+                if (v.length > 6) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+                } else if (v.length > 2) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+                } else if (v.length > 0) {
+                    e.target.value = `(${v}`;
+                } else {
+                    e.target.value = "";
+                }
+            });
+
+            const cpfInput = document.getElementById('cpf');
+            cpfInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+
+                if (v.length > 9) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6, 9)}-${v.slice(9)}`;
+                } else if (v.length > 6) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6)}`;
+                } else if (v.length > 3) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const dateInput = document.getElementById('nascimento');
+            dateInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 8) v = v.slice(0, 8);
+
+                if (v.length > 4) {
+                    e.target.value = `${v.slice(0, 2)}/${v.slice(2, 4)}/${v.slice(4)}`;
+                } else if (v.length > 2) {
+                    e.target.value = `${v.slice(0, 2)}/${v.slice(2)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const cepInput = document.getElementById('cep');
+            cepInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 8) v = v.slice(0, 8);
+
+                if (v.length > 5) {
+                    e.target.value = `${v.slice(0, 5)}-${v.slice(5)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const nisInput = document.getElementById('nis');
+            nisInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+
+                if (v.length > 10) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 8)}.${v.slice(8, 10)}-${v.slice(10)}`;
+                } else if (v.length > 8) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 8)}.${v.slice(8)}`;
+                } else if (v.length > 3) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const moneyMask = (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (!v) {
+                    e.target.value = "";
+                    return;
+                }
+                v = (parseFloat(v) / 100).toFixed(2) + "";
+                v = v.replace(".", ",");
+                v = v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                e.target.value = "R$ " + v;
+            };
+            document.getElementById('valor_beneficio').addEventListener('input', moneyMask);
+        });
+
+        // FAQ Toggle Accordion
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                answer.classList.add('animate-step-in');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Intersection Observer Scroll Entry Animations Reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.remove('opacity-0', 'translate-y-16', 'blur-md');
+                            entry.target.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+                        }, index * 80); // Staggering reveal delay
+                    }
+                });
+            }, { threshold: 0.08 });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Circular Progress Animation
+            const speedSection = document.getElementById('digital-speed-section');
+            if (speedSection) {
+                const speedObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounterAndCircle();
+                            speedObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                speedObserver.observe(speedSection);
+            }
+        });
+
+        function animateCounterAndCircle() {
+            const counter = document.getElementById('percentage-number');
+            const circle = document.getElementById('progress-circle');
+            if (!counter || !circle) return;
+
+            let start = 0;
+            const end = 100;
+            const duration = 2200; // 2.2 seconds
+            const startTime = performance.now();
+            const circumference = 289; // 2 * PI * 46
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing: easeOutExpo
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                
+                const currentValue = Math.floor(easeProgress * end);
+                counter.textContent = currentValue;
+
+                const offset = circumference - (easeProgress * circumference);
+                circle.style.strokeDashoffset = offset;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // 3D Parallax Tilt Card Spell + Card Spotlight Glow
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.tilt-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const xc = rect.width / 2;
+                    const yc = rect.height / 2;
+                    const dx = (xc - x) / xc;
+                    const dy = (yc - y) / yc;
+                    
+                    const tiltX = (dy * 6).toFixed(2);
+                    const tiltY = -(dx * 6).toFixed(2);
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.01, 1.01, 1.01)`;
+                    card.style.zIndex = "25";
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                    card.style.zIndex = "";
+                });
+            });
+
+            document.querySelectorAll('.glow-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mx', `${x}px`);
+                    card.style.setProperty('--my', `${y}px`);
+                });
+            });
+
+            // Cookie Consent Banner Logic
+            const cookieConsent = document.getElementById('cookie-consent');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+            
+            if (cookieConsent && acceptCookiesBtn) {
+                if (!localStorage.getItem('cookie-consent-accepted')) {
+                    setTimeout(() => {
+                        cookieConsent.classList.remove('translate-y-full');
+                    }, 1000);
+                }
+                
+                acceptCookiesBtn.addEventListener('click', () => {
+                    localStorage.setItem('cookie-consent-accepted', 'true');
+                    cookieConsent.classList.add('translate-y-full');
+                });
+            }
+        });
+    

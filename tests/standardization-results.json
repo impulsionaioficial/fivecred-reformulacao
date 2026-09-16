@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "date": "2026-09-15",
+  "sites": 12,
+  "htmlPages": 42,
+  "localLinks": 914,
+  "assets": 345,
+  "responsiveCases": 48,
+  "integratedInterceptedSubmissions": 10,
+  "originalsUnchanged": 109,
+  "nextBuilds": [
+    "fivecred-next",
+    "fivecred-afiliados",
+    "contemplada.fivecred.com.br"
+  ],
+  "nextTypeScript": true,
+  "nativeNextForms": true,
+  "realExternalSubmissions": 0,
+  "deployment": false
+}

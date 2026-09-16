@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "layouts": [
+    {
+      "width": 320,
+      "overflow": false,
+      "contrastChecks": 82,
+      "contrastFailures": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "contrastChecks": 82,
+      "contrastFailures": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "contrastChecks": 83,
+      "contrastFailures": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "contrastChecks": 83,
+      "contrastFailures": []
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "contrastChecks": 83,
+      "contrastFailures": []
+    }
+  ],
+  "sellerFlow": "completed",
+  "compatibilityEntry": true,
+  "errors": []
+}

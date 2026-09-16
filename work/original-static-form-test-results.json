@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "checks": 107,
+  "externalRequests": 0,
+  "externalNavigations": 0,
+  "results": [
+    {
+      "slug": "bolsa-fivecred",
+      "passed": true,
+      "transport": "WhatsApp URL prepared only; never opened",
+      "expectedCredit": 1500,
+      "scenarios": [
+        "field parity",
+        "empty validations",
+        "input masks",
+        "product-specific boundaries",
+        "calculations",
+        "step navigation",
+        "exact destination/message",
+        "inactive step accessibility"
+      ]
+    },
+    {
+      "slug": "consignado-fivecred",
+      "passed": true,
+      "transport": "WhatsApp URL prepared only; never opened",
+      "expectedCredit": 31659.600000000002,
+      "scenarios": [
+        "field parity",
+        "empty validations",
+        "input masks",
+        "product-specific boundaries",
+        "calculations",
+        "step navigation",
+        "exact destination/message",
+        "inactive step accessibility"
+      ]
+    },
+    {
+      "slug": "luz-fivecred",
+      "passed": true,
+      "transport": "WhatsApp URL prepared only; never opened",
+      "expectedCredit": 2500,
+      "scenarios": [
+        "field parity",
+        "empty validations",
+        "input masks",
+        "product-specific boundaries",
+        "calculations",
+        "step navigation",
+        "exact destination/message",
+        "inactive step accessibility"
+      ]
+    },
+    {
+      "slug": "imovel-fivecred",
+      "passed": true,
+      "transport": "WhatsApp URL prepared only; never opened",
+      "expectedCredit": 200000,
+      "scenarios": [
+        "field parity",
+        "empty validations",
+        "input masks",
+        "product-specific boundaries",
+        "calculations",
+        "step navigation",
+        "exact destination/message",
+        "inactive step accessibility"
+      ]
+    },
+    {
+      "slug": "veiculo-fivecred",
+      "passed": true,
+      "transport": "WhatsApp URL prepared only; never opened",
+      "expectedCredit": 35000,
+      "scenarios": [
+        "field parity",
+        "empty validations",
+        "input masks",
+        "product-specific boundaries",
+        "calculations",
+        "step navigation",
+        "exact destination/message",
+        "inactive step accessibility"
+      ]
+    },
+    {
+      "slug": "fivecred-landing-page",
+      "passed": true,
+      "transport": "local alert; no requests",
+      "scenarios": [
+        "field parity",
+        "masks",
+        "submit delay",
+        "local-only feedback",
+        "reset"
+      ]
+    }
+  ]
+}

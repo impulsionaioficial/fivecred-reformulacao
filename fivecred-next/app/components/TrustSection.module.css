@@ -1,0 +1,176 @@
+.section {
+  background: #0D0D0D;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax blob */
+.blob {
+  position: absolute;
+  left: -15%;
+  top: 10%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242,101,34,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.header { margin-bottom: 56px; max-width: 600px; }
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #F26522;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 800;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.accent { color: #F26522; }
+
+.sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.75;
+  max-width: 500px;
+}
+
+/* Badges */
+.badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+.badge {
+  background: #181818;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: background 0.2s;
+}
+
+.badge:hover { background: #1E1E1E; }
+
+.badgeIcon {
+  width: 42px;
+  height: 42px;
+  background: rgba(242,101,34,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge > div strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.badge > div span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+}
+
+/* Testimonials */
+.testiLabel {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.testiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card {
+  background: #181818;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: default;
+  will-change: transform;
+  transition: background 0.2s;
+}
+
+.card:hover { background: #1D1D1D; }
+
+.stars { display: flex; gap: 2px; }
+
+.card p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  flex: 1;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #F26522, #FF8C42);
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.author strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.author span {
+  font-size: 11.5px;
+  color: #F26522;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .badges { grid-template-columns: repeat(2, 1fr); }
+  .testiGrid { grid-template-columns: 1fr; }
+}

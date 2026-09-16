@@ -1,0 +1,455 @@
+
+        // Form wizard steps transitions
+        function clearErrors() {
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('border-red-500', 'bg-red-50');
+            });
+            document.querySelectorAll('p[id^="error-"]').forEach(p => {
+                p.classList.add('hidden');
+                p.innerText = '';
+            });
+        }
+
+        function showFieldError(fieldId, message) {
+            const input = document.getElementById(fieldId);
+            if (input) {
+                input.classList.add('border-red-500', 'bg-red-50');
+            }
+            const p = document.getElementById(`error-${fieldId.replace('_', '-')}`);
+            if (p) {
+                p.classList.remove('hidden');
+                p.innerText = message;
+            }
+        }
+
+        function nextStep(step) {
+            clearErrors();
+            if (step === 2) {
+                const nome = document.getElementById('nome').value.trim();
+                const whatsapp = document.getElementById('whatsapp').value.trim();
+                const cpf = document.getElementById('cpf').value.trim();
+                const nascimento = document.getElementById('nascimento').value.trim();
+                const email = document.getElementById('email').value.trim();
+                
+                let hasError = false;
+
+                if (nome.length < 3) {
+                    showFieldError('nome', 'Por favor, insira seu nome completo.');
+                    hasError = true;
+                }
+                if (whatsapp.length < 14) {
+                    showFieldError('whatsapp', 'Insira seu número de celular com DDD válido.');
+                    hasError = true;
+                }
+                if (cpf.length < 14) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
+                    hasError = true;
+                }
+                if (nascimento.length < 10) {
+                    showFieldError('nascimento', 'Insira sua data de nascimento.');
+                    hasError = true;
+                }
+                if (email.length < 5 || !email.includes('@')) {
+                    showFieldError('email', 'Por favor, insira um e-mail válido.');
+                    hasError = true;
+                }
+
+                if (hasError) return;
+                
+                // Hide step 1, show step 2 with transition
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+                s1.classList.add('hidden');
+                s2.classList.remove('hidden');
+                s2.classList.add('animate-step-in');
+                
+                // Update Progress Header
+                document.getElementById('step-title').innerText = 'Dados do Seu Benefício';
+                document.getElementById('step-subtitle').innerText = 'Insira as informações do seu provento do INSS';
+                document.getElementById('step-badge').innerText = 'Etapa 2/3';
+                
+                // Compute Default Margin if value exists
+                calculateDefaultMargin();
+            }
+        }
+
+        function prevStep(step) {
+            clearErrors();
+            if (step === 1) {
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+                s2.classList.add('hidden');
+                s1.classList.remove('hidden');
+                s1.classList.add('animate-step-in');
+                
+                document.getElementById('step-title').innerText = 'Seus Dados Pessoais';
+                document.getElementById('step-subtitle').innerText = 'Preencha os campos básicos da solicitação';
+                document.getElementById('step-badge').innerText = 'Etapa 1/3';
+            } else if (step === 2) {
+                const s2 = document.getElementById('step-2');
+                const s3 = document.getElementById('step-3');
+                s3.classList.add('hidden');
+                s2.classList.remove('hidden');
+                s2.classList.add('animate-step-in');
+                
+                document.getElementById('step-title').innerText = 'Dados do Seu Benefício';
+                document.getElementById('step-subtitle').innerText = 'Insira as informações do seu provento do INSS';
+                document.getElementById('step-badge').innerText = 'Etapa 2/3';
+            }
+        }
+
+        function toggleMargemInput() {
+            const opcao = document.getElementById('opcao_margem').value;
+            const container = document.getElementById('margem_livre_container');
+            const input = document.getElementById('valor_margem');
+
+            if (opcao === 'margem_livre') {
+                container.classList.remove('hidden');
+                input.required = true;
+                container.classList.add('animate-step-in');
+                calculateDefaultMargin();
+            } else {
+                container.classList.add('hidden');
+                input.required = false;
+                input.value = '';
+            }
+        }
+
+        function parseMoneyString(value) {
+            return parseFloat(value.replace(/[^0-9,-]/g, '').replace(',', '.')) || 0;
+        }
+
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function updateMaxMarginPlaceholder() {
+            calculateDefaultMargin();
+        }
+
+        function calculateDefaultMargin() {
+            const valBeneficio = parseMoneyString(document.getElementById('valor_beneficio').value);
+            const profile = document.getElementById('tipo_beneficio').value;
+            const inputMargem = document.getElementById('valor_margem');
+
+            if (valBeneficio > 0 && document.getElementById('opcao_margem').value === 'margem_livre') {
+                // Loans margin: 35% for Retired/Pensioners, 30% for BPC
+                const marginPercentage = (profile === 'bpc') ? 0.30 : 0.35;
+                const defaultMargin = valBeneficio * marginPercentage;
+                inputMargem.value = formatBRL(defaultMargin);
+            }
+        }
+
+        function calculateSimulation() {
+            clearErrors();
+            const valBeneficioStr = document.getElementById('valor_beneficio').value;
+            const valBeneficio = parseMoneyString(valBeneficioStr);
+
+            let hasError = false;
+
+            if (!valBeneficio || valBeneficio <= 0) {
+                showFieldError('valor_beneficio', 'Por favor, insira o valor mensal do seu benefício.');
+                hasError = true;
+            } else if (valBeneficio < 1412) {
+                showFieldError('valor_beneficio', 'O benefício do INSS não pode ser menor que o salário mínimo (R$ 1.412,00).');
+                hasError = true;
+            }
+
+            const opcao = document.getElementById('opcao_margem').value;
+            let valorMargem = 0;
+
+            if (opcao === 'margem_livre') {
+                const valMargemStr = document.getElementById('valor_margem').value;
+                valorMargem = parseMoneyString(valMargemStr);
+
+                if (!valorMargem || valorMargem <= 0) {
+                    showFieldError('valor_margem', 'Por favor, preencha o valor da sua margem livre estimada.');
+                    hasError = true;
+                } else {
+                    const profile = document.getElementById('tipo_beneficio').value;
+                    const maxAllowedMargin = valBeneficio * ((profile === 'bpc') ? 0.30 : 0.35);
+                    if (valorMargem > (maxAllowedMargin + 1)) {
+                        showFieldError('valor_margem', `Margem declarada (R$ ${valorMargem.toLocaleString('pt-BR')}) excede o limite legal de ${profile === 'bpc' ? '30%' : '35%'} do benefício (R$ ${maxAllowedMargin.toLocaleString('pt-BR')}).`);
+                        hasError = true;
+                    }
+                }
+            } else {
+                // For portabilidade, default margem simulation to 35% or 30% of benefit
+                const profile = document.getElementById('tipo_beneficio').value;
+                valorMargem = valBeneficio * ((profile === 'bpc') ? 0.30 : 0.35);
+            }
+
+            if (hasError) return;
+
+            // Calculations: INSS consignado coefficient for 84 months at ~1.66% a.m.
+            // Factor is approximately 45.228
+            const coefficientFactor = 45.228;
+            const estimatedCredit = valorMargem * coefficientFactor;
+
+            // Display results
+            document.getElementById('res-credito').innerText = formatBRL(estimatedCredit);
+            
+            const profileSelect = document.getElementById('tipo_beneficio');
+            document.getElementById('res-perfil-info').innerText = profileSelect.options[profileSelect.selectedIndex].text;
+            document.getElementById('res-parcela').innerText = formatBRL(valorMargem);
+
+            // Configure WhatsApp proposals
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const cpf = document.getElementById('cpf').value;
+            const perfil = profileSelect.options[profileSelect.selectedIndex].text;
+            
+            const message = `Olá! Acabei de realizar uma simulação de Empréstimo Consignado INSS no site.
+*Nome:* ${nome}
+*CPF:* ${cpf}
+*WhatsApp:* ${whatsapp}
+*Perfil:* ${perfil} (Benefício: ${valBeneficioStr})
+*Opção:* ${opcao === 'margem_livre' ? 'Margem Livre' : 'Portabilidade/Refinanciar'}
+*Margem Utilizada:* ${formatBRL(valorMargem)}/mês
+*Crédito Estimado:* ${formatBRL(estimatedCredit)} em 84 parcelas fixas`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waLink = `https://wa.me/5511989956521?text=${encodedMessage}`;
+            document.getElementById('btn-envio-whatsapp').href = waLink;
+
+            // Show step 3, hide step 2 with animation
+            const s2 = document.getElementById('step-2');
+            const s3 = document.getElementById('step-3');
+            s2.classList.add('hidden');
+            s3.classList.remove('hidden');
+            s3.classList.add('animate-step-in');
+
+            // Update Progress Header
+            document.getElementById('step-title').innerText = 'Simulação Concluída';
+            document.getElementById('step-subtitle').innerText = 'Confira as condições estimadas para averbação';
+            document.getElementById('step-badge').innerText = 'Etapa 3/3';
+        }
+
+        // Input Masking Helpers
+        document.addEventListener('DOMContentLoaded', () => {
+            const telInput = document.getElementById('whatsapp');
+            telInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+                
+                if (v.length > 6) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+                } else if (v.length > 2) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+                } else if (v.length > 0) {
+                    e.target.value = `(${v}`;
+                } else {
+                    e.target.value = "";
+                }
+            });
+
+            const cpfInput = document.getElementById('cpf');
+            cpfInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+
+                if (v.length > 9) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6, 9)}-${v.slice(9)}`;
+                } else if (v.length > 6) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6)}`;
+                } else if (v.length > 3) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const dateInput = document.getElementById('nascimento');
+            dateInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 8) v = v.slice(0, 8);
+
+                if (v.length > 4) {
+                    e.target.value = `${v.slice(0, 2)}/${v.slice(2, 4)}/${v.slice(4)}`;
+                } else if (v.length > 2) {
+                    e.target.value = `${v.slice(0, 2)}/${v.slice(2)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const moneyMask = (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (!v) {
+                    e.target.value = "";
+                    return;
+                }
+                v = (parseFloat(v) / 100).toFixed(2) + "";
+                v = v.replace(".", ",");
+                v = v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                e.target.value = "R$ " + v;
+            };
+            document.getElementById('valor_beneficio').addEventListener('input', moneyMask);
+            document.getElementById('valor_margem').addEventListener('input', moneyMask);
+        });
+
+        // FAQ Toggle Accordion
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                answer.classList.add('animate-step-in');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Intersection Observer Scroll Entry Animations Reveal
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.remove('opacity-0', 'translate-y-16', 'blur-md');
+                            entry.target.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+                        }, index * 80); // Staggering reveal delay
+                    }
+                });
+            }, { threshold: 0.08 });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Circular Progress Animation
+            const speedSection = document.getElementById('digital-speed-section');
+            if (speedSection) {
+                const speedObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounterAndCircle();
+                            speedObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+                speedObserver.observe(speedSection);
+            }
+        });
+
+        function animateCounterAndCircle() {
+            const counter = document.getElementById('percentage-number');
+            const circle = document.getElementById('progress-circle');
+            if (!counter || !circle) return;
+
+            let start = 0;
+            const end = 100;
+            const duration = 2200; // 2.2 seconds
+            const startTime = performance.now();
+            const circumference = 289; // 2 * PI * 46
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing: easeOutExpo
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                
+                const currentValue = Math.floor(easeProgress * end);
+                counter.textContent = currentValue;
+
+                const offset = circumference - (easeProgress * circumference);
+                circle.style.strokeDashoffset = offset;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // 3D Parallax Tilt Card Spell + Card Spotlight Glow
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.tilt-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const xc = rect.width / 2;
+                    const yc = rect.height / 2;
+                    const dx = (xc - x) / xc;
+                    const dy = (yc - y) / yc;
+                    
+                    const tiltX = (dy * 6).toFixed(2);
+                    const tiltY = -(dx * 6).toFixed(2);
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.01, 1.01, 1.01)`;
+                    card.style.zIndex = "25";
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+                    card.style.zIndex = "";
+                });
+            });
+
+            document.querySelectorAll('.glow-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mx', `${x}px`);
+                    card.style.setProperty('--my', `${y}px`);
+                });
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isActive = navLinks.classList.contains('active-menu');
+                    if (isActive) {
+                        navLinks.classList.remove('active-menu');
+                        navLinks.style.display = '';
+                        navLinks.style.flexDirection = '';
+                        navLinks.style.position = '';
+                        navLinks.style.top = '';
+                        navLinks.style.left = '';
+                        navLinks.style.width = '';
+                        navLinks.style.background = '';
+                        navLinks.style.padding = '';
+                        navLinks.style.boxShadow = '';
+                        navLinks.style.zIndex = '';
+                    } else {
+                        navLinks.classList.add('active-menu');
+                        navLinks.style.display = 'flex';
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.position = 'absolute';
+                        navLinks.style.top = '80px';
+                        navLinks.style.left = '0';
+                        navLinks.style.width = '100%';
+                        navLinks.style.background = '#ffffff';
+                        navLinks.style.padding = '2rem';
+                        navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                        navLinks.style.zIndex = '999';
+                    }
+                });
+            }
+
+            // Cookie Consent Banner Logic
+            const cookieConsent = document.getElementById('cookie-consent');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+            
+            if (cookieConsent && acceptCookiesBtn) {
+                if (!localStorage.getItem('cookie-consent-accepted')) {
+                    setTimeout(() => {
+                        cookieConsent.classList.remove('translate-y-full');
+                    }, 1000);
+                }
+                
+                acceptCookiesBtn.addEventListener('click', () => {
+                    localStorage.setItem('cookie-consent-accepted', 'true');
+                    cookieConsent.classList.add('translate-y-full');
+                });
+            }
+        });
+    

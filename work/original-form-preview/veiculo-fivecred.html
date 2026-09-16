@@ -1,0 +1,122 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';font-src 'self';connect-src 'none';form-action 'none';object-src 'none'"><link rel="stylesheet" href="../../shared/site.css"><link rel="stylesheet" href="../../shared/original-forms/forms.css"><script defer src="../../shared/original-forms/veiculo-fivecred.js"></script></head><body style="background:#fff4ea"><main class="container" style="max-width:620px;padding-block:30px"><section id="simulacao" class="original-form" data-original-form="veiculo-fivecred" aria-labelledby="original-form-heading"><div class="of-header"><div><p class="of-eyebrow">Simulação de crédito</p><h3 id="original-form-heading">Seu veículo, suas possibilidades</h3><p>Preencha os dados para uma estimativa.</p></div></div><form id="simulacao-form" class="space-y-5 relative of-fields" data-of-event-submit="of-event-0">
+                            
+                            <!-- STEP 1: Dados Pessoais -->
+                            <div id="step-1" class="transition-all duration-500 ease-in-out relative opacity-100 translate-x-0 z-10 of-step">
+                                <div class="mb-4 flex items-center justify-between">
+                                    <h4 class="font-bold text-gray-800 text-lg">Etapa 1: Seus Dados</h4>
+                                    <span class="text-xs font-bold text-brand-500 bg-brand-50 px-2 py-1 rounded-full">1/3</span>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 of-grid">
+                                    <div class="space-y-1 of-field">
+                                        <label for="nome" class="text-sm font-medium text-gray-700">Seu Nome</label>
+                                        <input type="text" id="nome" name="nome" required="" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none" placeholder="Como devemos te chamar?" aria-describedby="error-nome">
+                                        <p id="error-nome" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                    <div class="space-y-1 of-field">
+                                        <label for="whatsapp" class="text-sm font-medium text-gray-700">WhatsApp</label>
+                                        <input type="tel" id="whatsapp" name="whatsapp" required="" maxlength="15" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none" placeholder="(00) 00000-0000" aria-describedby="error-whatsapp" inputmode="tel">
+                                        <p id="error-whatsapp" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 of-grid">
+                                    <div class="space-y-1 of-field">
+                                        <label for="cpf" class="text-sm font-medium text-gray-700">CPF</label>
+                                        <input type="text" id="cpf" name="cpf" required="" maxlength="14" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none" placeholder="000.000.000-00" aria-describedby="error-cpf" inputmode="numeric">
+                                        <p id="error-cpf" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                    <div class="space-y-1 of-field">
+                                        <label for="email" class="text-sm font-medium text-gray-700">E-mail</label>
+                                        <input type="email" id="email" name="email" required="" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none" placeholder="seu@email.com" aria-describedby="error-email">
+                                        <p id="error-email" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                </div>
+                                <button type="button" class="w-full bg-brand-600 hover:bg-brand-500 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-[0_8px_20px_rgba(255,107,0,0.3)] hover:shadow-[0_12px_25px_rgba(255,107,0,0.4)] flex justify-center items-center gap-2 of-primary" data-of-event-click="of-event-1">
+                                    Avançar <svg class="of-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg>
+                                </button>
+                            </div>
+
+                            <!-- STEP 2: Dados do Veículo -->
+                            <div id="step-2" class="transition-all duration-500 ease-in-out absolute top-0 left-0 w-full opacity-0 translate-x-full pointer-events-none z-0 of-step">
+                                <div class="mb-4 flex items-center justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <button type="button" class="text-gray-400 hover:text-brand-500 of-secondary" data-of-event-click="of-event-2" aria-label="Voltar para seus dados"><svg class="of-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"></path></svg></button>
+                                        <h4 class="font-bold text-gray-800 text-lg">Etapa 2: Seu Veículo</h4>
+                                    </div>
+                                    <span class="text-xs font-bold text-brand-500 bg-brand-50 px-2 py-1 rounded-full">2/3</span>
+                                </div>
+                                <div class="space-y-1 mb-5 of-field">
+                                    <label for="modelo" class="text-sm font-medium text-gray-700">Modelo do Veículo</label>
+                                    <input type="text" id="modelo" name="modelo" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Ex: Onix 1.0" aria-describedby="error-modelo">
+                                    <p id="error-modelo" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 of-grid">
+                                    <div class="space-y-1 of-field">
+                                        <label for="ano" class="text-sm font-medium text-gray-700">Ano</label>
+                                        <input type="number" id="ano" name="ano" min="2005" max="2027" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Ex: 2020" aria-describedby="error-ano">
+                                        <p id="error-ano" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                    <div class="space-y-1 of-field">
+                                        <label for="placa" class="text-sm font-medium text-gray-700">Placa do Veículo</label>
+                                        <input type="text" id="placa" name="placa" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none uppercase" placeholder="Ex: ABC1D23" maxlength="8" aria-describedby="error-placa">
+                                        <p id="error-placa" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                </div>
+                                <div class="space-y-1 mb-5 of-field">
+                                    <label for="valor_estimado" class="text-sm font-medium text-gray-700">Valor Estimado (Tabela FIPE)</label>
+                                    <input type="text" id="valor_estimado" name="valor_estimado" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="R$ 50.000,00" aria-describedby="error-valor-estimado" inputmode="decimal">
+                                    <p id="error-valor-estimado" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5 of-grid">
+                                    <div class="space-y-1 of-field">
+                                        <label for="uf_cidade" class="text-sm font-medium text-gray-700">UF / Cidade</label>
+                                        <input type="text" id="uf_cidade" name="uf_cidade" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none" placeholder="Ex: SP / São Paulo" aria-describedby="error-uf-cidade">
+                                        <p id="error-uf-cidade" class="text-red-500 text-xs mt-1 hidden" aria-live="polite"></p>
+                                    </div>
+                                    <div class="space-y-1 of-field">
+                                        <label for="financiamento" class="text-sm font-medium text-gray-700">Possui Financiamento?</label>
+                                        <select id="financiamento" name="financiamento" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none appearance-none bg-no-repeat bg-[right_1rem_center]">
+                                            <option value="nao">Não, já está quitado</option>
+                                            <option value="sim">Sim, ainda estou pagando</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="button" id="btn-submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-[0_8px_20px_rgba(255,107,0,0.3)] hover:shadow-[0_12px_25px_rgba(255,107,0,0.4)] flex justify-center items-center gap-2 of-primary" data-of-event-click="of-event-3">
+                                    <span id="btn-text">VER MEU CRÉDITO</span>
+                                    <svg class="of-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" id="btn-icon"><path d="m3 3 18 9-18 9 3-9-3-9Zm3 9h15"></path></svg>
+                                </button>
+                            </div>
+
+                            <!-- STEP 3: Resultado da Simulação -->
+                            <div id="step-3" class="transition-all duration-500 ease-in-out absolute top-0 left-0 w-full opacity-0 translate-x-full pointer-events-none z-0 of-step">
+                                <div class="mb-4 text-center of-result-panel">
+                                    <div class="h-16 w-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                                        <svg class="of-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900 text-2xl font-sans">Sua simulação ilustrativa</h4>
+                                    <p class="text-gray-500 text-sm">Veja as condições do seu crédito</p>
+                                </div>
+                                
+                                <div class="bg-brand-50 rounded-xl p-5 mb-5 border border-brand-100 of-result-highlight">
+                                    <div class="flex justify-between items-center mb-3">
+                                        <span class="text-gray-650 font-semibold text-sm">Crédito estimado</span>
+                                        <span id="res-max-value" class="text-2xl font-bold text-brand-600">R$ 0,00</span>
+                                    </div>
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-gray-600 text-xs">Taxa estimada</span>
+                                        <span id="res-rate" class="font-bold text-gray-900 text-xs">0.00% a.m.</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-gray-650 text-xs">Parcela sugerida</span>
+                                        <span id="res-installment" class="font-bold text-gray-950 text-xs">0x de R$ 0,00</span>
+                                    </div>
+                                </div>
+
+                                <a href="#" id="btn-proposal" target="_blank" class="w-full bg-[#10C300] hover:bg-[#0ea300] text-white py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-[0_8px_20px_rgba(16,195,0,0.3)] flex justify-center items-center gap-2 of-primary of-whatsapp" rel="noopener noreferrer">
+                                    <span id="btn-prop-text">Continuar pelo WhatsApp</span>
+                                    <svg class="of-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" id="btn-prop-icon"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.4 7.5L3 21l1.8-5.2a8.5 8.5 0 1 1 15.7-4.2ZM8 8c.5 3.8 2.2 5.6 6 7l2-2-2-1-1 1-2-2 1-1-1-2Z"></path></svg>
+                                </a>
+                                <p class="text-center text-xs text-gray-500 mt-4 font-light">
+                                     Ao continuar, você abre o WhatsApp com os dados desta simulação para falar com a equipe.
+                                </p>
+                            <p class="of-estimate-note">Simulação ilustrativa. Valores, taxas e prazos dependem da análise e da proposta da instituição financeira.</p></div>
+                        </form></section></main></body></html>

@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 100;
+  padding: 1.125rem 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+.header.scrolled.dark {
+  background: rgba(13,13,13,0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+.header.scrolled.light {
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: rgba(0,0,0,0.07);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo system */
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.logoWrap {
+  position: relative;
+  width: 130px;
+  height: 36px;
+}
+
+.logoImg {
+  position: absolute;
+  top: 0; left: 0;
+  transition: opacity 0.25s ease;
+}
+
+.logoVisible { opacity: 1; }
+.logoHidden  { opacity: 0; pointer-events: none; }
+
+.badge {
+  background: rgba(242,101,34,0.12);
+  border: 1px solid rgba(242,101,34,0.3);
+  color: #F26522;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* Desktop CTA */
+.cta {
+  background: #F26522;
+  color: white;
+  padding: 0.625rem 1.375rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+.cta:hover { background: #D4501A; transform: translateY(-1px); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger color based on section */
+.light .hamburger { color: #111; }
+.dark  .hamburger { color: #fff; }
+
+.hamburgerOpen span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburgerOpen span:nth-child(2) { opacity: 0; }
+.hamburgerOpen span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile menu */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #0D0D0D;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mobileMenu a {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.mobileMenu a:hover { color: #F26522; }
+
+.mobileCtaLink {
+  background: #F26522 !important;
+  color: white !important;
+  padding: 0.875rem 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cta { display: none; }
+  .hamburger { display: flex; }
+  .badge { display: none; }
+}

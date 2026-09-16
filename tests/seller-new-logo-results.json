@@ -1,0 +1,118 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "width": 320,
+      "navHeight": 75,
+      "logoVisibleWidth": 168.73511904761904,
+      "logoHeight": 32.875,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 292,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "navHeight": 75,
+      "logoVisibleWidth": 208.4375,
+      "logoHeight": 40.625,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 324,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "navHeight": 75,
+      "logoVisibleWidth": 218.36309523809524,
+      "logoHeight": 42.546875,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 354,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 599,
+      "navHeight": 75,
+      "logoVisibleWidth": 218.36309523809524,
+      "logoHeight": 42.546875,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 563,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "navHeight": 83,
+      "logoVisibleWidth": 208.4375,
+      "logoHeight": 40.625,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 342.046875,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 960,
+      "navHeight": 91,
+      "logoVisibleWidth": 208.4375,
+      "logoHeight": 40.625,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 263.25,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "navHeight": 91,
+      "logoVisibleWidth": 208.4375,
+      "logoHeight": 40.625,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 284.046875,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 1200,
+      "navHeight": 91,
+      "logoVisibleWidth": 228.28869047619048,
+      "logoHeight": 44.484375,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 341,
+      "banner": false,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "navHeight": 91,
+      "logoVisibleWidth": 228.28869047619048,
+      "logoHeight": 44.484375,
+      "logoFits": true,
+      "controlsClear": true,
+      "imageLoaded": true,
+      "footerLogo": 375.9375,
+      "banner": false,
+      "overflow": false
+    }
+  ],
+  "formsUnchanged": true,
+  "sharedFilesAndOtherSitesUnchanged": true,
+  "mobileMenu": true,
+  "distChecked": true,
+  "errors": []
+}

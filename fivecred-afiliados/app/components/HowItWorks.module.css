@@ -1,0 +1,137 @@
+.section {
+  background: #0D0D0D;
+  padding: 120px 0;
+}
+.inner { display: flex; flex-direction: column; gap: 0; }
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #F26522;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 780px;
+  margin-bottom: 4rem;
+}
+
+.accent { color: #F26522; }
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 3rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  align-items: flex-start;
+}
+
+.step:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+
+.stepNum {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(242,101,34,0.25);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  transition: color 0.3s ease;
+}
+
+.step:hover .stepNum { color: #F26522; }
+
+.stepTitle {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.stepDesc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Insight */
+.insight {
+  background: rgba(242,101,34,0.07);
+  border: 1px solid rgba(242,101,34,0.25);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.insightIcon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.insight strong {
+  display: block;
+  font-size: 1rem;
+  color: #F26522;
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+}
+
+.insight p {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* CTA */
+.cta { display: flex; }
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: #F26522;
+  border: 1.5px solid rgba(242,101,34,0.5);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.ctaBtn:hover {
+  background: #F26522;
+  color: white;
+  border-color: #F26522;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 0; }
+  .heading { margin-bottom: 2.5rem; }
+  .step { grid-template-columns: 50px 1fr; gap: 1rem; padding: 2rem 0; }
+  .stepNum { font-size: 2rem; }
+  .stepTitle { font-size: 1.175rem; }
+  .insight { flex-direction: column; gap: 1rem; padding: 1.5rem; }
+  .cta { justify-content: stretch; }
+  .ctaBtn { width: 100%; justify-content: center; }
+}

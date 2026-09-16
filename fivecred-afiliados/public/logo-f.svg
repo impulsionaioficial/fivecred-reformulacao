@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 100" fill="none">
+  <!-- Top bar: rounded left, angled right -->
+  <path fill="#F26522" d="M6 20 L80 20 L68 40 L6 40 Q0 40 0 34 L0 26 Q0 20 6 20 Z"/>
+  <!-- Middle bar: rounded left, angled right, narrower -->
+  <path fill="#F26522" d="M6 46 L70 46 L58 66 L6 66 Q0 66 0 60 L0 52 Q0 46 6 46 Z"/>
+  <!-- Bottom stub/wedge: rounded left, angled right -->
+  <path fill="#F26522" d="M6 72 L42 72 L30 90 L6 90 Q0 90 0 84 L0 78 Q0 72 6 72 Z"/>
+</svg>

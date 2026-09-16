@@ -1,0 +1,67 @@
+{
+  "result": "PASS",
+  "forms": 10,
+  "results": [
+    {
+      "slug": "fivecred-next",
+      "native": false,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/a1niutnubcy8miisowdia8geyha1187u"
+    },
+    {
+      "slug": "fivecred-next",
+      "native": true,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/a1niutnubcy8miisowdia8geyha1187u"
+    },
+    {
+      "slug": "fivecred-afiliados",
+      "native": false,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/m4ln9sg12wotrfm5nejxgtge8qfpg2kd"
+    },
+    {
+      "slug": "fivecred-afiliados",
+      "native": true,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/m4ln9sg12wotrfm5nejxgtge8qfpg2kd"
+    },
+    {
+      "slug": "contemplada.fivecred.com.br",
+      "native": false,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/0b1d6blfvvj1ay2qkf3yi62v7w7e04uk"
+    },
+    {
+      "slug": "contemplada.fivecred.com.br",
+      "native": false,
+      "form": 1,
+      "endpoint": "https://hook.us1.make.celonis.com/0b1d6blfvvj1ay2qkf3yi62v7w7e04uk"
+    },
+    {
+      "slug": "contemplada.fivecred.com.br",
+      "native": true,
+      "form": 0,
+      "endpoint": "https://hook.us1.make.celonis.com/0b1d6blfvvj1ay2qkf3yi62v7w7e04uk"
+    },
+    {
+      "slug": "contemplada.fivecred.com.br",
+      "native": true,
+      "form": 1,
+      "endpoint": "https://hook.us1.make.celonis.com/0b1d6blfvvj1ay2qkf3yi62v7w7e04uk"
+    },
+    {
+      "slug": "fivecred-marketplace-imoveis",
+      "native": false,
+      "endpoint": "https://api.fivecred.online/leads"
+    },
+    {
+      "slug": "fivecred-marketplace-veiculos",
+      "native": false,
+      "endpoint": "https://api.fivecred.online/leads"
+    }
+  ],
+  "errors": [],
+  "realExternalRequests": 0,
+  "note": "All webhook/API requests fulfilled by Playwright; WhatsApp opens intercepted."
+}

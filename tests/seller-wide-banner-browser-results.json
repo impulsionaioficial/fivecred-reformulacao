@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "layouts": [
+    {
+      "width": 320,
+      "bannerWidth": 320,
+      "bannerX": 0,
+      "belowHeader": true,
+      "formBelow": true,
+      "controls": 0,
+      "overflow": false,
+      "formY": 728.96875
+    },
+    {
+      "width": 390,
+      "bannerWidth": 390,
+      "bannerX": 0,
+      "belowHeader": true,
+      "formBelow": true,
+      "controls": 0,
+      "overflow": false,
+      "formY": 721.4375
+    },
+    {
+      "width": 534,
+      "bannerWidth": 534,
+      "bannerX": 0,
+      "belowHeader": true,
+      "formBelow": true,
+      "controls": 0,
+      "overflow": false,
+      "formY": 796.3125
+    },
+    {
+      "width": 768,
+      "bannerWidth": 768,
+      "bannerX": 0,
+      "belowHeader": true,
+      "formBelow": true,
+      "controls": 0,
+      "overflow": false,
+      "formY": 737.296875
+    },
+    {
+      "width": 1440,
+      "bannerWidth": 1440,
+      "bannerX": 0,
+      "belowHeader": true,
+      "formBelow": true,
+      "controls": 0,
+      "overflow": false,
+      "formY": 620.390625
+    }
+  ],
+  "autoplay": true,
+  "noControls": true,
+  "formStableDuringRotation": true,
+  "reducedMotion": true,
+  "pauseOnFormFocus": true,
+  "sharedFilesAndOtherSitesUnchanged": true,
+  "errors": [],
+  "external": [],
+  "failed": []
+}

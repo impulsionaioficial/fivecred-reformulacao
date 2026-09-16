@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "pages": 12,
+  "directButtons": 62,
+  "originalProductResults": 5,
+  "buyerForms": 2,
+  "catalogContext": true,
+  "widths": [
+    320,
+    390,
+    1440
+  ],
+  "focusTrap": true,
+  "realSubmissions": 0,
+  "errors": []
+}

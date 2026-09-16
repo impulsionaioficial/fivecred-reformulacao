@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "responsiveLayouts": 48,
+  "widths": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "browserErrors": 0,
+  "externalRequests": 0,
+  "failedResources": 0,
+  "mobileJourneyTop": 503.9375,
+  "catalog": "filters, empty state, detail, WhatsApp, focus restoration and contact form passed",
+  "navigation": "mobile menu and Escape passed"
+}

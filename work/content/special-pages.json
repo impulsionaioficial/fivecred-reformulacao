@@ -1,0 +1,480 @@
+[
+  {
+    "slug": "fivecred-marketplace-imoveis",
+    "type": "marketplace",
+    "title": "Imóveis: encontre opções para sua próxima compra | Fivecred",
+    "description": "Explore exemplos de casas, apartamentos, terrenos e espaços comerciais. Conte à Fivecred o que procura e consulte disponibilidade e formas de compra.",
+    "label": "Quero encontrar um imóvel",
+    "headline": "Um espaço para o seu próximo passo.",
+    "intro": "Comece pelo tipo de imóvel, pela região e pelo valor que faz sentido para você. Escolha uma opção do catálogo para conversar com a Fivecred sobre sua compra.",
+    "profile": "Quero comprar um imóvel",
+    "goal": "Comprar um imóvel",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Encontre o que combina com seu plano",
+        "text": "Filtre casas, apartamentos, terrenos e espaços comerciais para organizar sua busca."
+      },
+      {
+        "title": "Compare antes de decidir",
+        "text": "Veja o preço de referência e os detalhes de cada exemplo. Confirme disponibilidade e informações do imóvel no atendimento."
+      },
+      {
+        "title": "Leve sua escolha para a conversa",
+        "text": "Selecione o imóvel que chamou sua atenção e continue pelo formulário ou WhatsApp com esse contexto."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte o que está procurando",
+        "text": "Escolha o tipo de imóvel e a faixa de valor. Se já tem uma região em mente, inclua essa preferência."
+      },
+      {
+        "title": "Explore os exemplos",
+        "text": "Compare as opções do catálogo e selecione uma para saber mais. Os dados desta prévia não confirmam estoque."
+      },
+      {
+        "title": "Consulte os próximos passos",
+        "text": "Converse sobre disponibilidade, documentação e formas de compra. Se precisar de crédito, as condições dependem de análise."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Os imóveis do catálogo estão disponíveis para compra?",
+        "a": "Este catálogo é uma prévia com exemplos extraídos dos arquivos do site. Preços, imagens e características precisam ser confirmados pela equipe antes de qualquer negociação."
+      },
+      {
+        "q": "Posso procurar por tipo de imóvel e valor?",
+        "a": "Sim. Use os filtros para explorar as opções e escolher o que mais se aproxima da sua busca. Você também pode contar no atendimento a região e outras características que procura."
+      },
+      {
+        "q": "O valor exibido é uma proposta final?",
+        "a": "Não. Os preços exibidos foram preservados do catálogo de origem como referência da demonstração. O valor de uma negociação, a disponibilidade e eventuais despesas devem ser confirmados."
+      },
+      {
+        "q": "Posso conversar sobre financiamento?",
+        "a": "Sim. Informe o valor aproximado do imóvel e quanto pretende usar de entrada. A equipe poderá orientar a consulta de opções, sujeitas aos critérios da instituição responsável e à análise do imóvel."
+      },
+      {
+        "q": "E se eu já tiver encontrado um imóvel fora do catálogo?",
+        "a": "Conte à equipe onde está o imóvel e o valor aproximado. O atendimento ajuda a entender quais informações serão necessárias para avaliar os próximos passos."
+      },
+      {
+        "q": "Preciso informar meu CPF para explorar o catálogo?",
+        "a": "Não. Você pode filtrar e selecionar exemplos antes de fornecer dados pessoais. Se quiser continuar, o formulário ou o WhatsApp permite iniciar o contato."
+      },
+      {
+        "q": "Selecionar um imóvel faz uma reserva?",
+        "a": "Não. A seleção serve para indicar seu interesse e dar contexto à conversa. Reserva, visita e compra dependem de confirmação e condições específicas."
+      }
+    ],
+    "editorial": {
+      "title": "Planeje a compra com o cenário completo.",
+      "text": "Além do preço, leve para a conversa a região desejada, o uso do imóvel, sua disponibilidade de entrada e as despesas da compra. Conhecer esses pontos ajuda a comparar opções com mais clareza. Os imóveis exibidos nesta prévia são exemplos, sem confirmação de disponibilidade."
+    },
+    "partnerGroup": "secured",
+    "aliases": [],
+    "catalog": [
+      {
+        "id": "imovel-1",
+        "title": "Apartamento com 2 quartos e varanda gourmet",
+        "type": "Apartamento",
+        "location": "Moema, SP",
+        "price": 850000,
+        "image": "assets/imoveis/apt_varanda.png",
+        "details": "2 quartos · Varanda gourmet · Piscina"
+      },
+      {
+        "id": "imovel-2",
+        "title": "Casa em condomínio com 4 suítes",
+        "type": "Casa",
+        "location": "Alphaville, Barueri",
+        "price": 1550000,
+        "image": "assets/imoveis/casa_condominio.png",
+        "details": "4 suítes · Piscina · Churrasqueira"
+      },
+      {
+        "id": "imovel-3",
+        "title": "Sobrado reformado com 3 quartos",
+        "type": "Casa",
+        "location": "Vila Mariana, SP",
+        "price": 620000,
+        "image": "assets/imoveis/casa_colonial.png",
+        "details": "3 quartos · Churrasqueira"
+      },
+      {
+        "id": "imovel-4",
+        "title": "Studio compacto mobiliado",
+        "type": "Apartamento",
+        "location": "Bela Vista, SP",
+        "price": 320000,
+        "image": "assets/imoveis/apt_kitnet.png",
+        "details": "Studio · Mobiliado · Academia"
+      },
+      {
+        "id": "imovel-7",
+        "title": "Lote residencial de 300 m²",
+        "type": "Terreno",
+        "location": "Peruíbe, Litoral SP",
+        "price": 180000,
+        "image": "assets/imoveis/terreno_lote.png",
+        "details": "300 m² · Uso residencial"
+      },
+      {
+        "id": "imovel-8",
+        "title": "Sala comercial de 45 m²",
+        "type": "Comercial",
+        "location": "Sé, SP",
+        "price": 350000,
+        "image": "assets/imoveis/sala_comercial.png",
+        "details": "45 m² · Centro histórico"
+      },
+      {
+        "id": "imovel-9",
+        "title": "Cobertura duplex com terraço e piscina",
+        "type": "Apartamento",
+        "location": "Itaim Bibi, SP",
+        "price": 2100000,
+        "image": "assets/imoveis/apt_cobertura_terraco.png",
+        "details": "Duplex · Terraço · Piscina"
+      },
+      {
+        "id": "imovel-12",
+        "title": "Chácara com casa e pomar",
+        "type": "Casa",
+        "location": "Itu, Interior SP",
+        "price": 950000,
+        "image": "assets/imoveis/casa_chacara.png",
+        "details": "2.000 m² · Piscina · Churrasqueira"
+      },
+      {
+        "id": "imovel-16",
+        "title": "Lote comercial de esquina",
+        "type": "Terreno",
+        "location": "Campinas, SP",
+        "price": 550000,
+        "image": "assets/imoveis/terreno_urbano.png",
+        "details": "500 m² · Esquina · Uso comercial"
+      }
+    ]
+  },
+  {
+    "slug": "fivecred-marketplace-veiculos",
+    "type": "marketplace",
+    "title": "Veículos: explore opções para sua próxima compra | Fivecred",
+    "description": "Compare exemplos de veículos por tipo e valor. Selecione o que procura e converse com a Fivecred sobre disponibilidade e possibilidades de compra.",
+    "label": "Quero encontrar um veículo",
+    "headline": "Seu próximo veículo começa com uma boa escolha.",
+    "intro": "Para o dia a dia, para a família ou para o trabalho: explore o catálogo e conte o que você procura. A Fivecred ajuda a organizar os próximos passos da sua compra.",
+    "profile": "Quero comprar um veículo",
+    "goal": "Comprar um veículo",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Uma busca mais simples",
+        "text": "Escolha o tipo de veículo e o valor que pretende considerar. Os filtros ajudam a reduzir as opções."
+      },
+      {
+        "title": "Detalhes para comparar",
+        "text": "Consulte modelo, ano, quilometragem e preço de referência dos exemplos antes de falar com a equipe."
+      },
+      {
+        "title": "Atendimento com contexto",
+        "text": "Leve o veículo selecionado para o formulário ou WhatsApp e converse sobre disponibilidade e formas de compra."
+      }
+    ],
+    "how": [
+      {
+        "title": "Defina o que você precisa",
+        "text": "Pense no uso do veículo, no tipo que prefere e no valor aproximado da compra."
+      },
+      {
+        "title": "Selecione uma opção",
+        "text": "Explore os exemplos e escolha um veículo para consultar. A seleção não faz uma reserva."
+      },
+      {
+        "title": "Converse sobre a compra",
+        "text": "Confirme os dados do veículo e, se necessário, consulte opções de financiamento. A análise considera seu perfil e as condições da operação."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Os veículos apresentados estão em estoque?",
+        "a": "Os veículos desta prévia são exemplos do catálogo de origem. A presença de um modelo na página não confirma estoque, preço atual, estado de conservação ou disponibilidade."
+      },
+      {
+        "q": "De onde vêm os preços do catálogo?",
+        "a": "Os valores foram extraídos dos arquivos locais do site e são exibidos como referência da demonstração. Confirme o preço e as condições do veículo no atendimento antes de negociar."
+      },
+      {
+        "q": "Posso consultar financiamento para o veículo escolhido?",
+        "a": "Sim. Informe a opção de interesse, o valor aproximado e quanto pretende usar de entrada. Qualquer condição de financiamento depende da análise da instituição responsável."
+      },
+      {
+        "q": "O site garante a aprovação do financiamento?",
+        "a": "Não. Escolher um veículo ou preencher o formulário não significa aprovação. A equipe orienta a consulta e explica os documentos e critérios necessários para seguir."
+      },
+      {
+        "q": "As fotos e a quilometragem foram verificadas?",
+        "a": "As imagens e os dados foram reaproveitados do catálogo local. Nesta prévia, não houve vistoria nem verificação dos anúncios. Peça fotos atualizadas, documentos e informações de conservação antes da compra."
+      },
+      {
+        "q": "Já escolhi um veículo em outro lugar. Posso conversar com a Fivecred?",
+        "a": "Sim. Informe marca, modelo, ano e valor aproximado para contextualizar seu interesse. A equipe orientará os próximos passos da consulta."
+      },
+      {
+        "q": "Preciso deixar meus dados antes de ver os veículos?",
+        "a": "Não. Explore o catálogo primeiro. Depois da seleção, você pode escolher o formulário ou o WhatsApp para iniciar uma conversa sobre a compra."
+      }
+    ],
+    "editorial": {
+      "title": "Olhe além da parcela.",
+      "text": "Na comparação, considere o preço do veículo, a entrada que você pretende usar e as despesas de uso. Antes de fechar uma compra, confirme documentação, conservação e condições de pagamento. O catálogo desta prévia ajuda a explorar opções; seus dados não foram verificados como anúncios disponíveis."
+    },
+    "partnerGroup": "banks",
+    "aliases": [],
+    "catalog": [
+      {
+        "id": "veiculo-61",
+        "title": "Fiat Pulse Drive 2024",
+        "type": "SUV",
+        "location": "São Paulo - SP",
+        "price": 94990,
+        "image": "assets/cars/fiat_pulse_phone_1779904321320.png",
+        "details": "2024 · 12.000 km · Automático"
+      },
+      {
+        "id": "veiculo-62",
+        "title": "Jeep Compass Longitude 2024",
+        "type": "SUV",
+        "location": "Rio de Janeiro - RJ",
+        "price": 159900,
+        "image": "assets/cars/jeep_compass_phone_1779904335455.png",
+        "details": "2024 · 18.000 km · Automático"
+      },
+      {
+        "id": "veiculo-64",
+        "title": "Toyota Corolla Cross XRE 2024",
+        "type": "SUV",
+        "location": "Curitiba - PR",
+        "price": 169900,
+        "image": "assets/cars/corolla_cross_phone_1779904368278.png",
+        "details": "2024 · 15.000 km · Automático"
+      },
+      {
+        "id": "veiculo-67",
+        "title": "Ford Ranger 2024",
+        "type": "Picape",
+        "location": "Goiânia - GO",
+        "price": 329900,
+        "image": "assets/cars/ford_ranger_phone_1779904438955.png",
+        "details": "2024 · 10.000 km · Automático"
+      },
+      {
+        "id": "veiculo-68",
+        "title": "Toyota Corolla XEI 2024",
+        "type": "Sedã",
+        "location": "Brasília - DF",
+        "price": 149900,
+        "image": "assets/cars/toyota_corolla_phone_1779904453992.png",
+        "details": "2024 · 20.000 km · Automático"
+      },
+      {
+        "id": "veiculo-69",
+        "title": "Hyundai Creta Limited 2024",
+        "type": "SUV",
+        "location": "Porto Alegre - RS",
+        "price": 139900,
+        "image": "assets/cars/hyundai_creta_phone_1779904477731.png",
+        "details": "2024 · 14.000 km · Automático"
+      },
+      {
+        "id": "veiculo-71",
+        "title": "Fiat Argo Trekking 2023",
+        "type": "Hatch",
+        "location": "Salvador - BA",
+        "price": 79990,
+        "image": "assets/cars/fiat_argo_phone_1779904507449.png",
+        "details": "2023 · 28.000 km · Automático"
+      },
+      {
+        "id": "veiculo-73",
+        "title": "Nissan Kicks Exclusive 2024",
+        "type": "SUV",
+        "location": "Recife - PE",
+        "price": 119900,
+        "image": "assets/cars/nissan_kicks_phone_1779904545727.png",
+        "details": "2024 · 17.000 km · Automático"
+      },
+      {
+        "id": "veiculo-74",
+        "title": "Chevrolet Tracker Premier 2024",
+        "type": "SUV",
+        "location": "Curitiba - PR",
+        "price": 134900,
+        "image": "assets/cars/chevrolet_tracker_phone_1779904561224.png",
+        "details": "2024 · 13.000 km · Automático"
+      }
+    ]
+  },
+  {
+    "slug": "contemplada.fivecred.com.br",
+    "type": "buyer",
+    "title": "Comprar carta contemplada para imóvel ou veículo | Fivecred",
+    "description": "Quer comprar uma carta de consórcio contemplada? Entenda entrada, saldo a pagar e transferência antes de consultar opções com a Fivecred.",
+    "label": "Quero comprar uma carta contemplada",
+    "headline": "Encontre uma carta para o que você quer comprar.",
+    "intro": "Conte se procura um imóvel, veículo ou bem para o seu negócio. Converse com a Fivecred sobre cartas contempladas e entenda o valor de entrada, as parcelas e as regras antes de decidir.",
+    "profile": "Quero comprar uma carta contemplada",
+    "goal": "Comprar uma carta contemplada",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Comece pelo bem que procura",
+        "text": "Informe seu objetivo e o valor aproximado. Isso ajuda a direcionar a consulta de cartas."
+      },
+      {
+        "title": "Entenda todos os valores",
+        "text": "Compare o crédito da carta, o valor negociado para assumir a cota, o saldo a pagar e os custos previstos."
+      },
+      {
+        "title": "Saiba o que falta para seguir",
+        "text": "Conheça a documentação, as etapas de transferência e as exigências da administradora antes da decisão."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte seu objetivo",
+        "text": "Escolha o tipo de bem e informe o crédito aproximado que procura. Você pode começar essa conversa sem informar CPF."
+      },
+      {
+        "title": "Consulte cartas e condições",
+        "text": "Verifique com a equipe a disponibilidade e os dados de cada opção: entrada, parcelas restantes, saldo e custos."
+      },
+      {
+        "title": "Avalie a transferência",
+        "text": "A compra envolve assumir uma cota de consórcio. A transferência depende da aprovação da administradora e do cumprimento de suas exigências."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O que estou comprando ao adquirir uma carta contemplada?",
+        "a": "Você negocia a transferência de uma cota de consórcio que já foi contemplada. É preciso conferir o crédito disponível e as obrigações da cota, incluindo o saldo a pagar e as regras para utilização."
+      },
+      {
+        "q": "A carta contemplada é dinheiro liberado imediatamente?",
+        "a": "Não há liberação automática pela simples compra da cota. A transferência e a utilização do crédito seguem as exigências da administradora. Consulte as etapas, os documentos e os prazos aplicáveis ao caso."
+      },
+      {
+        "q": "Existe uma entrada mínima fixa?",
+        "a": "Esta página não apresenta uma entrada mínima. O valor negociado para assumir a cota varia conforme a carta e as condições da negociação. Peça a composição completa dos valores antes de decidir."
+      },
+      {
+        "q": "Comprar uma carta significa não ter mais parcelas?",
+        "a": "Não necessariamente. A cota pode ter parcelas e outras obrigações a cumprir. Confira o saldo, a quantidade de parcelas, as regras de atualização e os custos previstos no contrato."
+      },
+      {
+        "q": "A transferência precisa ser aprovada?",
+        "a": "Sim. A transferência de uma cota depende da aprovação da administradora. A equipe pode orientar a consulta, mas não garante a aprovação ou um prazo de conclusão."
+      },
+      {
+        "q": "Que informações devo levar para a primeira conversa?",
+        "a": "Informe o que pretende comprar, o valor aproximado do crédito e quanto considera usar na negociação da entrada. Os documentos necessários serão explicados conforme a opção consultada."
+      },
+      {
+        "q": "Posso vender a carta que já está no meu nome por esta página?",
+        "a": "Esta página atende quem quer comprar uma carta. Se você já tem uma carta contemplada e quer negociá-la com a Fivecred, escolha a opção “Vender minha carta contemplada” no site."
+      },
+      {
+        "q": "As opções e os valores estão garantidos?",
+        "a": "Não. A consulta depende da disponibilidade das cartas e da confirmação de seus dados. Só uma proposta específica permite avaliar valores, responsabilidades e condições da negociação."
+      }
+    ],
+    "editorial": {
+      "title": "Crédito da carta e custo da compra são valores diferentes.",
+      "text": "O valor de crédito informa o que a carta pode permitir comprar, conforme as regras do consórcio. Para avaliar a negociação, confira também o valor para assumir a cota, as parcelas restantes e os custos contratuais. Peça essas informações de forma clara antes de decidir."
+    },
+    "partnerGroup": "banks",
+    "aliases": []
+  },
+  {
+    "slug": "fivecred-afiliados",
+    "type": "affiliate",
+    "title": "Programa de afiliados: conheça a parceria Fivecred",
+    "description": "Quer indicar pessoas à Fivecred? Conheça o programa de afiliados, consulte as regras de participação e converse com a equipe sobre a parceria.",
+    "label": "Quero ser afiliado",
+    "headline": "Conecte quem precisa de crédito a quem pode orientar.",
+    "intro": "Você tem uma rede de contatos ou trabalha com indicações? Conheça o programa de afiliados Fivecred e converse sobre como participar, acompanhar suas indicações e entender as regras de remuneração.",
+    "profile": "Quero indicar clientes",
+    "goal": "Conhecer o programa de afiliados",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Indicação com contexto",
+        "text": "Apresente o atendimento Fivecred a pessoas interessadas e ajude a iniciar uma conversa sobre o que elas procuram."
+      },
+      {
+        "title": "Conheça o processo",
+        "text": "Entenda como registrar as indicações e qual é o papel de cada pessoa, do primeiro contato ao acompanhamento."
+      },
+      {
+        "title": "Regras antes de começar",
+        "text": "Consulte os critérios de participação, a forma de acompanhamento e as condições de eventual remuneração."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte como você atua",
+        "text": "Informe sua cidade, se já trabalha com indicações e quais canais costuma utilizar. O primeiro passo é conhecer seu interesse na parceria."
+      },
+      {
+        "title": "Conheça as condições",
+        "text": "Converse com a equipe sobre cadastro, materiais, registro das indicações e regras de remuneração."
+      },
+      {
+        "title": "Indique com orientação",
+        "text": "Após a confirmação do cadastro e das regras, use os canais informados pela equipe e acompanhe suas indicações conforme o programa."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O que faz um afiliado Fivecred?",
+        "a": "O afiliado apresenta o atendimento Fivecred a pessoas interessadas. A participação, a forma de registrar a indicação e as responsabilidades de cada parte devem seguir as regras do programa."
+      },
+      {
+        "q": "Preciso trabalhar com crédito para demonstrar interesse?",
+        "a": "Você pode iniciar a conversa informando sua experiência e seus canais de indicação. A equipe explicará os critérios de participação e as orientações necessárias."
+      },
+      {
+        "q": "Preciso ter CNPJ?",
+        "a": "Consulte os requisitos de cadastro com a equipe. Esta página não define CNPJ como condição universal de participação."
+      },
+      {
+        "q": "Quanto posso ganhar como afiliado?",
+        "a": "Não há promessa de renda. A eventual remuneração depende das regras do programa e das condições de cada indicação. Peça os critérios de cálculo, elegibilidade e pagamento antes de começar."
+      },
+      {
+        "q": "Toda indicação gera uma comissão?",
+        "a": "Não presuma que sim. Confirme quais situações geram remuneração e como são tratadas operações não concluídas, cancelamentos e outras condições previstas no programa."
+      },
+      {
+        "q": "Existe taxa para participar?",
+        "a": "O material de origem apresenta o cadastro como gratuito. Confirme com a equipe as condições vigentes do programa antes de aderir; esta prévia não formaliza contratação."
+      },
+      {
+        "q": "Posso enviar os dados de alguém que conheço?",
+        "a": "Antes de compartilhar dados de outra pessoa, converse com ela e obtenha sua autorização. A equipe orientará a forma adequada de registrar a indicação."
+      },
+      {
+        "q": "Preciso fazer uma simulação de empréstimo para ser afiliado?",
+        "a": "Não. Seu interesse aqui é na parceria. Informe seu perfil de atuação e seus canais de indicação, depois escolha o formulário ou o WhatsApp para conversar com a equipe."
+      }
+    ],
+    "editorial": {
+      "title": "Uma boa indicação começa com uma conversa clara.",
+      "text": "Apresente o serviço com as informações do programa, respeite a decisão da pessoa e evite prometer aprovação, taxa ou prazo. Conheça suas responsabilidades e as regras de remuneração antes de começar a indicar."
+    },
+    "partnerGroup": "banks",
+    "aliases": []
+  }
+]

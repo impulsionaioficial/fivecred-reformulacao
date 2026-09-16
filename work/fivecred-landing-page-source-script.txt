@@ -1,0 +1,119 @@
+
+        // Animations on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+        // Input Masks
+        const maskCPF = (value) => {
+            return value.replace(/\D/g, '')
+                .replace(/(\d{3})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+                .replace(/(-\d{2})\d+?$/, '$1');
+        };
+
+        const maskPhone = (value) => {
+            return value.replace(/\D/g, '')
+                .replace(/(\d{2})(\d)/, '($1) $2')
+                .replace(/(\d{5})(\d)/, '$1-$2')
+                .replace(/(-\d{4})\d+?$/, '$1');
+        };
+
+        const cpfInput = document.getElementById('cpf');
+        if(cpfInput) {
+            cpfInput.addEventListener('input', (e) => {
+                e.target.value = maskCPF(e.target.value);
+            });
+        }
+
+        const phoneInput = document.getElementById('whatsapp');
+        if(phoneInput) {
+            phoneInput.addEventListener('input', (e) => {
+                e.target.value = maskPhone(e.target.value);
+            });
+        }
+
+        // Form Submit
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Fazendo Varredura...';
+            btn.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                alert('Varredura iniciada. Um especialista entrará em contato pelo WhatsApp com as suas opções de saque.');
+                btn.innerText = originalText;
+                btn.style.opacity = '1';
+                e.target.reset();
+            }, 1500);
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isActive = navLinks.classList.contains('active-menu');
+                if (isActive) {
+                    navLinks.classList.remove('active-menu');
+                    navLinks.style.display = '';
+                    navLinks.style.flexDirection = '';
+                    navLinks.style.position = '';
+                    navLinks.style.top = '';
+                    navLinks.style.left = '';
+                    navLinks.style.width = '';
+                    navLinks.style.background = '';
+                    navLinks.style.padding = '';
+                    navLinks.style.boxShadow = '';
+                    navLinks.style.zIndex = '';
+                } else {
+                    navLinks.classList.add('active-menu');
+                    navLinks.style.display = 'flex';
+                    navLinks.style.flexDirection = 'column';
+                    navLinks.style.position = 'absolute';
+                    navLinks.style.top = '80px';
+                    navLinks.style.left = '0';
+                    navLinks.style.width = '100%';
+                    navLinks.style.background = '#0a0a0a';
+                    navLinks.style.padding = '2rem';
+                    navLinks.style.borderBottom = '1px solid var(--border)';
+                    navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.5)';
+                    navLinks.style.zIndex = '999';
+                }
+            });
+        }
+
+        // Cookie Consent Banner Logic
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        
+        if (cookieConsent && acceptCookiesBtn) {
+            if (!localStorage.getItem('cookie-consent-accepted')) {
+                setTimeout(() => {
+                    cookieConsent.classList.add('show');
+                }, 1000);
+            }
+            
+            acceptCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('cookie-consent-accepted', 'true');
+                cookieConsent.classList.remove('show');
+            });
+        }
+    

@@ -1,0 +1,26 @@
+{
+  "intervalMs": 8000,
+  "slides": [
+    {
+      "id": "institucional",
+      "title": "Banner institucional",
+      "image": "",
+      "mobileImage": "",
+      "alt": "Arte institucional da Fivecred"
+    },
+    {
+      "id": "imovel",
+      "title": "Banner de carta de imóvel",
+      "image": "",
+      "mobileImage": "",
+      "alt": "Arte da Fivecred sobre venda de carta contemplada de imóvel"
+    },
+    {
+      "id": "veiculo",
+      "title": "Banner de carta de veículo",
+      "image": "",
+      "mobileImage": "",
+      "alt": "Arte da Fivecred sobre venda de carta contemplada de veículo"
+    }
+  ]
+}

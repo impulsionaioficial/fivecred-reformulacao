@@ -1,0 +1,1477 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 823.65625,
+          "inside": true,
+          "bar": 856.25
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 823.65625,
+          "inside": true,
+          "bar": 856.25
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 823.65625,
+          "inside": true,
+          "bar": 856.25
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 567.65625,
+          "inside": true,
+          "bar": 600.25
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 567.65625,
+          "inside": true,
+          "bar": 600.25
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 567.65625,
+          "inside": true,
+          "bar": 600.25
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 466.65625,
+          "inside": true,
+          "bar": 499.25
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 466.65625,
+          "inside": true,
+          "bar": 499.25
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 466.65625,
+          "inside": true,
+          "bar": 499.25
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 53.65625,
+          "inside": true,
+          "bar": 86.25
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 818.90625,
+          "inside": true,
+          "bar": 851.5
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 818.90625,
+          "inside": true,
+          "bar": 851.5
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 818.90625,
+          "inside": true,
+          "bar": 851.5
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 315.90625,
+          "inside": true,
+          "bar": 348.5
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 237.90625,
+          "inside": true,
+          "bar": 270.5
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 237.90625,
+          "inside": true,
+          "bar": 270.5
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 237.90625,
+          "inside": true,
+          "bar": 270.5
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 464.90625,
+          "inside": true,
+          "bar": 497.5
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 464.90625,
+          "inside": true,
+          "bar": 497.5
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 464.90625,
+          "inside": true,
+          "bar": 497.5
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 52.90625,
+          "inside": true,
+          "bar": 85.5
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 818.125,
+          "inside": true,
+          "bar": 850.71875
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 818.125,
+          "inside": true,
+          "bar": 850.71875
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 818.125,
+          "inside": true,
+          "bar": 850.71875
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 561.125,
+          "inside": true,
+          "bar": 593.71875
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 561.125,
+          "inside": true,
+          "bar": 593.71875
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 561.125,
+          "inside": true,
+          "bar": 593.71875
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 65.125,
+          "inside": true,
+          "bar": 97.71875
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 53.125,
+          "inside": true,
+          "bar": 85.71875
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 894.609375,
+          "inside": true,
+          "bar": 927.203125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 894.609375,
+          "inside": true,
+          "bar": 927.203125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 894.609375,
+          "inside": true,
+          "bar": 927.203125
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 372.609375,
+          "inside": true,
+          "bar": 405.203125
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 481.609375,
+          "inside": true,
+          "bar": 514.203125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 481.609375,
+          "inside": true,
+          "bar": 514.203125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 481.609375,
+          "inside": true,
+          "bar": 514.203125
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 599,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 202.609375,
+          "inside": true,
+          "bar": 235.203125
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 817.1875,
+          "inside": true,
+          "bar": 851.984375
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 817.1875,
+          "inside": true,
+          "bar": 851.984375
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 817.1875,
+          "inside": true,
+          "bar": 851.984375
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 658.1875,
+          "inside": true,
+          "bar": 692.984375
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 658.1875,
+          "inside": true,
+          "bar": 692.984375
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 658.1875,
+          "inside": true,
+          "bar": 692.984375
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 140.1875,
+          "inside": true,
+          "bar": 174.984375
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 548.28125,
+          "inside": true,
+          "bar": 583.078125
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 376.28125,
+          "inside": true,
+          "bar": 411.078125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 376.28125,
+          "inside": true,
+          "bar": 411.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 376.28125,
+          "inside": true,
+          "bar": 411.078125
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 274.28125,
+          "inside": true,
+          "bar": 309.078125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 274.28125,
+          "inside": true,
+          "bar": 309.078125
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 274.28125,
+          "inside": true,
+          "bar": 309.078125
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 458.28125,
+          "inside": true,
+          "bar": 493.078125
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 960,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        }
+      ],
+      "stage": "success"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Modalidade",
+          "lines": 1,
+          "labelTop": 702.28125,
+          "inside": true,
+          "bar": 737.078125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 702.28125,
+          "inside": true,
+          "bar": 737.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 702.28125,
+          "inside": true,
+          "bar": 737.078125
+        }
+      ],
+      "stage": "modality"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 498.28125,
+          "inside": true,
+          "bar": 533.078125
+        },
+        {
+          "text": "2 Administradora",
+          "lines": 1,
+          "labelTop": 498.28125,
+          "inside": true,
+          "bar": 533.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 498.28125,
+          "inside": true,
+          "bar": 533.078125
+        }
+      ],
+      "stage": "administrator"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 438.28125,
+          "inside": true,
+          "bar": 473.078125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 438.28125,
+          "inside": true,
+          "bar": 473.078125
+        },
+        {
+          "text": "3 Valor",
+          "lines": 1,
+          "labelTop": 438.28125,
+          "inside": true,
+          "bar": 473.078125
+        }
+      ],
+      "stage": "amount"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Modalidade",
+          "lines": 1,
+          "labelTop": 387.28125,
+          "inside": true,
+          "bar": 422.078125
+        },
+        {
+          "text": " Administradora",
+          "lines": 1,
+          "labelTop": 387.28125,
+          "inside": true,
+          "bar": 422.078125
+        },
+        {
+          "text": " Valor",
+          "lines": 1,
+          "labelTop": 387.28125,
+          "inside": true,
+          "bar": 422.078125
+        }
+      ],
+      "stage": "result"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": "1 Contato",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 477.28125,
+          "inside": true,
+          "bar": 512.078125
+        }
+      ],
+      "stage": "contact"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        },
+        {
+          "text": "2 Identificação",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        }
+      ],
+      "stage": "identity"
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "kickerGap": 20,
+      "headingGap": 24,
+      "steps": [
+        {
+          "text": " Contato",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        },
+        {
+          "text": " Identificação",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        },
+        {
+          "text": "3 Conclusão",
+          "lines": 1,
+          "labelTop": 196.28125,
+          "inside": true,
+          "bar": 231.078125
+        }
+      ],
+      "stage": "success"
+    }
+  ],
+  "protectedFilesUnchanged": true,
+  "errors": []
+}

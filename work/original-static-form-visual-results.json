@@ -1,0 +1,278 @@
+[
+  {
+    "slug": "bolsa-fivecred",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "nome",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "nascimento",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cep",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "endereco",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "email",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      268,
+      268,
+      268,
+      268,
+      268,
+      268,
+      554
+    ],
+    "resultFlow": true,
+    "errors": []
+  },
+  {
+    "slug": "consignado-fivecred",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "nome",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "nascimento",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "email",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      268,
+      268,
+      268,
+      268,
+      554
+    ],
+    "resultFlow": true,
+    "errors": []
+  },
+  {
+    "slug": "luz-fivecred",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "nome",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "nascimento",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cep",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "endereco",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "email",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      268,
+      268,
+      268,
+      268,
+      268,
+      268,
+      554
+    ],
+    "resultFlow": true,
+    "errors": []
+  },
+  {
+    "slug": "imovel-fivecred",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "nome",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "nascimento",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "email",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      268,
+      268,
+      268,
+      268,
+      554
+    ],
+    "resultFlow": true,
+    "errors": []
+  },
+  {
+    "slug": "veiculo-fivecred",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "nome",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "email",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      268,
+      268,
+      268,
+      268
+    ],
+    "resultFlow": true,
+    "errors": []
+  },
+  {
+    "slug": "fivecred-landing-page",
+    "passed": true,
+    "mobile": {
+      "scrollWidth": 390,
+      "viewport": 390,
+      "fields": [
+        {
+          "id": "",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "cpf",
+          "width": 312,
+          "font": "18px"
+        },
+        {
+          "id": "whatsapp",
+          "width": 312,
+          "font": "18px"
+        }
+      ],
+      "initialized": "true"
+    },
+    "desktopFieldWidths": [
+      554,
+      268,
+      268
+    ],
+    "resultFlow": false,
+    "errors": []
+  }
+]

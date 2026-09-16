@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- F mark icon (real FiveCred shape) -->
+  <g transform="scale(0.44) translate(0, 2)">
+    <path fill="#F26522" d="M6 0 L72 0 L60 18 L6 18 Q0 18 0 12 L0 6 Q0 0 6 0 Z"/>
+    <path fill="#F26522" d="M6 22 L62 22 L50 40 L6 40 Q0 40 0 34 L0 28 Q0 22 6 22 Z"/>
+    <path fill="#F26522" d="M6 44 L36 44 L24 62 L6 62 Q0 62 0 56 L0 50 Q0 44 6 44 Z"/>
+  </g>
+  <!-- FiveCred wordmark white -->
+  <text x="38" y="34" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="26" fill="#FFFFFF" letter-spacing="-0.5">FiveCred</text>
+</svg>

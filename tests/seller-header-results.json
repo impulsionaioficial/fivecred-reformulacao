@@ -1,0 +1,118 @@
+{
+  "result": "PASS",
+  "results": [
+    {
+      "width": 320,
+      "navHeight": 75,
+      "logoVisibleWidth": 149.99589895013122,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 292,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "navHeight": 75,
+      "logoVisibleWidth": 159.99926181102362,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 324,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "navHeight": 75,
+      "logoVisibleWidth": 159.99926181102362,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 354,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 599,
+      "navHeight": 75,
+      "logoVisibleWidth": 159.99926181102362,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 563,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "navHeight": 83,
+      "logoVisibleWidth": 179.99507874015748,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 342.046875,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 960,
+      "navHeight": 91,
+      "logoVisibleWidth": 179.99507874015748,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 263.25,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "navHeight": 91,
+      "logoVisibleWidth": 179.99507874015748,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 284.046875,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 1200,
+      "navHeight": 91,
+      "logoVisibleWidth": 189.99844160104988,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 341,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "navHeight": 91,
+      "logoVisibleWidth": 189.99844160104988,
+      "logoFits": true,
+      "controlsClear": true,
+      "footerLogo": 375.9375,
+      "banner": false,
+      "carouselScript": false,
+      "heroBelowHeader": true,
+      "overflow": false
+    }
+  ],
+  "formsUnchanged": true,
+  "sharedFilesAndOtherSitesUnchanged": true,
+  "mobileMenu": true,
+  "distChecked": true,
+  "errors": []
+}

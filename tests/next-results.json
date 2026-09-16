@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "builds": [
+    "fivecred-next",
+    "fivecred-afiliados",
+    "contemplada.fivecred.com.br"
+  ],
+  "typescript": true,
+  "nativeHomeBrowser": true,
+  "localRoutes": 6,
+  "blockedPrivateRoutes": 3,
+  "browserErrors": 0
+}

@@ -1,0 +1,841 @@
+[
+  {
+    "slug": "bolsa-fivecred",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\bolsa-fivecred\\index.html",
+    "sourceSHA256": "235d4f879d356245f7de74aea7797fa64bc84f72ede35314ec33becc616cdc0c",
+    "formId": "simulacao-form",
+    "steps": 3,
+    "fields": [
+      {
+        "tag": "input",
+        "id": "nome",
+        "name": "nome",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": "whatsapp",
+        "type": "tel",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": "cpf",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "nascimento",
+        "name": "nascimento",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cep",
+        "name": "cep",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "endereco",
+        "name": "endereco",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "valor_beneficio",
+        "name": "valor_beneficio",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "nis",
+        "name": "nis",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      }
+    ],
+    "transport": {
+      "type": "whatsapp-link",
+      "endpoint": "https://wa.me/5511989956521",
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/bolsa-fivecred.js"
+  },
+  {
+    "slug": "consignado-fivecred",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\consignado-fivecred\\index.html",
+    "sourceSHA256": "2077cf2834aaf1f20ad21cedf76404e3ac4ed4d6b32034631500fedae9a34587",
+    "formId": "simulacao-form",
+    "steps": 3,
+    "fields": [
+      {
+        "tag": "input",
+        "id": "nome",
+        "name": "nome",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": "whatsapp",
+        "type": "tel",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": "cpf",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "nascimento",
+        "name": "nascimento",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "tipo_beneficio",
+        "name": "tipo_beneficio",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "aposentado",
+            "label": "Aposentado INSS"
+          },
+          {
+            "value": "pensionista",
+            "label": "Pensionista INSS"
+          },
+          {
+            "value": "bpc",
+            "label": "Beneficiário BPC/LOAS"
+          }
+        ]
+      },
+      {
+        "tag": "input",
+        "id": "valor_beneficio",
+        "name": "valor_beneficio",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "opcao_margem",
+        "name": "opcao_margem",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "margem_livre",
+            "label": "Tenho Margem Livre"
+          },
+          {
+            "value": "portabilidade",
+            "label": "Quero Portabilidade / Refinanciar"
+          }
+        ]
+      },
+      {
+        "tag": "input",
+        "id": "valor_margem",
+        "name": "valor_margem",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      }
+    ],
+    "transport": {
+      "type": "whatsapp-link",
+      "endpoint": "https://wa.me/5511989956521",
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/consignado-fivecred.js"
+  },
+  {
+    "slug": "luz-fivecred",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\luz-fivecred\\index.html",
+    "sourceSHA256": "1c44aac3a5462c9812c1f51235c7194113d6edd04c7b62ea97323585cf80be2e",
+    "formId": "simulacao-form",
+    "steps": 3,
+    "fields": [
+      {
+        "tag": "input",
+        "id": "nome",
+        "name": "nome",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": "whatsapp",
+        "type": "tel",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": "cpf",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "nascimento",
+        "name": "nascimento",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cep",
+        "name": "cep",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "endereco",
+        "name": "endereco",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "distribuidora",
+        "name": "distribuidora",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "enel_sp",
+            "label": "Enel SP"
+          },
+          {
+            "value": "enel_rj",
+            "label": "Enel RJ"
+          },
+          {
+            "value": "enel_ce",
+            "label": "Enel Ceará"
+          },
+          {
+            "value": "light_rj",
+            "label": "Light RJ"
+          },
+          {
+            "value": "cpfl_paulista",
+            "label": "CPFL Paulista"
+          },
+          {
+            "value": "cpfl_piratininga",
+            "label": "CPFL Piratininga"
+          },
+          {
+            "value": "cemig",
+            "label": "Cemig MG"
+          },
+          {
+            "value": "copel",
+            "label": "Copel PR"
+          },
+          {
+            "value": "celesc",
+            "label": "Celesc SC"
+          },
+          {
+            "value": "coelba",
+            "label": "Neoenergia Coelba"
+          },
+          {
+            "value": "elektro",
+            "label": "Neoenergia Elektro"
+          }
+        ]
+      },
+      {
+        "tag": "input",
+        "id": "codigo_cliente",
+        "name": "codigo_cliente",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "valor_conta",
+        "name": "valor_conta",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      }
+    ],
+    "transport": {
+      "type": "whatsapp-link",
+      "endpoint": "https://wa.me/5511989956521",
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/luz-fivecred.js"
+  },
+  {
+    "slug": "imovel-fivecred",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\imovel-fivecred\\index.html",
+    "sourceSHA256": "f77f5ecc347e0b77b0ab933362621701a13e4720cd7a9e9d1d4b3504a8276101",
+    "formId": "simulacao-form",
+    "steps": 3,
+    "fields": [
+      {
+        "tag": "input",
+        "id": "nome",
+        "name": "nome",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": "whatsapp",
+        "type": "tel",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": "cpf",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "nascimento",
+        "name": "nascimento",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "tipo_imovel",
+        "name": "tipo_imovel",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "casa",
+            "label": "Casa Residencial"
+          },
+          {
+            "value": "apartamento",
+            "label": "Apartamento Residencial"
+          },
+          {
+            "value": "comercial",
+            "label": "Imóvel Comercial"
+          },
+          {
+            "value": "terreno",
+            "label": "Terreno em Condomínio"
+          }
+        ]
+      },
+      {
+        "tag": "input",
+        "id": "valor_imovel",
+        "name": "valor_imovel",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "localidade",
+        "name": "localidade",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "situacao_imovel",
+        "name": "situacao_imovel",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "quitado",
+            "label": "Quitado (Sem ônus pendente)"
+          },
+          {
+            "value": "financiado",
+            "label": "Financiado (Ainda pagando parcelas)"
+          }
+        ]
+      },
+      {
+        "tag": "input",
+        "id": "saldo_devedor",
+        "name": "saldo_devedor",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      }
+    ],
+    "transport": {
+      "type": "whatsapp-link",
+      "endpoint": "https://wa.me/5511989956521",
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/imovel-fivecred.js"
+  },
+  {
+    "slug": "veiculo-fivecred",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\veiculo-fivecred\\index.html",
+    "sourceSHA256": "5d37ac0c1f870d774dec6ff0b45fcb4605107de83d888ac3089102c522413dfe",
+    "formId": "simulacao-form",
+    "steps": 3,
+    "fields": [
+      {
+        "tag": "input",
+        "id": "nome",
+        "name": "nome",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": "whatsapp",
+        "type": "tel",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": "15",
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": "cpf",
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": "14",
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "modelo",
+        "name": "modelo",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "ano",
+        "name": "ano",
+        "type": "number",
+        "required": false,
+        "min": "2005",
+        "max": "2027",
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "placa",
+        "name": "placa",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": "8",
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "valor_estimado",
+        "name": "valor_estimado",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "uf_cidade",
+        "name": "uf_cidade",
+        "type": "text",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "select",
+        "id": "financiamento",
+        "name": "financiamento",
+        "type": "select-one",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null,
+        "options": [
+          {
+            "value": "nao",
+            "label": "Não, já está quitado"
+          },
+          {
+            "value": "sim",
+            "label": "Sim, ainda estou pagando"
+          }
+        ]
+      }
+    ],
+    "transport": {
+      "type": "whatsapp-link",
+      "endpoint": "https://wa.me/5511989956521",
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/veiculo-fivecred.js"
+  },
+  {
+    "slug": "fivecred-landing-page",
+    "sourcePath": "C:\\Users\\auror\\Downloads\\fivecred-sites\\fivecred-landing-page\\index.html",
+    "sourceSHA256": "a82cb72f63183ed495fa437f98f8679b5bc83576576826381f5a553d65cb7d3f",
+    "formId": "leadForm",
+    "steps": 1,
+    "fields": [
+      {
+        "tag": "input",
+        "id": null,
+        "name": null,
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "cpf",
+        "name": null,
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "whatsapp",
+        "name": null,
+        "type": "text",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "inss",
+        "name": "perfil",
+        "type": "radio",
+        "required": true,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "fgts",
+        "name": "perfil",
+        "type": "radio",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "clt",
+        "name": "perfil",
+        "type": "radio",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      },
+      {
+        "tag": "input",
+        "id": "conta-luz",
+        "name": "perfil",
+        "type": "radio",
+        "required": false,
+        "min": null,
+        "max": null,
+        "maxLength": null,
+        "value": null
+      }
+    ],
+    "transport": {
+      "type": "local-alert-only",
+      "endpoint": null,
+      "webhookFound": false
+    },
+    "preserved": "Original IDs/names/types/required/options, validation, masks, formulas and conditional fields. Original navigation; inline handlers compiled to external listeners.",
+    "adaptations": [
+      "Scoped CSS and inline SVG icons replace external Tailwind/Phosphor assets.",
+      "Approval/eligibility claims changed to illustrative estimates; campaign alert accurately states no data was sent.",
+      "Accessibility attributes and inactive-step inert state added."
+    ],
+    "scriptPath": "shared/original-forms/fivecred-landing-page.js"
+  }
+]

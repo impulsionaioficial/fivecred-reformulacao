@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a; /* Slate 900 */
+  
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  
+  --primary: #E8590C;
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f1f5f9; /* Slate 100 */
+  --secondary-foreground: #0f172a;
+  
+  --muted: #f8fafc; /* Slate 50 */
+  --muted-foreground: #64748b; /* Slate 500 */
+  
+  --accent: #fff7ed; /* Orange 50 */
+  --accent-foreground: #E8590C;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  
+  --border: #e2e8f0; /* Slate 200 */
+  --input: #e2e8f0;
+  --ring: #E8590C;
+  
+  --radius: 0.75rem;
+
+  /* Contemplada brand tokens — Light Orange palette */
+  --brand-orange: #E8590C;
+  --brand-orange-light: #FF7A30;
+  --brand-orange-dark: #C24100;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: rgba(232,89,12,0.5);
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Sora", "Inter", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ============================================
+   CONTEMPLADA — CUSTOM UTILITIES (LIGHT)
+   ============================================ */
+@layer utilities {
+
+  /* Orange gradient text */
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF7A30 0%, #E8590C 50%, #C24100 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Dot grid background for light mode */
+  .dot-grid {
+    background-image: radial-gradient(circle, rgba(232,89,12,0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Line grid background for light mode */
+  .line-grid {
+    background-image:
+      linear-gradient(rgba(232,89,12,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,89,12,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Badge orange */
+  .badge-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff7ed;
+    border: 1px solid rgba(232,89,12,0.2);
+    color: #E8590C;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .badge-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Left-border card style for light mode */
+  .card-bordered {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #E8590C;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  }
+
+  /* ---- ANIMATIONS ---- */
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: float 7s ease-in-out infinite 2.5s;
+  }
+  .animate-float-delayed-2 {
+    animation: float 7s ease-in-out infinite 5s;
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2.5s ease-in-out infinite;
+  }
+  .animate-slide-up {
+    animation: slide-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(-5px) rotate(-1deg); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scale-in {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* ---- SCROLL PROGRESS ---- */
+  .scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #E8590C, #FF7A30);
+    z-index: 9999;
+    transition: width 0.1s linear;
+  }
+
+  /* ---- CTA BUTTON — ORANGE ---- */
+  .btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #E8590C 0%, #FF7A30 100%);
+    color: #ffffff;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(232,89,12,0.3);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(232,89,12,0.4);
+    background: linear-gradient(135deg, #FF7A30 0%, #E8590C 100%);
+  }
+  .btn-orange:active {
+    transform: translateY(0);
+  }
+
+  /* ---- OUTLINED BUTTON ---- */
+  .btn-outline-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    color: #E8590C;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    border: 2px solid #E8590C;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-orange:hover {
+    background: #fff7ed;
+    transform: translateY(-2px);
+  }
+}

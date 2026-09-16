@@ -1,0 +1,289 @@
+
+        // Form Wizard State Control
+        function clearErrors() {
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('border-red-500', 'bg-red-50');
+            });
+            document.querySelectorAll('p[id^="error-"]').forEach(p => {
+                p.classList.add('hidden');
+                p.innerText = '';
+            });
+        }
+
+        function showFieldError(fieldId, message) {
+            const input = document.getElementById(fieldId);
+            if (input) {
+                input.classList.add('border-red-500', 'bg-red-50');
+            }
+            const p = document.getElementById(`error-${fieldId.replace('_', '-')}`);
+            if (p) {
+                p.classList.remove('hidden');
+                p.innerText = message;
+            }
+        }
+
+        function nextStep(step) {
+            clearErrors();
+            if (step === 2) {
+                const nome = document.getElementById('nome').value.trim();
+                const whatsapp = document.getElementById('whatsapp').value.trim();
+                const cpf = document.getElementById('cpf').value.trim();
+                const email = document.getElementById('email').value.trim();
+                
+                let hasError = false;
+
+                if (nome.length < 3) {
+                    showFieldError('nome', 'Por favor, insira seu nome completo.');
+                    hasError = true;
+                }
+                if (whatsapp.length < 14) {
+                    showFieldError('whatsapp', 'Insira seu número de WhatsApp com DDD válido.');
+                    hasError = true;
+                }
+                if (cpf.length < 14) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
+                    hasError = true;
+                }
+                if (email.length > 0 && (email.length < 5 || !email.includes('@'))) {
+                    showFieldError('email', 'Por favor, insira um e-mail válido.');
+                    hasError = true;
+                }
+
+                if (hasError) return;
+
+                // Move to Step 2
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+                
+                s1.classList.remove('opacity-100', 'translate-x-0', 'z-10');
+                s1.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+                s1.classList.remove('relative');
+                s1.classList.add('absolute', 'top-0', 'left-0', 'w-full');
+
+                s2.classList.remove('absolute', 'top-0', 'left-0', 'opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+                s2.classList.add('relative', 'opacity-100', 'translate-x-0', 'z-10');
+            }
+        }
+
+        function prevStep(step) {
+            clearErrors();
+            if (step === 1) {
+                const s1 = document.getElementById('step-1');
+                const s2 = document.getElementById('step-2');
+
+                s2.classList.remove('relative', 'opacity-100', 'translate-x-0', 'z-10');
+                s2.classList.add('absolute', 'top-0', 'left-0', 'opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+
+                s1.classList.remove('absolute', 'top-0', 'left-0', 'w-full', 'opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+                s1.classList.add('relative', 'opacity-100', 'translate-x-0', 'z-10');
+            }
+        }
+
+        function parseMoneyString(value) {
+            return parseFloat(value.replace(/[^0-9,-]/g, '').replace(',', '.')) || 0;
+        }
+
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        function calculateSimulation() {
+            clearErrors();
+            const modelo = document.getElementById('modelo').value.trim();
+            const ano = parseInt(document.getElementById('ano').value);
+            const placa = document.getElementById('placa').value.trim();
+            const valFipeStr = document.getElementById('valor_estimado').value;
+            const valFipe = parseMoneyString(valFipeStr);
+            const ufCidade = document.getElementById('uf_cidade').value.trim();
+            const financiamento = document.getElementById('financiamento').value;
+
+            let hasError = false;
+
+            if (modelo.length < 3) {
+                showFieldError('modelo', 'Por favor, insira o modelo do seu veículo.');
+                hasError = true;
+            }
+            if (isNaN(ano) || ano < 2005 || ano > 2027) {
+                showFieldError('ano', 'Insira um ano de fabricação entre 2005 e 2027.');
+                hasError = true;
+            }
+            if (placa.length < 7) {
+                showFieldError('placa', 'Por favor, insira a placa do veículo.');
+                hasError = true;
+            }
+            if (!valFipe || valFipe < 5000) {
+                showFieldError('valor_estimado', 'O valor estimado deve ser de pelo menos R$ 5.000,00.');
+                hasError = true;
+            }
+            if (ufCidade.length < 4) {
+                showFieldError('uf_cidade', 'Por favor, informe a sua Cidade/UF.');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // Credit Calculation: 70% of vehicle value, capped at R$ 150.000,00
+            let estimatedCredit = Math.min(valFipe * 0.7, 150000);
+            estimatedCredit = Math.round(estimatedCredit / 100) * 100; // Round to nearest 100
+
+            // Installment PMT calculation: 48 months at 1.99% a.m.
+            const rate = 0.0199;
+            const term = 48;
+            const installment = (estimatedCredit * rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1);
+
+            // Display results
+            document.getElementById('res-max-value').innerText = formatBRL(estimatedCredit);
+            document.getElementById('res-rate').innerText = '1,99% a.m.';
+            document.getElementById('res-installment').innerText = `${term}x de ` + formatBRL(installment);
+
+            // Configure WhatsApp Proposal Link
+            const nome = document.getElementById('nome').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const cpf = document.getElementById('cpf').value;
+            const email = document.getElementById('email').value;
+
+            const message = `Olá! Acabei de fazer uma simulação de Crédito com Garantia de Veículo.
+*Nome:* ${nome}
+*CPF:* ${cpf}
+*WhatsApp:* ${whatsapp}
+*E-mail:* ${email}
+*Veículo:* ${modelo} (Ano: ${ano}, Placa: ${placa})
+*Valor Estimado FIPE:* ${valFipeStr}
+*Financiado:* ${financiamento === 'sim' ? 'Sim' : 'Não'}
+*Localização:* ${ufCidade}
+*Crédito Pré-Aprovado:* ${formatBRL(estimatedCredit)}
+*Parcelas:* ${term}x de ${formatBRL(installment)} (Taxa: 1,99% a.m.)`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waLink = `https://wa.me/5511989956521?text=${encodedMessage}`;
+            document.getElementById('btn-proposal').href = waLink;
+
+            // Transition to Step 3
+            const s2 = document.getElementById('step-2');
+            const s3 = document.getElementById('step-3');
+
+            s2.classList.remove('relative', 'opacity-100', 'translate-x-0', 'z-10');
+            s2.classList.add('absolute', 'top-0', 'left-0', 'opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+
+            s3.classList.remove('absolute', 'top-0', 'left-0', 'opacity-0', 'translate-x-full', 'pointer-events-none', 'z-0');
+            s3.classList.add('relative', 'opacity-100', 'translate-x-0', 'z-10');
+        }
+
+        // Input Masking Helpers
+        document.addEventListener('DOMContentLoaded', () => {
+            const telInput = document.getElementById('whatsapp');
+            telInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+                
+                if (v.length > 6) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+                } else if (v.length > 2) {
+                    e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+                } else if (v.length > 0) {
+                    e.target.value = `(${v}`;
+                } else {
+                    e.target.value = "";
+                }
+            });
+
+            const cpfInput = document.getElementById('cpf');
+            cpfInput.addEventListener('input', (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+
+                if (v.length > 9) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6, 9)}-${v.slice(9)}`;
+                } else if (v.length > 6) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6)}`;
+                } else if (v.length > 3) {
+                    e.target.value = `${v.slice(0, 3)}.${v.slice(3)}`;
+                } else {
+                    e.target.value = v;
+                }
+            });
+
+            const moneyMask = (e) => {
+                let v = e.target.value.replace(/\D/g, "");
+                if (!v) {
+                    e.target.value = "";
+                    return;
+                }
+                v = (parseFloat(v) / 100).toFixed(2) + "";
+                v = v.replace(".", ",");
+                v = v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+                e.target.value = "R$ " + v;
+            };
+            document.getElementById('valor_estimado').addEventListener('input', moneyMask);
+        });
+
+        // Intersection Observer for Reveal Scroll Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.remove('opacity-0', 'translate-y-8');
+                            entry.target.classList.add('opacity-100', 'translate-y-0');
+                        }, index * 80);
+                    }
+                });
+            }, { threshold: 0.05 });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle && navLinks) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    const isActive = navLinks.classList.contains('active-menu');
+                    if (isActive) {
+                        navLinks.classList.remove('active-menu');
+                        navLinks.style.display = '';
+                        navLinks.style.flexDirection = '';
+                        navLinks.style.position = '';
+                        navLinks.style.top = '';
+                        navLinks.style.left = '';
+                        navLinks.style.width = '';
+                        navLinks.style.background = '';
+                        navLinks.style.padding = '';
+                        navLinks.style.boxShadow = '';
+                        navLinks.style.zIndex = '';
+                    } else {
+                        navLinks.classList.add('active-menu');
+                        navLinks.style.display = 'flex';
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.position = 'absolute';
+                        navLinks.style.top = '80px';
+                        navLinks.style.left = '0';
+                        navLinks.style.width = '100%';
+                        navLinks.style.background = '#ffffff';
+                        navLinks.style.padding = '2rem';
+                        navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                        navLinks.style.zIndex = '999';
+                    }
+                });
+            }
+
+            // Cookie Consent Banner
+            const cookieConsent = document.getElementById('cookie-consent');
+            const acceptCookiesBtn = document.getElementById('accept-cookies');
+            
+            if (cookieConsent && acceptCookiesBtn) {
+                if (!localStorage.getItem('cookie-consent-accepted')) {
+                    setTimeout(() => {
+                        cookieConsent.classList.remove('translate-y-full');
+                    }, 1000);
+                }
+                
+                acceptCookiesBtn.addEventListener('click', () => {
+                    localStorage.setItem('cookie-consent-accepted', 'true');
+                    cookieConsent.classList.add('translate-y-full');
+                });
+            }
+        });
+    

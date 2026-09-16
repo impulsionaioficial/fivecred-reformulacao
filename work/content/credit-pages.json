@@ -1,0 +1,498 @@
+[
+  {
+    "slug": "bolsa-fivecred",
+    "type": "credit",
+    "title": "Recebe Bolsa Família? Conheça opções de crédito | Fivecred",
+    "description": "Recebe Bolsa Família e precisa de crédito? Entenda o que pode ser analisado, sem promessa de aprovação nem desconto no benefício.",
+    "label": "Para quem recebe Bolsa Família",
+    "headline": "Recebe Bolsa Família? Comece entendendo suas opções.",
+    "intro": "Conte o que você precisa resolver e o valor que procura. Receber Bolsa Família não garante acesso a crédito. Uma eventual opção depende do seu perfil e da análise da instituição financeira.",
+    "profile": "bolsa",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Comece pela sua necessidade",
+        "text": "Escolha objetivo, perfil e valor antes de informar dados pessoais. O primeiro resultado ajuda a organizar a conversa."
+      },
+      {
+        "title": "Benefício e crédito são diferentes",
+        "text": "O Bolsa Família não representa um limite de empréstimo. Esta página não oferece consignado com desconto no benefício."
+      },
+      {
+        "title": "Conheça a proposta inteira",
+        "text": "Se houver uma opção para seu perfil, confira o valor recebido, o custo total, as parcelas e a forma de pagamento antes de decidir."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte o que precisa resolver",
+        "text": "Informe seu objetivo, selecione seu perfil e indique o valor desejado. Não é preciso começar pelo CPF ou pelo NIS."
+      },
+      {
+        "title": "Entenda o que pode ser analisado",
+        "text": "O resultado aponta um caminho de atendimento. A equipe poderá conferir a disponibilidade de uma modalidade conforme sua situação."
+      },
+      {
+        "title": "Avalie antes de contratar",
+        "text": "Se houver proposta após a análise, leia as condições e veja como o pagamento afetaria as despesas da sua família."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Receber Bolsa Família garante um empréstimo?",
+        "a": "Não. O recebimento do benefício, por si só, não garante elegibilidade, limite ou aprovação. Qualquer opção de crédito depende dos critérios da instituição financeira e da análise do seu perfil."
+      },
+      {
+        "q": "As parcelas serão descontadas do Bolsa Família?",
+        "a": "Esta página não oferece essa forma de cobrança. Segundo o Ministério do Desenvolvimento e Assistência Social, novos empréstimos consignados com desconto no Bolsa Família não são permitidos desde junho de 2023. Se houver outra modalidade disponível, a forma de pagamento deverá constar na proposta."
+      },
+      {
+        "q": "O resultado do site é uma aprovação?",
+        "a": "Não. É uma orientação a partir das suas escolhas. Não confirma benefício, não consulta seu NIS e não representa crédito aprovado ou dinheiro disponível."
+      },
+      {
+        "q": "Preciso informar CPF ou NIS para começar?",
+        "a": "Não. Primeiro, você escolhe objetivo, perfil e valor. Dados de identificação ou documentos só devem ser solicitados na etapa posterior, quando estiver claro para que serão usados."
+      },
+      {
+        "q": "Posso consultar opções se estiver com o nome negativado?",
+        "a": "Você pode explicar sua situação no atendimento. Uma restrição no CPF pode influenciar a avaliação, e cada instituição tem critérios próprios. Não há promessa de aprovação ou de ausência de consulta aos órgãos de crédito."
+      },
+      {
+        "q": "Como saber se uma parcela cabe no meu orçamento?",
+        "a": "Considere o que sobra depois de alimentação, moradia, energia e outras despesas essenciais. Compare o custo total e todas as parcelas da proposta, preservando o dinheiro necessário à sua família."
+      },
+      {
+        "q": "Preciso pagar para liberar o crédito?",
+        "a": "A Fivecred não cobra taxa, depósito ou PIX antecipado para análise ou liberação de crédito. Se alguém pedir um pagamento para liberar dinheiro em nome da Fivecred, interrompa o contato e confira os canais oficiais."
+      }
+    ],
+    "editorial": {
+      "title": "A renda da sua família vem primeiro.",
+      "text": "Antes de assumir uma parcela, olhe para as despesas que não podem esperar. O benefício tem a função de apoiar a família; recebê-lo não transforma esse valor em crédito disponível. Comece pelas suas necessidades e só avance se uma proposta fizer sentido no seu orçamento."
+    },
+    "partnerGroup": "popular",
+    "aliases": [
+      "emprestimo-bolsa-familia.html"
+    ]
+  },
+  {
+    "slug": "consignado-fivecred",
+    "type": "credit",
+    "title": "Empréstimo consignado INSS: entenda suas opções | Fivecred",
+    "description": "Aposentado ou pensionista do INSS? Entenda o crédito consignado, o desconto no benefício e as condições que precisam ser avaliadas antes da contratação.",
+    "label": "Para aposentados e pensionistas",
+    "headline": "Seu benefício faz parte do orçamento. O crédito também precisa caber.",
+    "intro": "Conheça o empréstimo consignado para aposentados e pensionistas do INSS. As parcelas são descontadas do benefício quando a contratação é autorizada. Disponibilidade, juros e prazo dependem de análise.",
+    "profile": "beneficio",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Entenda o desconto mensal",
+        "text": "No consignado, a parcela reduz o valor do benefício que fica disponível para as outras despesas. Considere esse compromisso antes de contratar."
+      },
+      {
+        "title": "Veja o que pode ser avaliado",
+        "text": "O tipo de benefício, as condições para contratar e o valor disponível para novos descontos fazem parte da análise."
+      },
+      {
+        "title": "Compare uma nova proposta",
+        "text": "Se já possui consignado, pergunte sobre portabilidade ou refinanciamento. Compare o custo total, o prazo e o valor final a pagar."
+      }
+    ],
+    "how": [
+      {
+        "title": "Defina seu objetivo e valor",
+        "text": "Diga o que quer resolver, escolha o perfil de beneficiário e informe quanto precisa, antes dos dados pessoais."
+      },
+      {
+        "title": "Confira as condições do benefício",
+        "text": "No atendimento, a instituição verifica o tipo de benefício, a possibilidade de novos descontos e os requisitos para a contratação."
+      },
+      {
+        "title": "Revise a proposta",
+        "text": "Confira juros, custo total, número de parcelas e valor que restará no benefício. A contratação depende de aprovação e da sua autorização."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Quem pode consultar um empréstimo consignado INSS?",
+        "a": "Aposentados e pensionistas podem consultar a disponibilidade. Ter um benefício não basta: o tipo de benefício, as condições vigentes, o valor disponível para novos descontos e os critérios da instituição precisam ser verificados. Beneficiários do BPC devem confirmar as regras específicas no atendimento."
+      },
+      {
+        "q": "Como as parcelas são pagas?",
+        "a": "Quando o consignado é contratado e autorizado, as parcelas são descontadas mensalmente do benefício. Esse desconto reduz o valor recebido para as demais despesas durante o prazo do contrato."
+      },
+      {
+        "q": "O que significa ter valor disponível para desconto?",
+        "a": "É a parte do benefício que ainda pode ser comprometida com parcelas dentro das regras aplicáveis, considerando os contratos existentes. Esse valor precisa ser confirmado na análise; uma informação preenchida no site não substitui a verificação."
+      },
+      {
+        "q": "Já tenho um consignado. Posso avaliar outra condição?",
+        "a": "Você pode pedir uma avaliação de portabilidade ou refinanciamento, quando disponíveis. Compare o saldo devedor, o custo total, o prazo e o valor final a pagar. Uma parcela menor, sozinha, não comprova economia."
+      },
+      {
+        "q": "A taxa e o prazo mostrados na proposta são iguais para todos?",
+        "a": "Não. As condições dependem das regras vigentes e da instituição responsável. Leia a taxa de juros, o Custo Efetivo Total, que reúne os custos da operação, o prazo e as parcelas antes de aceitar."
+      },
+      {
+        "q": "Quem está negativado tem aprovação garantida?",
+        "a": "Não. A instituição aplica seus critérios de análise mesmo nas operações com desconto no benefício. Não prometemos aprovação nem ausência de consulta aos órgãos de crédito."
+      },
+      {
+        "q": "O site consulta meu benefício automaticamente?",
+        "a": "O primeiro resultado usa apenas suas escolhas de objetivo, perfil e valor. Ele não consulta o INSS, não confirma margem disponível e não aprova um contrato."
+      },
+      {
+        "q": "É preciso pagar alguma taxa antes da liberação?",
+        "a": "A Fivecred não cobra depósito, taxa ou PIX antecipado para analisar ou liberar crédito. Os custos de uma eventual contratação precisam estar claros na proposta."
+      }
+    ],
+    "editorial": {
+      "title": "Olhe para o valor que fica no benefício.",
+      "text": "A parcela do consignado acompanha o seu orçamento todo mês. Antes de decidir, considere alimentação, medicamentos, moradia e contratos que já estão em andamento. Uma proposta precisa fazer sentido pelo custo total e pelo compromisso que você assume."
+    },
+    "partnerGroup": "banks",
+    "aliases": [
+      "emprestimo-consignado-inss.html"
+    ]
+  },
+  {
+    "slug": "luz-fivecred",
+    "type": "credit",
+    "title": "Empréstimo na conta de luz: como funciona | Fivecred",
+    "description": "Entenda o crédito com parcelas na conta de luz. Consulte o caminho de análise conforme sua titularidade, distribuidora e perfil, sem aprovação garantida.",
+    "label": "Para titulares da conta de luz",
+    "headline": "Crédito na conta de luz, com clareza sobre cada parcela.",
+    "intro": "Nesta modalidade, as parcelas do empréstimo podem ser cobradas na fatura de energia. A disponibilidade depende da sua distribuidora, da titularidade da conta e da análise da instituição financeira.",
+    "profile": "luz",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Comece pela sua realidade",
+        "text": "Informe que a conta de luz está no seu nome e o valor que procura. A disponibilidade para sua região será verificada no atendimento."
+      },
+      {
+        "title": "Entenda a cobrança",
+        "text": "A parcela do empréstimo é um valor adicional ao consumo de energia. Consulte como ela aparecerá na fatura antes de contratar."
+      },
+      {
+        "title": "Planeje a conta completa",
+        "text": "Considere a parcela junto à variação do consumo de energia e às outras despesas. O crédito tem juros e pode incluir outros custos."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte sua necessidade",
+        "text": "Escolha objetivo, perfil de titular da conta de luz e valor desejado. O direcionamento aparece antes do cadastro pessoal."
+      },
+      {
+        "title": "Confira a disponibilidade",
+        "text": "Na etapa de atendimento, a equipe verifica a distribuidora, a titularidade e os documentos necessários para a análise."
+      },
+      {
+        "title": "Leia as condições de pagamento",
+        "text": "Se a proposta for aprovada, confira custo total, prazo, parcelas e cobrança na fatura antes de autorizar a contratação."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O que é o empréstimo na conta de luz?",
+        "a": "É uma modalidade de crédito em que as parcelas são cobradas na fatura de energia, quando essa forma de pagamento está disponível. O valor da parcela é adicional ao consumo de luz e deve estar descrito no contrato."
+      },
+      {
+        "q": "Basta ter uma conta de luz no meu nome para ser aprovado?",
+        "a": "Não. A titularidade é uma informação da análise. A instituição também precisa verificar a disponibilidade da modalidade, os documentos e os critérios aplicáveis ao seu perfil."
+      },
+      {
+        "q": "Qualquer distribuidora ou cidade é atendida?",
+        "a": "A disponibilidade precisa ser confirmada para sua distribuidora e região. A seleção do perfil no site não confirma um convênio ativo nem garante que a modalidade esteja disponível no seu endereço."
+      },
+      {
+        "q": "O limite depende do valor da minha conta de energia?",
+        "a": "O valor da fatura, sozinho, não define um limite aprovado. A instituição avalia as informações necessárias conforme seus critérios. O valor que você informa no início é o que deseja solicitar."
+      },
+      {
+        "q": "O empréstimo tem juros?",
+        "a": "Sim. Compare juros, tributos, eventuais tarifas e o Custo Efetivo Total da proposta. Verifique também o valor total a pagar, além do valor de cada parcela."
+      },
+      {
+        "q": "E se a conta estiver atrasada ou eu tiver restrição no CPF?",
+        "a": "Informe essa situação no atendimento. As possibilidades dependem da política da instituição e da análise da conta. Não há aprovação automática nem promessa de crédito sem consulta."
+      },
+      {
+        "q": "O que acontece se eu mudar de endereço ou de titularidade?",
+        "a": "Antes de contratar, pergunte como as parcelas serão pagas se a conta mudar. Siga o procedimento previsto no contrato e fale com a instituição responsável para atualizar a cobrança."
+      },
+      {
+        "q": "Preciso pagar um valor para liberar o dinheiro?",
+        "a": "A Fivecred não pede taxa, depósito ou PIX antecipado para análise ou liberação do crédito. O atendimento deve esclarecer todos os custos da proposta antes da sua decisão."
+      }
+    ],
+    "editorial": {
+      "title": "A parcela vem junto. A decisão merece atenção.",
+      "text": "Sua conta de energia pode variar ao longo do ano. Ao avaliar essa modalidade, some o consumo previsto à parcela do empréstimo e confira o total a pagar. Ter uma única fatura facilita a visualização, mas não elimina os juros nem o compromisso com a dívida."
+    },
+    "partnerGroup": "popular",
+    "aliases": [
+      "emprestimo-conta-de-luz.html"
+    ]
+  },
+  {
+    "slug": "imovel-fivecred",
+    "type": "credit",
+    "title": "Empréstimo com garantia de imóvel | Fivecred",
+    "description": "Entenda como usar um imóvel como garantia de crédito, quais etapas são avaliadas e o risco de perda do bem em caso de inadimplência.",
+    "label": "Para quem tem um imóvel",
+    "headline": "Seu imóvel como garantia. Sua decisão com todos os detalhes.",
+    "intro": "Conheça o crédito que usa um imóvel como garantia. O valor e as condições dependem da análise financeira, documental e da avaliação do bem. O atraso no pagamento pode levar à perda do imóvel.",
+    "profile": "garantia",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Crédito para seu objetivo",
+        "text": "Informe o valor que precisa e para que pretende usá-lo. A finalidade aceita e as condições serão confirmadas na proposta."
+      },
+      {
+        "title": "Uso do imóvel durante o contrato",
+        "text": "Em regra, você pode continuar usando o imóvel enquanto cumpre o contrato. A garantia vincula o bem ao pagamento da dívida."
+      },
+      {
+        "title": "Condições que precisam fazer sentido",
+        "text": "Compare juros, prazo, valor total e eventuais custos de avaliação e registro. A garantia exige cuidado com a capacidade de pagamento."
+      }
+    ],
+    "how": [
+      {
+        "title": "Defina o valor e o objetivo",
+        "text": "Comece pelo que quer resolver e selecione que possui um bem. As informações do imóvel vêm depois do direcionamento inicial."
+      },
+      {
+        "title": "Entenda a avaliação",
+        "text": "A instituição analisa sua capacidade de pagamento, a documentação e o imóvel. Possuir o bem não garante a aprovação."
+      },
+      {
+        "title": "Confira contrato e garantia",
+        "text": "Revise custos, parcelas e consequências do atraso. Após aprovação, a liberação segue as etapas contratuais e de registro exigidas."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Como funciona o empréstimo com garantia de imóvel?",
+        "a": "Você oferece um imóvel como garantia de uma dívida. A instituição avalia o bem, a documentação e sua capacidade de pagamento para definir se pode apresentar uma proposta. O imóvel fica vinculado ao cumprimento do contrato."
+      },
+      {
+        "q": "Posso perder meu imóvel se não pagar?",
+        "a": "Sim. A inadimplência pode levar à execução da garantia e à perda do imóvel, conforme o contrato e a legislação aplicável. Antes de assumir a dívida, avalie o impacto das parcelas e procure a instituição se houver dificuldade de pagamento."
+      },
+      {
+        "q": "Preciso sair do imóvel durante o contrato?",
+        "a": "Em regra, o uso pode continuar enquanto você cumpre as obrigações do contrato. Isso não elimina o risco da garantia. Leia as condições relacionadas ao bem e ao pagamento antes de assinar."
+      },
+      {
+        "q": "Meu imóvel ainda está financiado. Posso consultar?",
+        "a": "Pode consultar. A possibilidade depende do saldo devedor, da documentação e da política da instituição. Não há garantia de aceitação ou de um valor líquido disponível apenas por informar o preço do imóvel."
+      },
+      {
+        "q": "Como é definido o valor que posso receber?",
+        "a": "A instituição considera a avaliação do imóvel, sua capacidade de pagamento, eventuais dívidas sobre o bem e seus próprios critérios. O valor estimado que você informar não corresponde a um limite aprovado."
+      },
+      {
+        "q": "Quais custos preciso conferir?",
+        "a": "Peça os juros, o Custo Efetivo Total, as parcelas e o valor total a pagar. Confirme também eventuais despesas de avaliação e registro e se há correção por índice que possa alterar valores ao longo do contrato."
+      },
+      {
+        "q": "Quanto tempo leva para liberar o crédito?",
+        "a": "O prazo depende da análise, da avaliação do imóvel, dos documentos e das etapas de formalização e registro. O atendimento pode explicar a previsão do seu caso, mas esta página não garante uma data de liberação."
+      },
+      {
+        "q": "É a mesma coisa que financiar a compra de um imóvel?",
+        "a": "São finalidades diferentes. Nesta página, você consulta crédito usando um imóvel que já possui como garantia. Para comprar outro imóvel, o atendimento deve avaliar a modalidade adequada ao objetivo."
+      },
+      {
+        "q": "A Fivecred cobra depósito para liberar o empréstimo?",
+        "a": "Não. A Fivecred não cobra taxa ou depósito antecipado para análise ou liberação de crédito. Eventuais custos contratuais de avaliação, registro e da operação devem ser explicados na proposta da instituição responsável."
+      }
+    ],
+    "editorial": {
+      "title": "O plano precisa considerar também o seu imóvel.",
+      "text": "Uma garantia não substitui o planejamento das parcelas. Considere mudanças na renda, despesas do imóvel e toda a duração do contrato. Só avance depois de entender o custo total e o risco de perder o bem se a dívida não for paga."
+    },
+    "partnerGroup": "secured",
+    "aliases": [
+      "emprestimo-garantia-imovel.html"
+    ]
+  },
+  {
+    "slug": "veiculo-fivecred",
+    "type": "credit",
+    "title": "Empréstimo com garantia de veículo | Fivecred",
+    "description": "Consulte opções de empréstimo usando seu veículo como garantia. Entenda análise, avaliação do carro, custos e risco de perda do bem se a dívida não for paga.",
+    "label": "Para quem tem um veículo",
+    "headline": "Seu carro pode ser uma garantia. Entenda o compromisso.",
+    "intro": "Use o veículo que você já possui para consultar uma opção de empréstimo. A proposta depende da análise do seu perfil e do carro. Se a dívida não for paga, há risco de perda do veículo.",
+    "profile": "garantia",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Seu objetivo vem primeiro",
+        "text": "Comece pelo valor que precisa e pelo que quer resolver. O empréstimo será avaliado com o seu veículo como garantia."
+      },
+      {
+        "title": "Uso do carro no dia a dia",
+        "text": "Em regra, você continua usando o veículo durante o contrato, enquanto cumpre suas obrigações. O bem permanece vinculado à dívida."
+      },
+      {
+        "title": "Avaliação além do preço do carro",
+        "text": "Ano, estado de conservação, documentação e eventuais financiamentos fazem parte da avaliação, junto à sua capacidade de pagamento."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte o que precisa resolver",
+        "text": "Escolha seu objetivo, selecione que possui um bem e informe o valor desejado, antes de preencher dados pessoais."
+      },
+      {
+        "title": "Confira se o veículo pode ser aceito",
+        "text": "No atendimento, serão verificadas as características do carro, sua documentação e a necessidade de avaliação ou vistoria."
+      },
+      {
+        "title": "Decida com a proposta em mãos",
+        "text": "Após a análise, confira custo total, parcelas, prazo e regras da garantia. A liberação depende da aprovação e da formalização exigida."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Esta opção serve para comprar um carro?",
+        "a": "Esta página é de empréstimo com garantia de veículo: você usa um carro que já possui como garantia de uma dívida. Se o objetivo for comprar um veículo, informe isso no atendimento para avaliar outro caminho."
+      },
+      {
+        "q": "Posso continuar usando o veículo?",
+        "a": "Em regra, sim, enquanto cumpre as condições do contrato. O veículo fica vinculado ao pagamento da dívida. Consulte as obrigações sobre uso, documentação e conservação previstas na proposta."
+      },
+      {
+        "q": "Posso perder meu carro se não pagar?",
+        "a": "Sim. O atraso pode levar à execução da garantia e à perda do veículo, conforme o contrato e a legislação aplicável. Considere esse risco especialmente se depende do carro para trabalhar ou se deslocar."
+      },
+      {
+        "q": "Meu carro ainda está financiado. Posso consultar?",
+        "a": "Pode consultar. A instituição precisa avaliar o saldo devedor, a situação do financiamento e o veículo. A aceitação e um eventual valor disponível dependem dessa análise."
+      },
+      {
+        "q": "Existe limite de ano ou modelo para o veículo?",
+        "a": "Cada instituição define os veículos que aceita. Ano, modelo, condição e documentação devem ser confirmados no atendimento. Esta página não garante a aceitação de uma idade ou categoria específica."
+      },
+      {
+        "q": "Como é calculado o valor do empréstimo?",
+        "a": "O preço estimado do carro é uma das informações consideradas. O valor depende da avaliação do bem, da sua capacidade de pagamento, de eventuais dívidas existentes e dos critérios da instituição."
+      },
+      {
+        "q": "A vistoria é sempre digital e a liberação ocorre no mesmo dia?",
+        "a": "O formato da avaliação e o prazo dependem da instituição e das características do caso. O atendimento informa as etapas necessárias. Não há promessa de vistoria exclusivamente digital nem de liberação em prazo fixo."
+      },
+      {
+        "q": "O que preciso comparar antes de contratar?",
+        "a": "Confira o valor líquido que receberá, os juros, o custo total, as parcelas e o prazo. Leia também as obrigações ligadas ao veículo e as consequências do atraso no pagamento."
+      },
+      {
+        "q": "Preciso fazer um PIX para liberar meu crédito?",
+        "a": "Não. A Fivecred não cobra taxa, depósito ou PIX antecipado para análise ou liberação de crédito. Se houver pedido desse tipo em seu nome, interrompa o contato e confira os canais oficiais."
+      }
+    ],
+    "editorial": {
+      "title": "Se o carro faz parte da sua rotina, inclua isso na decisão.",
+      "text": "Antes de oferecer o veículo como garantia, considere o quanto você depende dele e como pagaria as parcelas se a renda mudasse. Compare a proposta inteira, incluindo custos e obrigações, e só avance depois de compreender o risco sobre o bem."
+    },
+    "partnerGroup": "secured",
+    "aliases": []
+  },
+  {
+    "slug": "fivecred-landing-page",
+    "type": "home",
+    "title": "Encontre um caminho para o seu crédito | Fivecred",
+    "description": "Comece pelo que precisa resolver. Escolha objetivo, perfil e valor para entender um caminho de crédito antes de informar seus dados pessoais.",
+    "label": "Comece pelo que você precisa",
+    "headline": "O que você quer resolver com crédito?",
+    "intro": "Você não precisa conhecer todos os nomes de empréstimo. Conte seu objetivo, o que faz parte da sua realidade e o valor que procura. A Fivecred ajuda a entender o próximo passo.",
+    "profile": "geral",
+    "goal": "credito",
+    "heroAsset": null,
+    "benefits": [
+      {
+        "title": "Comece pela sua realidade",
+        "text": "Carteira assinada, benefício, saldo no FGTS, um bem ou conta de luz no seu nome: escolha a situação que faz sentido para você."
+      },
+      {
+        "title": "Entenda o caminho antes do cadastro",
+        "text": "Primeiro, você informa objetivo, perfil e valor. Depois do direcionamento, pode decidir se quer continuar para o atendimento."
+      },
+      {
+        "title": "Compare com calma",
+        "text": "Se uma opção estiver disponível após a análise, confira juros, parcelas, prazo e o total a pagar antes de contratar."
+      }
+    ],
+    "how": [
+      {
+        "title": "Escolha seu objetivo",
+        "text": "Diga o que quer resolver. Sua necessidade orienta o caminho, sem exigir que você escolha um nome de produto bancário."
+      },
+      {
+        "title": "Conte o que você tem",
+        "text": "Selecione seu perfil, benefício ou bem. Essa escolha ajuda a organizar possibilidades e não confirma aprovação."
+      },
+      {
+        "title": "Informe o valor desejado",
+        "text": "Veja o resumo das suas escolhas e um direcionamento inicial. Só então decida se quer continuar e fornecer dados para atendimento."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Preciso saber qual empréstimo quero contratar?",
+        "a": "Não. Comece pelo seu objetivo, escolha a situação que descreve seu perfil e informe o valor desejado. O direcionamento ajuda a entender qual conversa iniciar com o atendimento."
+      },
+      {
+        "q": "Preciso informar CPF logo no início?",
+        "a": "Não. A primeira parte pede objetivo, perfil e valor. Dados pessoais entram na etapa posterior, depois de você ver o direcionamento e escolher continuar."
+      },
+      {
+        "q": "O resultado significa que tenho dinheiro aprovado?",
+        "a": "Não. O resultado organiza suas escolhas e indica um caminho de atendimento. Ele não confirma saldo, limite ou aprovação. Uma proposta depende da análise da instituição financeira."
+      },
+      {
+        "q": "O site encontra dinheiro esquecido em meu nome?",
+        "a": "Não. O fluxo apresenta caminhos de crédito e não realiza consulta a valores a receber, contas bancárias, INSS ou FGTS. As informações escolhidas por você servem apenas ao direcionamento inicial."
+      },
+      {
+        "q": "Antecipar o FGTS ou contratar consignado cria uma obrigação financeira?",
+        "a": "Sim. São operações de crédito com condições contratuais próprias. O consignado compromete parte dos pagamentos futuros do salário ou benefício. Na antecipação do FGTS, saques-aniversário futuros pagam a operação e há bloqueio de saldo como garantia, conforme as regras aplicáveis."
+      },
+      {
+        "q": "Tenho mais de um perfil. Qual devo escolher?",
+        "a": "Comece pelo que melhor representa sua situação e seu objetivo. Você pode voltar e ajustar a escolha. No atendimento, informe outros vínculos ou bens que queira considerar."
+      },
+      {
+        "q": "Receber Bolsa Família garante acesso a crédito?",
+        "a": "Não. O benefício não assegura elegibilidade nem representa limite disponível. Não oferecemos aqui consignado com desconto no Bolsa Família; uma eventual alternativa depende do perfil e das condições da instituição."
+      },
+      {
+        "q": "Como comparar uma proposta?",
+        "a": "Confira quanto receberá, quanto pagará no total, o valor das parcelas, os juros e o Custo Efetivo Total. Se houver garantia de imóvel ou veículo, entenda também o risco de perda do bem se a dívida não for paga."
+      },
+      {
+        "q": "A Fivecred pede pagamento antecipado?",
+        "a": "A Fivecred não cobra taxa, depósito ou PIX antecipado para análise ou liberação de crédito. Os custos da eventual contratação devem ser apresentados antes da sua decisão."
+      }
+    ],
+    "editorial": {
+      "title": "Um próximo passo que você consegue entender.",
+      "text": "Crédito começa com uma necessidade e vira um compromisso no orçamento. Esta jornada ajuda a organizar o que você procura para chegar ao atendimento com mais clareza. A escolha final vem depois de conhecer a proposta, seus custos e as condições de pagamento."
+    },
+    "partnerGroup": "banks",
+    "aliases": []
+  }
+]

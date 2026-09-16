@@ -1,0 +1,128 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.scrolled {
+  background: rgba(13,13,13,0.95);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo { cursor: pointer; display: flex; align-items: center; }
+.logo img { height: 32px; width: auto; }
+
+.links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.links button {
+  background: transparent;
+  color: rgba(0,0,0,0.55);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.18s;
+  border: none;
+  cursor: pointer;
+}
+
+.scrolled .links button {
+  color: rgba(255,255,255,0.55);
+}
+
+.links button:hover {
+  color: #F26522;
+  background: rgba(242,101,34,0.06);
+}
+
+.cta {
+  background: #F26522;
+  color: white;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 100px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: #D9581A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(242,101,34,0.4);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1A1A1A;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.scrolled .burger span { background: white; }
+
+.b1 { transform: translateY(7px) rotate(45deg); }
+.b2 { opacity: 0; }
+.b3 { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile {
+  background: #0D0D0D;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 28px 20px;
+  gap: 4px;
+}
+
+.mobile button {
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+}
+
+.mobileCta {
+  margin-top: 10px !important;
+  background: #F26522 !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 14px !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+
+@media (max-width: 768px) {
+  .links, .cta { display: none; }
+  .burger { display: flex; }
+}

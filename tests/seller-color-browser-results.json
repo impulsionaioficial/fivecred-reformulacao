@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "layouts": [
+    {
+      "width": 320,
+      "overflow": false,
+      "checked": 82,
+      "contrastFailures": [],
+      "heroBackground": "rgb(248, 249, 251)",
+      "formTop": 499
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "checked": 82,
+      "contrastFailures": [],
+      "heroBackground": "rgb(248, 249, 251)",
+      "formTop": 441
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "checked": 83,
+      "contrastFailures": [],
+      "heroBackground": "rgb(248, 249, 251)",
+      "formTop": 497
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "checked": 83,
+      "contrastFailures": [],
+      "heroBackground": "rgb(248, 249, 251)",
+      "formTop": 174
+    }
+  ],
+  "formAndHtmlUnchanged": true,
+  "orangePrimaryAction": true,
+  "errors": []
+}
