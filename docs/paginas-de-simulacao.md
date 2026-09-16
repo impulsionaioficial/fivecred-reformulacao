@@ -1,6 +1,6 @@
 # Páginas próprias dos formulários
 
-As LPs apresentam uma caixa branca com chamada e botão laranja. O botão abre o formulário do produto na mesma aba. Os atalhos por perfil e as chamadas finais também levam ao formulário da respectiva LP.
+As LPs apresentam uma caixa branca com chamada e botão laranja. O botão abre o formulário do produto na mesma aba. As chamadas finais também levam ao formulário da respectiva LP. Os cartões da seção “Comece pelo que você tem” abrem a LP do produto escolhido.
 
 | LP | Formulário |
 | --- | --- |
@@ -33,4 +33,10 @@ Rode `node work/build-sites.cjs` para regenerar os documentos e `node work/build
 
 ## Validação desta alteração
 
-Verificação estrutural: dez formulários, 54 links de conversão, dez arquivos de comportamento intactos e 22 espaços de imagem preservados. Navegador: 50 combinações de página de formulário/tamanho e 110 combinações de LP/largura. Testes dos três webhooks originais (geral, afiliados, compra de carta) e dos cinco resultados de WhatsApp com requisições interceptadas. Nenhum lead real enviado.
+Verificação estrutural: dez formulários, links de conversão, dez arquivos de comportamento intactos e 22 espaços de imagem preservados. Navegador: 50 combinações de página de formulário/tamanho e 110 combinações de LP/largura. Testes dos três webhooks originais (geral, afiliados, compra de carta) e dos cinco resultados de WhatsApp com requisições interceptadas. Nenhum lead real enviado.
+
+## Navegação por produto
+
+A seção de perfis da página inicial, da LP geral e da campanha usa links para cada produto. Aposentadoria/benefício abre `consignado-fivecred/index.html`; conta de luz abre `luz-fivecred/index.html`; Bolsa Família abre `bolsa-fivecred/index.html`. O cartão de garantia oferece escolhas independentes para `veiculo-fivecred/index.html` e `imovel-fivecred/index.html`.
+
+As páginas CLT e FGTS já existem no site principal e não fazem parte das dez LPs desta pasta. Os cartões usam seus endereços oficiais publicados, na mesma aba: `https://www.fivecred.com.br/emprestimo-consignado-clt` e `https://www.fivecred.com.br/emprestimo-fgts`. As páginas originais e seus formulários não são alterados por esses links.

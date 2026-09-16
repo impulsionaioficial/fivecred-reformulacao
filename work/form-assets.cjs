@@ -1,7 +1,7 @@
 const staticSlugs = new Set(['bolsa-fivecred','consignado-fivecred','luz-fivecred','imovel-fivecred','veiculo-fivecred','fivecred-landing-page']);
 const connectedSlugs = new Set(['fivecred-next','fivecred-afiliados','contemplada.fivecred.com.br']);
 function assetsFor(page,prefix='../') {
- const styles=[prefix+'shared/site.css',prefix+'shared/lp-design.css?v=20260916-production',prefix+'shared/whatsapp-contact.css?v=20260915-1'];
+ const styles=[prefix+'shared/site.css',prefix+'shared/lp-design.css?v=20260916-products',prefix+'shared/whatsapp-contact.css?v=20260915-1'];
  const scripts=[prefix+'shared/content-panels.js?v=20260916-editorial',prefix+'shared/whatsapp-contact.js?v=20260915-1',prefix+'shared/site.js?v=20260916-production'];
  if(page.type==='seller'){styles.push(prefix+'shared/seller.css?v=20260915');if(page.formPage)scripts.push(prefix+'shared/journey.js');}
  if(page.formPage&&staticSlugs.has(page.slug)){const a=require('./original-static-forms.cjs').originalStaticFormAssets(page.slug,prefix);styles.push(a.css);scripts.push(a.script);}
