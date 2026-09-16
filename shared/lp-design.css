@@ -1,6 +1,6 @@
 /* Approved Fivecred visual language, shared by all local landing pages. */
 .header .logo{display:flex;align-items:center;width:230px;height:48px}
-.header .logo img{width:100%;height:auto}
+.header .logo img{width:92%;height:auto}
 .footer .logo{display:block;width:180px;max-width:100%}
 .lp-page{--navy:#1c2d40;--text:#526071;--orange:#ff6b00;--orange-light:#fff0e4;--orange-dark:#a94b13;--line:#e1e6eb;color:var(--navy);font-size:18px;line-height:1.6}
 .lp-page h1,.lp-page h2,.lp-page h3{font-weight:550;letter-spacing:-.025em;text-wrap:balance}
