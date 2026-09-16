@@ -20,6 +20,12 @@ Referência da configuração: https://vercel.com/docs/project-configuration/ver
 
 Nenhum teste deve enviar leads reais. Os testes de navegador interceptam webhooks e abertura do WhatsApp.
 
+## Telas menores
+
+Abaixo de 1280 px, o menu fica compacto e os blocos principais passam a uma coluna. O layout amplia o espaço dos formulários, permite rolagem no menu em telas baixas e mantém a altura original da barra de navegação. O botão de WhatsApp permanece no cabeçalho e no fim da página, sem sobrepor os campos. Os links legais do rodapé têm área de toque de pelo menos 44 px.
+
+Os ajustes compartilhados ficam em `shared/responsive.css`, carregado depois dos estilos das LPs. Os formulários e seus destinos de envio não são alterados por essa camada.
+
 ## Desenvolvimento
 
 1. Edite conteúdo em `work/content/`, textos de formulário em `work/form-copy.cjs`, templates em `work/build-sites.cjs`, `work/seller-page.cjs` e `work/legal-pages.cjs`.
@@ -33,6 +39,7 @@ Os três projetos Next mantêm entradas para execução local. Após mover a pas
 
 ## Verificações
 
+- Layout responsivo: `node tests/responsive-layout.cjs` (110 combinações de página/largura, menus em telas baixas, ancoragem e ausência de sobreposição do WhatsApp; rode o build estático antes).
 - Estrutura, links e acessibilidade básica: `node tests/verify-sites.cjs`.
 - Saída de produção, raiz, versões mobile/desktop, erro e nova tentativa do webhook geral: `node tests/production-browser.cjs` (rode o build estático antes).
 - Contato WhatsApp e destinos originais: `node tests/whatsapp-contact-browser.cjs`.

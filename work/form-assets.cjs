@@ -6,6 +6,7 @@ function assetsFor(page,prefix='../') {
  if(page.type==='seller'){styles.push(prefix+'shared/seller.css?v=20260915');scripts.push(prefix+'shared/journey.js');}
  if(staticSlugs.has(page.slug)){const a=require('./original-static-forms.cjs').originalStaticFormAssets(page.slug,prefix);styles.push(a.css);scripts.push(a.script);}
  if(connectedSlugs.has(page.slug)){styles.push(prefix+'shared/connected-forms.css');scripts.push(prefix+'shared/connected-forms.js?v=20260915-wa');}
+ styles.push(prefix+'shared/responsive.css?v=20260916-compact');
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){

@@ -4,7 +4,8 @@
     "/shared/site.css",
     "/shared/lp-design.css?v=20260916-production",
     "/shared/whatsapp-contact.css?v=20260915-1",
-    "/shared/connected-forms.css"
+    "/shared/connected-forms.css",
+    "/shared/responsive.css?v=20260916-compact"
   ],
   "scripts": [
     "/shared/whatsapp-contact.js?v=20260915-1",

@@ -14,3 +14,5 @@ node_modules/
 /public-site/
 
 /tests/screenshots/production-*.png
+
+/tests/screenshots/responsive-*.png

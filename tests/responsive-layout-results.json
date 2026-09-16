@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "pages": 11,
+  "viewportChecks": 110,
+  "widths": [
+    320,
+    390,
+    600,
+    768,
+    960,
+    1024,
+    1206,
+    1279,
+    1280,
+    1440
+  ],
+  "smallLandscapeMenu": true,
+  "formsClearOfWhatsApp": true,
+  "navbarHeightPreserved": true,
+  "footerTouchTargets": "44px minimum",
+  "errors": []
+}
