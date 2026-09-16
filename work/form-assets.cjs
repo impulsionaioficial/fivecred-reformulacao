@@ -12,6 +12,7 @@ function assetsFor(page,prefix='../') {
  styles.push(prefix+'shared/brand-refresh.css?v=20260916-editorial');
  styles.push(prefix+'shared/simulation-pages.css?v=20260916-amount');
  scripts.push(prefix+'shared/simulation-amount.js?v=20260916');
+ if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260916');scripts.push(prefix+'shared/partner-marquee.js?v=20260916');}
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){
