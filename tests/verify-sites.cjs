@@ -35,7 +35,7 @@ for(const file of files){
 }
 const css=postcss.parse(read('shared/site.css'));let rules=0;css.walkRules(()=>rules++);
 for(const script of ['shared/site.js','shared/journey.js']){new Function(read(script));assert(!/\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage|sessionStorage|window\.open\s*\(/.test(read(script)),script+' network/persistence');}
-assert.equal(manifest.length,10,'Ten active LPs');
+assert.equal(manifest.length,12,'Twelve active LPs');
 assert(!manifest.some(p=>p.type==='marketplace'),'No marketplace generated');
 const dom=new JSDOM(read('fivecred-next/index.html'),{url:'http://127.0.0.1:4174/fivecred-next/index.html',runScripts:'outside-only',pretendToBeVisual:true});const w=dom.window,d=w.document;
 w.matchMedia=()=>({matches:true});w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};w.eval(read('shared/whatsapp-contact.js'));w.eval(read('shared/site.js'));d.dispatchEvent(new w.Event('DOMContentLoaded'));

@@ -19,6 +19,36 @@
       "source": "/fivecred-next/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/emprestimo-consignado-clt",
+      "destination": "/clt-fivecred/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/emprestimo-consignado-clt/",
+      "destination": "/clt-fivecred/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/emprestimo-consignado-clt.html",
+      "destination": "/clt-fivecred/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/emprestimo-fgts",
+      "destination": "/fgts-fivecred/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/emprestimo-fgts/",
+      "destination": "/fgts-fivecred/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/emprestimo-fgts.html",
+      "destination": "/fgts-fivecred/index.html",
+      "permanent": true
     }
   ],
   "headers": [

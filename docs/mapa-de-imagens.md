@@ -24,6 +24,8 @@ Os espaços aparecem identificados nas páginas até que a foto ou arte seja for
 | Comprar uma carta contemplada | `contemplada.fivecred.com.br-contexto.webp` | foto de uma família adulta em frente a um imóvel, ou arte Fivecred que represente a compra de imóvel e veículo. |
 | Parceria Fivecred | `fivecred-afiliados-contexto.webp` | foto oficial de uma reunião da equipe Fivecred com um parceiro, ou arte institucional sobre conexão e atendimento. |
 | Venda da própria carta | `lp-venda-carta-contemplada-contexto.webp` | foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real. |
+| Consignado CLT | `clt-fivecred-contexto.webp` | trabalhador adulto em ambiente profissional, com representação natural e acolhedora; foto ou design Fivecred. |
+| Antecipação FGTS | `fgts-fivecred-contexto.webp` | pessoa adulta planejando suas finanças ou design Fivecred sobre FGTS e calendário; evitar valores ou liberação garantidos. |
 
 ## Equipe — utilizada em todas as LPs
 

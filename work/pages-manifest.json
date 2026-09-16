@@ -64,6 +64,26 @@
     "simulation": "fivecred-landing-page/simulacao.html"
   },
   {
+    "slug": "clt-fivecred",
+    "type": "credit",
+    "title": "Consignado CLT: conheça suas opções | Fivecred",
+    "description": "Trabalha de carteira assinada? Conte sobre seu vínculo e sua renda. A Fivecred orienta você sobre as possibilidades de crédito e as condições antes de decidir.",
+    "aliases": [
+      "emprestimo-consignado-clt.html"
+    ],
+    "simulation": "clt-fivecred/simulacao.html"
+  },
+  {
+    "slug": "fgts-fivecred",
+    "type": "credit",
+    "title": "Antecipação do saque-aniversário FGTS | Fivecred",
+    "description": "Conheça a antecipação do saque-aniversário. Informe seu saldo aproximado e converse com a Fivecred sobre os valores e as condições que podem ser analisados.",
+    "aliases": [
+      "emprestimo-fgts.html"
+    ],
+    "simulation": "fgts-fivecred/simulacao.html"
+  },
+  {
     "slug": "contemplada.fivecred.com.br",
     "type": "buyer",
     "title": "Comprar carta contemplada para imóvel ou veículo | Fivecred",

@@ -22,3 +22,5 @@ node_modules/
 /tests/screenshots/brand-*.png
 
 /tests/screenshots/simulation-*.png
+
+/tests/screenshots/migration-*.png

@@ -1,0 +1,18 @@
+{
+  "source": "fivecred.com.br-main/app",
+  "products": [
+    "clt",
+    "fgts"
+  ],
+  "files": {
+    "components/LeadForm.tsx": "f1550da2781eb65580cbf1a9ad6761b9048e3d38f4af4c4a7448cfba1f8e7c43",
+    "lib/fivecredFunnel.ts": "3522e0607019d4bf476f01fc672da09d3c8773cae0a971120f13ad1845c3ce48",
+    "lib/creditMath.ts": "e07ad6835d7674fbcaac7c39729ad9309170e396ce46a4cb9d641b6081734f9b",
+    "lib/leadValidation.ts": "f9b918960b922ff394a3d12fac3fbc1d0371f1c6d8e0b36f8d98b19a8a7298ef",
+    "lib/whatsapp.ts": "b34b328ec21477a62d3f2736c091cb07bfa4e9d21a0f9ccb276bb6e3ff49c1a0",
+    "lib/attribution.ts": "fb3fad85352f8e1c96810a18f7f2fa48d91f1c592f9a18c3c147870900912db4",
+    "lib/leadWebhook.ts": "63735464247b17dc12f7b5621dc35ac667319541b74bb10a9a09671a981ec478",
+    "lib/customerJourney.ts": "4151e18166b21ebab065dba0c26d0ca70aae4462c15c215371ff578ff9bf4cef",
+    "lib/consent.ts": "a855ee94fb6fc51401ba37af3e3d1e92cf8850789c4de918353ba9205ee996fe"
+  }
+}

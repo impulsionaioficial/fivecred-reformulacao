@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "migratedProducts": 2,
+  "originalModulesUnchanged": 9,
+  "viewports": 5,
+  "formFlows": 10,
+  "interceptedPosts": 20,
+  "failedDeliveryRetry": true,
+  "consentAndFieldValidation": true,
+  "originalWebhookAndWhatsApp": true,
+  "localProductLinks": true,
+  "realExternalSubmissions": 0,
+  "errors": []
+}

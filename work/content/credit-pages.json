@@ -494,5 +494,131 @@
     },
     "partnerGroup": "banks",
     "aliases": []
+  },
+  {
+    "slug": "clt-fivecred",
+    "type": "credit",
+    "title": "Consignado CLT: conheça suas opções | Fivecred",
+    "description": "Trabalha de carteira assinada? Conheça as possibilidades do consignado CLT e converse sobre as condições para seu vínculo e sua renda.",
+    "label": "Crédito para quem trabalha de carteira assinada",
+    "headline": "Seu trabalho, seus planos. Conheça o crédito CLT.",
+    "intro": "Trabalha de carteira assinada? Conte sobre seu vínculo e sua renda. A Fivecred orienta você sobre as possibilidades de crédito e as condições antes de decidir.",
+    "profile": "clt",
+    "goal": "credito",
+    "benefits": [
+      {
+        "title": "Seu vínculo é o ponto de partida",
+        "text": "Salário e situação do contrato orientam a avaliação da operação."
+      },
+      {
+        "title": "Uma estimativa para planejar",
+        "text": "Compare o valor, o prazo e a parcela estimada com seu orçamento."
+      }
+    ],
+    "how": [
+      {
+        "title": "Conte sobre você",
+        "text": "Informe nome, WhatsApp, e-mail, CPF e data de nascimento na primeira etapa."
+      },
+      {
+        "title": "Monte o seu cenário",
+        "text": "Informe vínculo, endereço, tempo de carteira e salário. Escolha o valor e o prazo para conferir uma estimativa."
+      },
+      {
+        "title": "Confira com a equipe",
+        "text": "Continue o atendimento para conferir elegibilidade, margem e condições. A simulação não é aprovação de crédito."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Esta opção é para quem trabalha com carteira assinada?",
+        "a": "Sim. O consignado CLT considera a situação do vínculo de trabalho, a renda e os critérios de elegibilidade. A instituição responsável confirma se a contratação está disponível para seu caso."
+      },
+      {
+        "q": "A simulação já aprova o empréstimo?",
+        "a": "Não. O formulário calcula uma estimativa com os dados informados. Valor disponível, taxa, CET e prazo finais dependem da análise e da proposta."
+      },
+      {
+        "q": "Como as parcelas são pagas?",
+        "a": "O consignado prevê desconto em folha de pagamento. Confira na proposta o valor da parcela, o prazo e as condições aplicáveis ao seu vínculo antes de contratar."
+      },
+      {
+        "q": "Quais dados vou informar?",
+        "a": "A primeira etapa pede seus dados de contato e identificação. Depois, você informa vínculo, CEP, endereço, tempo de carteira, salário, valor desejado e prazo."
+      },
+      {
+        "q": "Preciso pagar uma taxa antecipada?",
+        "a": "Não. A Fivecred não cobra depósito, PIX ou taxa antecipada para análise ou liberação de crédito."
+      }
+    ],
+    "partnerGroup": "banks",
+    "aliases": [
+      "emprestimo-consignado-clt.html"
+    ]
+  },
+  {
+    "slug": "fgts-fivecred",
+    "type": "credit",
+    "title": "Antecipação do saque-aniversário FGTS | Fivecred",
+    "description": "Informe seu saldo aproximado e converse sobre a antecipação do saque-aniversário FGTS. Entenda custos, disponibilidade e o bloqueio do saldo em garantia.",
+    "label": "Antecipação do saque-aniversário",
+    "headline": "Seu FGTS pode ajudar nos próximos planos.",
+    "intro": "Conheça a antecipação do saque-aniversário. Informe seu saldo aproximado e converse com a Fivecred sobre os valores e as condições que podem ser analisados.",
+    "profile": "fgts",
+    "goal": "credito",
+    "benefits": [
+      {
+        "title": "Comece pelo saldo informado",
+        "text": "Conte se o saque-aniversário está ativo e qual é seu saldo aproximado."
+      },
+      {
+        "title": "Entenda antes de antecipar",
+        "text": "A equipe orienta a consulta e explica a proposta antes da contratação."
+      }
+    ],
+    "how": [
+      {
+        "title": "Preencha seus dados",
+        "text": "Informe nome, WhatsApp, e-mail, CPF e data de nascimento na primeira etapa."
+      },
+      {
+        "title": "Conte sobre o FGTS",
+        "text": "Informe a situação do saque-aniversário e o saldo aproximado. O formulário não acessa sua conta do FGTS."
+      },
+      {
+        "title": "Conheça as condições",
+        "text": "A equipe orienta a consulta pelos canais oficiais. Confira valor liberado, custos e saldo comprometido antes de decidir."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O que é antecipar o saque-aniversário?",
+        "a": "É uma operação de crédito em que saques-aniversário futuros são usados como garantia. Parte do saldo fica bloqueada para a operação. Confira as condições antes de contratar."
+      },
+      {
+        "q": "Preciso ter saque-aniversário ativo?",
+        "a": "A contratação depende da adesão ao saque-aniversário, do saldo disponível e dos critérios aplicáveis à operação. Informe sua situação no formulário para receber orientação."
+      },
+      {
+        "q": "O formulário consulta meu saldo automaticamente?",
+        "a": "Não. Você informa um saldo aproximado. A consulta oficial depende da autorização necessária nos canais do FGTS e da análise da instituição responsável."
+      },
+      {
+        "q": "Vou receber todo o saldo do meu FGTS?",
+        "a": "Não necessariamente. O valor disponível depende das parcelas que podem ser antecipadas, de compromissos já existentes e das regras da operação."
+      },
+      {
+        "q": "O que acontece com o saldo usado como garantia?",
+        "a": "O saldo necessário à garantia fica bloqueado durante a operação, conforme as regras do FGTS. Peça à equipe que explique os efeitos sobre seus saques antes de aceitar a proposta."
+      },
+      {
+        "q": "A Fivecred cobra alguma taxa antecipada?",
+        "a": "Não. Não faça depósito ou PIX antecipado para análise ou liberação de crédito. Confira os canais oficiais se receber esse tipo de pedido."
+      }
+    ],
+    "partnerGroup": "banks",
+    "aliases": [
+      "emprestimo-fgts.html"
+    ]
   }
 ]

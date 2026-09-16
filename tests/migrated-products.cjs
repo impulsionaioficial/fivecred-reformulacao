@@ -1,0 +1,46 @@
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const {JSDOM}=require('C:/Users/auror/Downloads/fivecred.com.br-main/node_modules/jsdom');
+const {chromium}=require('C:/Users/auror/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site'),source=path.join(root,'work/migrated-form-src');
+const contract=JSON.parse(fs.readFileSync(path.join(source,'original-contract.json')));
+for(const [file,sha] of Object.entries(contract.files)){assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(source,file),'utf8').replaceAll('\r\n','\n')).digest('hex'),sha,'Original form module preserved: '+file);}
+for(const product of ['clt','fgts']){
+ const doc=new JSDOM(fs.readFileSync(path.join(output,product+'-fivecred/index.html'),'utf8')).window.document;
+ assert.equal(doc.querySelectorAll('main form').length,0);assert.equal(doc.querySelectorAll('[data-image-slot]').length,2);assert(doc.querySelector('.simulation-cta [href="../'+product+'-fivecred/simulacao.html"]'));
+ const form=new JSDOM(fs.readFileSync(path.join(output,product+'-fivecred/simulacao.html'),'utf8')).window.document;
+ assert(form.querySelector('[data-migrated-form="'+product+'"]'));assert(form.querySelector('meta[http-equiv="Content-Security-Policy"]').content.includes('https://webhook.agenciaimpulsionai.com.br'));
+ for(const file of ['index.html','fivecred-next/index.html','fivecred-landing-page/index.html']){const page=new JSDOM(fs.readFileSync(path.join(output,file),'utf8'),{url:'http://local/'+file}).window.document;assert.equal(new URL(page.querySelector('[data-product="'+product+'"]').href).pathname,'/'+product+'-fivecred/index.html');}
+}
+(async()=>{
+ const server=http.createServer((req,res)=>{const u=new URL(req.url,'http://local'),file=path.join(output,u.pathname+(u.pathname.endsWith('/')?'index.html':''));fs.readFile(file,(e,b)=>{if(e){res.writeHead(404);return res.end();}res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.woff2':'font/woff2','.png':'image/png','.svg':'image/svg+xml','.webp':'image/webp'})[path.extname(file)]||'application/octet-stream');res.end(b);});});
+ await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;
+ const browser=await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true}),ctx=await browser.newContext({reducedMotion:'reduce'}),page=await ctx.newPage(),errors=[],posts=[];let status=500;
+ await ctx.route('**/*',r=>{const req=r.request(),u=new URL(req.url());if(u.hostname==='127.0.0.1')return r.continue();if(u.href==='https://webhook.agenciaimpulsionai.com.br/webhook/b1ce8c0e-50cf-4810-b3fb-d64378ae0201'){posts.push({url:u.href,payload:req.postDataJSON(),headers:req.headers()});return r.fulfill({status,contentType:'application/json',body:'{}'});}errors.push('Unexpected request '+u.origin);return r.abort();});
+ await ctx.addInitScript(()=>{window.__wa=[];window.__closed=0;window.open=()=>({opener:null,close(){window.__closed++},location:{replace(url){window.__wa.push(url)}}});});page.on('pageerror',e=>errors.push(e.message));
+ try{
+  for(const product of ['clt','fgts'])for(const [width,height] of [[320,568],[390,844],[768,600],[1280,600],[1440,900]]){
+   status=500;await page.setViewportSize({width,height});await page.goto(base+'/');await page.locator('[data-product="'+product+'"]').click();await page.waitForURL('**/'+product+'-fivecred/index.html');
+   await page.evaluate(()=>document.fonts.ready);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+   if([390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/migration-'+product+'-landing-'+width+'.png')});
+   await page.locator('.simulation-cta [data-simulation-link]').click();await page.waitForURL('**/'+product+'-fivecred/simulacao.html');await page.waitForFunction(()=>document.querySelector('[data-migrated-form]')?.dataset.formReady==='true');
+   const form=page.locator('[data-migrated-form]'),next=form.getByRole('button',{name:'Continuar para a etapa 2'});const invalidPosts=posts.length;await next.click();assert(await form.getByRole('alert').isVisible());assert.equal(posts.length,invalidPosts);
+   await form.getByLabel('Nome completo',{exact:true}).fill('Pessoa Teste');await form.getByLabel('Telefone / WhatsApp',{exact:true}).fill('11987654321');await form.getByLabel('E-mail',{exact:true}).fill('teste@example.com');await form.getByLabel('CPF',{exact:true}).fill('52998224725');await form.getByLabel('Data de nascimento',{exact:true}).fill('1980-01-01');
+   if([390,1440].includes(width)){await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(root,'tests/screenshots/migration-'+product+'-form-'+width+'.png')});}
+   await next.click();await form.getByRole('radio',{name:product==='clt'?'Ativo':'Sim',exact:true}).check();
+   if(product==='clt'){await form.getByLabel('CEP',{exact:true}).fill('01001000');await form.getByLabel('Endereço completo',{exact:true}).fill('Rua Teste, 123, Centro, São Paulo/SP');await form.getByLabel('Tempo de registro em carteira',{exact:true}).selectOption('Mais de 2 anos');}
+   await form.locator('#lf-anchor').fill(product==='clt'?'5000':'3500');
+   if(product==='clt'){await form.locator('#lf-months').focus();await form.locator('#lf-requested').fill('2000');assert.equal(await form.locator('#lf-requested').inputValue(),'2000');await form.locator('#lf-months').selectOption('24');assert(await form.locator('[aria-live=polite]').isVisible());}
+   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,product+' step 2 fits '+width);
+   const sizes=await form.locator('input:not([type=radio]):not([type=checkbox]),select,button').evaluateAll(els=>els.filter(e=>e.getBoundingClientRect().height).map(e=>({font:parseFloat(getComputedStyle(e).fontSize),height:e.getBoundingClientRect().height,right:e.getBoundingClientRect().right,left:e.getBoundingClientRect().left})));assert(sizes.every(s=>s.font>=16&&s.height>=44&&s.left>=0&&s.right<=width),JSON.stringify({product,width,sizes}));
+   if(width===390){await form.screenshot({path:path.join(root,'tests/screenshots/migration-'+product+'-qualification-390.png')});}
+   await form.getByRole('checkbox').check();const submit=form.getByRole('button',{name:product==='clt'?'Enviar simulação no WhatsApp':'Continuar no WhatsApp',exact:true});
+   const before=posts.length;await submit.click();await form.getByText('Não foi possível registrar seus dados agora.',{exact:false}).waitFor({timeout:5000}).catch(async e=>{console.log(JSON.stringify({product,width,posts,errors,form:await form.innerText()},null,2));await page.screenshot({path:path.join(root,'tests/screenshots/migration-failure.png')});throw e;});assert.equal(posts.length,before+1);assert.equal(await page.evaluate(()=>window.__wa.length),0);assert.equal(await page.evaluate(()=>window.__closed),1);
+   status=200;await submit.click();await page.waitForFunction(()=>window.__wa.length===1);assert.equal(posts.length,before+2);
+   const record=posts.at(-1),data=record.payload;assert.equal(data.schema_version,'fivecred.lead.v2');assert.equal(data.product,product);assert.equal(data.form_name,'formulario_'+product);assert.equal(data.stage,'qualified');assert.equal(data.nome,'Pessoa Teste');assert.equal(data.email,'teste@example.com');assert.equal(record.headers['idempotency-key'],data.event_id);assert.equal(data.consent.accepted,true);assert.equal(data.test_mode,false);assert.equal(data.page_path,'/'+product+'-fivecred/simulacao.html');
+   if(product==='clt'){assert.equal(data.vinculo,'Ativo');assert.equal(data.salarioLiquido,5000);assert.equal(data.valorDesejado,2000);assert.equal(data.prazoMeses,24);assert.equal(data.tempoCarteira,'Mais de 2 anos');assert(data.parcelaEstimada>0);}else{assert.equal(data.resposta_qualificacao,'Sim');assert.equal(data.valor_ancora,3500);}
+   const wa=new URL(await page.evaluate(()=>window.__wa[0]));assert.equal(wa.origin,'https://wa.me');assert.equal(wa.pathname,'/5511940083152');assert(wa.searchParams.get('text').includes('Pessoa Teste'));
+   await form.getByRole('button',{name:'Voltar',exact:true}).click();assert.equal(await form.getByLabel('Nome completo',{exact:true}).inputValue(),'Pessoa Teste');await page.locator('.simulation-back').click();assert(page.url().endsWith('/'+product+'-fivecred/index.html'));
+  }
+  assert.deepEqual(errors,[]);const report={result:'PASS',migratedProducts:2,originalModulesUnchanged:Object.keys(contract.files).length,viewports:5,formFlows:10,interceptedPosts:posts.length,failedDeliveryRetry:true,consentAndFieldValidation:true,originalWebhookAndWhatsApp:true,localProductLinks:true,realExternalSubmissions:0,errors};fs.writeFileSync(path.join(root,'tests/migrated-products-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+ }finally{await browser.close();await new Promise(r=>server.close(r));}
+})().catch(e=>{console.error(e);process.exit(1)});

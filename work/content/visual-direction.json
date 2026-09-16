@@ -218,5 +218,49 @@
     "note": "O valor do crédito e o preço de venda da cota são diferentes. A compra e a transferência estão sujeitas à análise.",
     "imageTitle": "Novos planos para uma nova fase",
     "imageDescription": "Inserir foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real."
+  },
+  "clt-fivecred": {
+    "name": "Crédito para quem trabalha de carteira assinada",
+    "headline": "Seu trabalho, seus planos. Conheça o crédito CLT.",
+    "intro": "Trabalha de carteira assinada? Conte sobre seu vínculo e sua renda. A Fivecred orienta você sobre as possibilidades de crédito e as condições antes de decidir.",
+    "storyTitle": "Um plano que precisa caber no seu salário.",
+    "storyIntro": "Uma parcela acompanha seu orçamento por um período. Comece com uma estimativa e confira as condições completas antes de contratar.",
+    "facts": [
+      [
+        "work",
+        "Seu vínculo é o ponto de partida",
+        "Salário e situação do contrato orientam a avaliação da operação."
+      ],
+      [
+        "document",
+        "Uma estimativa para planejar",
+        "Compare o valor, o prazo e a parcela estimada com seu orçamento."
+      ]
+    ],
+    "note": "Condições sujeitas à análise do vínculo, da margem e da instituição financeira. As parcelas são descontadas em folha.",
+    "imageTitle": "Seu trabalho, seus próximos planos",
+    "imageDescription": "Inserir foto ou design Fivecred de um trabalhador adulto em ambiente profissional, com uma representação natural e acolhedora."
+  },
+  "fgts-fivecred": {
+    "name": "Antecipação do saque-aniversário",
+    "headline": "Seu FGTS pode ajudar nos próximos planos.",
+    "intro": "Conheça a antecipação do saque-aniversário. Informe seu saldo aproximado e converse com a Fivecred sobre os valores e as condições que podem ser analisados.",
+    "storyTitle": "Entenda o que você antecipa e o que fica comprometido.",
+    "storyIntro": "A antecipação pode trazer recursos para o presente, usando saques futuros como garantia. Conhecer esse compromisso faz parte da decisão.",
+    "facts": [
+      [
+        "wallet",
+        "Comece pelo saldo informado",
+        "Conte se o saque-aniversário está ativo e qual é seu saldo aproximado."
+      ],
+      [
+        "document",
+        "Entenda antes de antecipar",
+        "A equipe orienta a consulta e explica a proposta antes da contratação."
+      ]
+    ],
+    "note": "A antecipação é uma operação de crédito e envolve bloqueio de saldo do FGTS como garantia. Condições sujeitas à consulta e análise.",
+    "imageTitle": "Planejamento com o seu FGTS",
+    "imageDescription": "Inserir foto de uma pessoa adulta planejando suas finanças ou design Fivecred sobre FGTS e calendário. Evitar promessas de liberação ou valores garantidos."
   }
 }

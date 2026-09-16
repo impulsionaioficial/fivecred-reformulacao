@@ -1,6 +1,8 @@
 "use strict";
 // Presentation and navigation only. The original form renderers own every field and submission.
 const messages={
+ 'clt-fivecred':['Planeje sua simulação de crédito CLT.','Conte sobre seu vínculo e salário. Veja uma estimativa e leve suas dúvidas para a equipe.','Simule aqui','Simulação de consignado CLT'],
+ 'fgts-fivecred':['Conheça as possibilidades do seu FGTS.','Informe o saldo aproximado e a situação do saque-aniversário para começar a consulta.','Simule aqui','Consulta de antecipação FGTS'],
  'fivecred-next':['Simule seu crédito com a Fivecred.','Conte sobre o seu perfil e o valor que procura. Comece sua solicitação e conheça o próximo passo.','Simule aqui','Simulação de crédito'],
  'fivecred-landing-page':['Seu próximo plano começa aqui.','Preencha sua solicitação para conversar sobre as possibilidades de crédito para você.','Simule aqui','Solicitação de crédito'],
  'bolsa-fivecred':['Veja as possibilidades para você.','Informe seus dados e as informações do benefício para iniciar sua simulação.','Simule aqui','Crédito para quem recebe Bolsa Família'],

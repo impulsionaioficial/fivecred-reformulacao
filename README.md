@@ -15,6 +15,7 @@ Referência da configuração: https://vercel.com/docs/project-configuration/ver
 Cada LP leva a uma página própria em `<pasta-da-lp>/simulacao.html`. A abertura usa uma caixa com chamada e botão **Simule aqui**; venda de carta e afiliados usam chamadas específicas. Os campos, etapas e scripts de envio foram movidos sem alterações. A página de formulário tem navegação de retorno e não apresenta botão flutuante. O cadastro de nome e e-mail para WhatsApp permanece no diálogo de contato. Veja o [mapa dos formulários](docs/paginas-de-simulacao.md).
 
 - **LP geral (`/`) e `fivecred-next`:** campos, etapas e webhook Make originais preservados.
+- **CLT e FGTS:** LPs locais em `clt-fivecred/` e `fgts-fivecred/`, com formulários próprios em `simulacao.html`. Os nove módulos originais do site principal foram preservados, incluindo validações, cálculo, payload e webhook. Os cartões e o rodapé abrem essas páginas dentro desta versão.
 - **Afiliados e compra de carta:** formulários, payloads e webhooks originais preservados.
 - **Bolsa Família, consignado, luz, garantia de imóvel e garantia de veículo:** formulários e destinos originais no WhatsApp preservados. Valores simulados são estimativas.
 - **Campanha (`fivecred-landing-page`) e venda da própria carta (`lp-venda-carta-contemplada`):** aguardam os webhooks específicos que a Fivecred informou que irá fornecer. Não simulam confirmação de envio. Na campanha, o formulário fica desabilitado; na venda da carta, as etapas de características continuam disponíveis, mas a continuação para os dados de contato fica indisponível.
@@ -32,9 +33,9 @@ Os ajustes compartilhados ficam em `shared/responsive.css`, carregado depois dos
 
 ## Design e imagens
 
-As dez LPs usam a mesma identidade Fivecred: abertura em bege, conteúdo e orientação de imagem específicos por produto, seção de confiança em azul-marinho e chamada final laranja. A logo e a altura da navegação foram preservadas. Benefícios, etapas e orientações usam tópicos que abrem ao toque nas telas compactas.
+As doze LPs usam a mesma identidade Fivecred: abertura em bege, conteúdo e orientação de imagem específicos por produto, seção de confiança em azul-marinho e chamada final laranja. A logo e a altura da navegação foram preservadas. Benefícios, etapas e orientações usam tópicos que abrem ao toque nas telas compactas.
 
-Os espaços de imagem estão identificados nas próprias páginas. O [mapa de imagens](docs/mapa-de-imagens.md) informa o material esperado, o nome do arquivo e a pasta `shared/assets/lps/`. Há dez imagens de contexto e uma imagem de equipe compartilhada. Os slots são substituídos pelas imagens durante a geração do HTML, quando o arquivo indicado estiver disponível. Não foram incluídos depoimentos ou indicadores sem comprovação.
+Os espaços de imagem estão identificados nas próprias páginas. O [mapa de imagens](docs/mapa-de-imagens.md) informa o material esperado, o nome do arquivo e a pasta `shared/assets/lps/`. Há doze imagens de contexto e uma imagem de equipe compartilhada. Os slots são substituídos pelas imagens durante a geração do HTML, quando o arquivo indicado estiver disponível. Não foram incluídos depoimentos ou indicadores sem comprovação.
 
 O conteúdo está em `work/content/visual-direction.json`, a renderização dos blocos em `work/visual-direction.cjs` e a camada visual em `shared/brand-refresh.css`. A saída Vercel permanece estática e os formulários não foram alterados. A [direção visual](docs/direcao-visual-2026-09-16.md) registra os critérios aplicados.
 
@@ -47,12 +48,16 @@ O conteúdo está em `work/content/visual-direction.json`, a renderização dos 
 
 As páginas usam os estilos de `shared/`. Formulários React ficam em `work/connected-form-src/`; os formulários anteriores de produtos ficam em `shared/original-forms/`. A logo oficial é `shared/assets/logo-navbar.png`.
 
+Para recompilar os formulários migrados de CLT e FGTS, execute `node work/migrated-form-src/build.cjs` antes de regenerar o site. O componente original e suas dependências ficam em `work/migrated-form-src/`; os estilos são isolados para não afetar as outras páginas. A publicação da Vercel usa os bundles já gerados, sem executar essa compilação.
+
 Os três projetos Next mantêm entradas para execução local. Após mover a pasta, regenere as páginas para atualizar o caminho do adaptador local. A publicação deste repositório usa HTML estático.
 
 ## Verificações
 
+- Migração CLT/FGTS, nove módulos originais, etapas, validações, falha/reenvio e destinos preservados: `node tests/migrated-products.cjs`.
+
 - Formulários separados, rotas e preservação exata de campos/scripts: `node tests/simulation-pages.cjs`.
-- Navegação, retorno, teclado e formulários em 50 combinações de tela: `node tests/simulation-pages-browser.cjs`.
+- Navegação, retorno, teclado e formulários em 60 combinações de tela: `node tests/simulation-pages-browser.cjs`.
 
 - Preservação de formulários e espaços de imagem: `node tests/design-refresh.cjs`.
 - Composição, contraste e tópicos no navegador: `node tests/brand-refresh-browser.cjs` (44 combinações e inserção de imagem simulada apenas durante o teste).
