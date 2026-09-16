@@ -24,7 +24,9 @@ Nenhum teste deve enviar leads reais. Os testes de navegador interceptam webhook
 
 Abaixo de 1280 px, o menu fica compacto e os blocos principais passam a uma coluna. O layout amplia o espaço dos formulários, permite rolagem no menu em telas baixas e mantém a altura original da barra de navegação. O botão de WhatsApp permanece no cabeçalho e no fim da página, sem sobrepor os campos. Os links legais do rodapé têm área de toque de pelo menos 44 px.
 
-Os ajustes compartilhados ficam em `shared/responsive.css`, carregado depois dos estilos das LPs. Os formulários e seus destinos de envio não são alterados por essa camada.
+A seção de confiança considera também a altura: em telas de computador de 1280 × 600, título, imagem, botão e três orientações cabem abaixo da navegação. Nas telas compactas, a introdução, os tópicos e a imagem são blocos separados. As orientações usam tópicos nativos que abrem ao toque ou pelo teclado, um por vez; ao abrir, o grupo é trazido para a área visível. A imagem oficial continua com espaço reservado. O aviso contra fraudes permanece logo após a seção.
+
+Os ajustes compartilhados ficam em `shared/responsive.css`, carregado depois dos estilos das LPs. `shared/content-panels.js` controla somente os tópicos de conteúdo. Os formulários e seus destinos de envio não são alterados.
 
 ## Desenvolvimento
 
@@ -39,6 +41,7 @@ Os três projetos Next mantêm entradas para execução local. Após mover a pas
 
 ## Verificações
 
+- Altura disponível e tópicos: `node tests/viewport-height.cjs` (88 combinações, seção completa no computador, tópicos por toque/teclado no celular, sem cortes ou rolagem interna).
 - Layout responsivo: `node tests/responsive-layout.cjs` (110 combinações de página/largura, menus em telas baixas, ancoragem e ausência de sobreposição do WhatsApp; rode o build estático antes).
 - Estrutura, links e acessibilidade básica: `node tests/verify-sites.cjs`.
 - Saída de produção, raiz, versões mobile/desktop, erro e nova tentativa do webhook geral: `node tests/production-browser.cjs` (rode o build estático antes).

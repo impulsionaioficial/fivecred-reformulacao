@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "viewports": [
+    [
+      1280,
+      600
+    ],
+    [
+      1366,
+      600
+    ],
+    [
+      1440,
+      700
+    ],
+    [
+      1024,
+      600
+    ],
+    [
+      768,
+      600
+    ],
+    [
+      390,
+      667
+    ],
+    [
+      375,
+      600
+    ],
+    [
+      320,
+      568
+    ]
+  ],
+  "pages": 11,
+  "checks": 88,
+  "desktop": "Complete trust section fits below navigation",
+  "mobile": "Native touch/keyboard disclosure; one topic expanded; whole topic group fits below navigation",
+  "errors": []
+}

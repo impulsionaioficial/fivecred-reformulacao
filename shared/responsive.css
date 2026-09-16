@@ -104,3 +104,73 @@ html{scroll-padding-top:calc(var(--header-height) + 16px)}
  .original-form{padding:26px 22px}
  .s-hero-form .j-card{padding:26px 22px}
 }
+
+/* Height matters too: separate the introduction from the three trust points. */
+.trust .trust-grid,.s-trust .s-trust-grid{align-items:stretch;gap:24px 40px}
+.lp-page .trust,.seller-page .s-trust{padding-block:clamp(24px,4svh,40px)}
+.trust-heading{align-self:center;scroll-margin-top:16px}
+.trust .trust-heading h2,.seller-page .s-trust h2{font-size:clamp(30px,4.8svh,38px);line-height:1.15}
+.trust-heading .section-label,.trust-heading .s-kicker{font-size:15px;line-height:1.5;margin-bottom:10px}
+.trust .trust-intro,.s-trust .trust-heading>p:not(.s-kicker){font-size:17px;line-height:1.55;margin-top:14px;max-width:60ch}
+.trust .trust-heading .button,.s-trust .trust-heading .button{margin-top:20px;min-height:48px;font-size:16px}
+.trust .brand-placeholder,.s-trust .s-team-placeholder{min-height:0;width:100%;max-width:none;padding:24px;scroll-margin-top:16px}
+.trust .brand-placeholder>.icon,.s-trust .s-team-placeholder>.icon{width:32px;height:32px;margin:0 0 12px;color:var(--orange-dark,#a94b13)}
+.trust .brand-placeholder strong,.s-trust .s-team-placeholder strong{font-size:22px;line-height:1.3}
+.trust .brand-placeholder p,.s-trust .s-team-placeholder p{font-size:15px;line-height:1.5;margin-top:12px;max-width:42ch}
+.trust .placeholder-label,.s-trust .s-material-label{margin-top:16px}
+.trust .trust-points,.s-trust .s-trust-list{grid-column:1/-1;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;gap:20px}
+.trust .trust-points li,.s-trust .s-trust-list li{padding:20px;border:1px solid #e1e6eb;border-radius:10px;background:#fff;gap:12px;scroll-margin-top:16px}
+.trust .trust-points strong,.s-trust .s-trust-list h3{display:block;font-size:17px;line-height:1.4}
+.trust .trust-points p,.s-trust .s-trust-list p{font-size:16px;line-height:1.5;margin-top:6px}
+.trust .trust-points .icon,.s-trust .s-trust-list .icon{width:22px;height:22px;flex-shrink:0}
+.trust-notice{background:#f7f0e6;border-block:1px solid #e8dfd3;padding-block:24px}
+.trust-notice .antifraud{margin:0;padding:0;border:0;font-size:16px;line-height:1.6}
+@media(max-width:1279px){
+ .trust .trust-grid,.s-trust .s-trust-grid{gap:28px;max-width:800px}
+ .trust .trust-heading,.s-trust .trust-heading{padding-block:8px 20px;border-bottom:1px solid #e1e6eb;max-width:none}
+ .trust .brand-placeholder,.s-trust .s-team-placeholder{min-height:240px;max-width:800px;padding:24px}
+ .trust .trust-points,.s-trust .s-trust-list{grid-template-columns:minmax(0,1fr);gap:20px}
+ .trust .trust-points li,.s-trust .s-trust-list li{padding:24px}
+}
+@media(max-height:760px){
+ .lp-page .section:not(.trust),.seller-page .s-section:not(.s-trust){padding-block:32px}
+ .lp-page .section h2,.seller-page h2:not(.j-heading){font-size:32px;line-height:1.2}
+ .lp-page .section-head,.s-section-heading{gap:24px;margin-bottom:24px}
+ .benefit-list{margin-top:24px}
+ .benefit-list,.process-list,.s-steps{gap:24px}
+ .benefit-list .icon{margin-bottom:12px}
+ .process-number{margin-bottom:14px}
+ .brand-placeholder{min-height:260px}
+ .s-life-photo img{height:auto;max-height:320px;aspect-ratio:3/2}
+ .floating-whatsapp{position:static;display:flex;width:max-content;max-width:calc(100% - 32px);height:auto;min-height:54px;margin:8px auto 24px;padding:14px 24px;box-shadow:none}
+ .floating-whatsapp span{display:inline}
+}
+@media(max-width:599px){
+ .trust .trust-heading h2,.seller-page .s-trust h2{font-size:29px;line-height:1.2}
+ .trust .trust-intro,.s-trust .trust-heading>p:not(.s-kicker){font-size:17px;line-height:1.55}
+ .trust .trust-heading .button,.s-trust .trust-heading .button{width:100%;font-size:16px}
+ .trust .trust-points li,.s-trust .s-trust-list li{padding:22px 18px}
+ .trust .brand-placeholder,.s-trust .s-team-placeholder{min-height:0;padding:24px 20px}
+}
+
+/* Native disclosure controls on compact screens; open cards on desktop. */
+.trust .trust-points li,.s-trust .s-trust-list li{display:block;padding:0}
+[data-reading-panel]{width:100%;scroll-margin-block:16px}
+[data-reading-panel]>summary{display:grid;grid-template-columns:22px minmax(0,1fr);align-items:start;gap:12px;padding:20px;list-style:none;cursor:default}
+[data-reading-panel]>summary::-webkit-details-marker{display:none}
+[data-reading-panel]>summary::marker{content:""}
+[data-reading-panel]>summary>.icon{margin-top:1px}
+[data-reading-panel] .reading-toggle{display:none}
+[data-reading-panel] .reading-panel-body{padding:0 20px 20px 54px}
+.trust .trust-points .reading-panel-body p,.s-trust .s-trust-list .reading-panel-body p{margin:0}
+@media(max-width:1279px){
+ .trust-heading{grid-row:1}
+ .trust .trust-points,.s-trust .s-trust-list{grid-row:2;gap:12px;scroll-margin-block:16px}
+ .trust .brand-placeholder,.s-trust .s-team-placeholder{grid-row:3}
+ [data-reading-panel]>summary{grid-template-columns:22px minmax(0,1fr) 20px;cursor:pointer;min-height:64px;padding:20px 18px}
+ [data-reading-panel]>summary:focus-visible{outline:2px solid #a94b13;outline-offset:3px;border-radius:8px}
+ [data-reading-panel] .reading-toggle{display:block;color:#a94b13}
+ [data-reading-panel] .reading-toggle .icon{width:20px;height:20px}
+ [data-reading-panel][open] .reading-toggle{transform:rotate(45deg)}
+ [data-reading-panel] .reading-panel-body{padding:0 20px 20px 52px}
+}

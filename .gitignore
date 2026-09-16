@@ -16,3 +16,5 @@ node_modules/
 /tests/screenshots/production-*.png
 
 /tests/screenshots/responsive-*.png
+
+/tests/screenshots/viewport-*.png

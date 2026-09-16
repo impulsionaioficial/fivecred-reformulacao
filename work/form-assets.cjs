@@ -2,11 +2,11 @@ const staticSlugs = new Set(['bolsa-fivecred','consignado-fivecred','luz-fivecre
 const connectedSlugs = new Set(['fivecred-next','fivecred-afiliados','contemplada.fivecred.com.br']);
 function assetsFor(page,prefix='../') {
  const styles=[prefix+'shared/site.css',prefix+'shared/lp-design.css?v=20260916-production',prefix+'shared/whatsapp-contact.css?v=20260915-1'];
- const scripts=[prefix+'shared/whatsapp-contact.js?v=20260915-1',prefix+'shared/site.js?v=20260916-production'];
+ const scripts=[prefix+'shared/content-panels.js?v=20260916-height',prefix+'shared/whatsapp-contact.js?v=20260915-1',prefix+'shared/site.js?v=20260916-production'];
  if(page.type==='seller'){styles.push(prefix+'shared/seller.css?v=20260915');scripts.push(prefix+'shared/journey.js');}
  if(staticSlugs.has(page.slug)){const a=require('./original-static-forms.cjs').originalStaticFormAssets(page.slug,prefix);styles.push(a.css);scripts.push(a.script);}
  if(connectedSlugs.has(page.slug)){styles.push(prefix+'shared/connected-forms.css');scripts.push(prefix+'shared/connected-forms.js?v=20260915-wa');}
- styles.push(prefix+'shared/responsive.css?v=20260916-compact');
+ styles.push(prefix+'shared/responsive.css?v=20260916-height');
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){
