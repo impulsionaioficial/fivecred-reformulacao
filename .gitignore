@@ -18,3 +18,5 @@ node_modules/
 /tests/screenshots/responsive-*.png
 
 /tests/screenshots/viewport-*.png
+
+/tests/screenshots/brand-*.png

@@ -1,0 +1,222 @@
+{
+  "fivecred-next": {
+    "name": "Crédito para o seu momento",
+    "headline": "Crédito para tirar seus planos do papel.",
+    "intro": "Conte o que você precisa e conheça as opções que podem ser analisadas para o seu perfil. A Fivecred acompanha você nessa conversa.",
+    "storyTitle": "Cada plano começa de um jeito. O seu também.",
+    "storyIntro": "Organizar as contas, cuidar da família ou investir no negócio. O atendimento começa entendendo o que faz diferença para você.",
+    "facts": [
+      [
+        "person",
+        "Seu perfil orienta a consulta",
+        "A equipe considera sua renda, seu objetivo e as informações da solicitação."
+      ],
+      [
+        "chat",
+        "Uma equipe para explicar",
+        "Entenda as opções, as parcelas e o próximo passo antes de decidir."
+      ]
+    ],
+    "note": "Crédito sujeito à análise e às condições da instituição responsável.",
+    "imageTitle": "Uma pessoa, um plano real",
+    "imageDescription": "Inserir foto de um adulto ou casal maduro planejando um projeto em casa, com expressão tranquila e ambiente acolhedor."
+  },
+  "fivecred-landing-page": {
+    "name": "Sua próxima conquista",
+    "headline": "Encontre um caminho para o crédito que você procura.",
+    "intro": "Converse sobre o seu objetivo e entenda quais possibilidades podem ser avaliadas. A equipe Fivecred explica o que considerar em cada opção.",
+    "storyTitle": "Uma necessidade sua. Um atendimento próximo.",
+    "storyIntro": "Uma boa conversa ajuda a entender de quanto você precisa e como uma proposta se encaixaria no seu momento.",
+    "facts": [
+      [
+        "wallet",
+        "Comece pelo seu objetivo",
+        "Explique o que quer resolver e o valor que está buscando."
+      ],
+      [
+        "document",
+        "Conheça as condições",
+        "Compare parcelas, prazo e custo total quando houver uma proposta."
+      ]
+    ],
+    "note": "A disponibilidade depende do perfil e da análise da instituição financeira.",
+    "imageTitle": "Atendimento que aproxima",
+    "imageDescription": "Inserir foto oficial de um atendimento Fivecred ou arte da marca mostrando uma conversa sobre projetos pessoais."
+  },
+  "bolsa-fivecred": {
+    "name": "Orçamento da família",
+    "headline": "Crédito com atenção ao orçamento da sua família.",
+    "intro": "Recebe Bolsa Família? Informe sua situação e converse sobre o que pode ser analisado. O benefício, por si só, não garante aprovação de crédito.",
+    "storyTitle": "O cuidado com a sua família vem primeiro.",
+    "storyIntro": "Antes de uma nova parcela, considere as despesas da casa e entenda as condições de qualquer oferta.",
+    "facts": [
+      [
+        "people",
+        "Atendimento para sua realidade",
+        "Conte sua necessidade e esclareça as dúvidas com a equipe."
+      ],
+      [
+        "document",
+        "Informação antes da decisão",
+        "Confira valor recebido, parcelas e custo total da proposta."
+      ]
+    ],
+    "note": "Benefício e crédito são diferentes. Esta página não oferece consignado descontado do Bolsa Família.",
+    "imageTitle": "Família e cotidiano",
+    "imageDescription": "Inserir foto acolhedora de uma pessoa adulta organizando o orçamento da casa. Evitar imagens de dinheiro, urgência ou vulnerabilidade."
+  },
+  "consignado-fivecred": {
+    "name": "Consignado INSS",
+    "headline": "Consignado INSS para planejar o próximo passo.",
+    "intro": "É aposentado ou pensionista do INSS? Faça uma simulação inicial e conheça as condições que podem ser avaliadas para o seu benefício.",
+    "storyTitle": "Seus planos merecem uma conversa com calma.",
+    "storyIntro": "Entenda a parcela, o prazo e o valor que continuará disponível no benefício para as despesas do dia a dia.",
+    "facts": [
+      [
+        "person",
+        "Orientação da equipe Fivecred",
+        "Tire dúvidas sobre a simulação e os dados do benefício."
+      ],
+      [
+        "document",
+        "Compare a proposta completa",
+        "Avalie o custo total e o compromisso mensal antes de contratar."
+      ]
+    ],
+    "note": "Contratação sujeita à análise. As parcelas do consignado são descontadas do benefício.",
+    "imageTitle": "Uma nova fase, novos planos",
+    "imageDescription": "Inserir foto de uma pessoa ou casal maduro, em situação cotidiana. Expressão natural, boa iluminação e representação respeitosa."
+  },
+  "luz-fivecred": {
+    "name": "Crédito na conta de luz",
+    "headline": "Uma opção de crédito pela sua conta de luz.",
+    "intro": "Consulte uma modalidade em que as parcelas podem ser cobradas na fatura de energia. A equipe verifica as possibilidades para a sua região e seu perfil.",
+    "storyTitle": "Uma conta conhecida. Uma possibilidade a entender.",
+    "storyIntro": "Conte sobre sua conta de energia e conheça como funciona a cobrança antes de tomar uma decisão.",
+    "facts": [
+      [
+        "pin",
+        "Disponibilidade na sua região",
+        "O atendimento considera a distribuidora e os dados da conta."
+      ],
+      [
+        "light",
+        "A fatura precisa caber no mês",
+        "Considere o consumo de energia junto da parcela do empréstimo."
+      ]
+    ],
+    "note": "Disponibilidade e aprovação dependem de análise. O crédito acrescenta uma obrigação à fatura.",
+    "imageTitle": "O conforto da sua casa",
+    "imageDescription": "Inserir foto de uma pessoa adulta em uma casa iluminada, conferindo a conta de energia, ou arte Fivecred sobre a modalidade."
+  },
+  "imovel-fivecred": {
+    "name": "Crédito com garantia de imóvel",
+    "headline": "Seu imóvel pode abrir espaço para novos planos.",
+    "intro": "Reorganizar as finanças ou investir em um projeto: conheça o crédito com garantia de imóvel e converse sobre uma proposta para o seu perfil.",
+    "storyTitle": "Para os planos que pedem um próximo passo.",
+    "storyIntro": "O imóvel entra como garantia. A equipe explica a avaliação e o que precisa ser considerado na negociação.",
+    "facts": [
+      [
+        "home",
+        "Uma análise do seu imóvel",
+        "Valor, localização e documentação fazem parte da avaliação."
+      ],
+      [
+        "work",
+        "Seu projeto no centro da conversa",
+        "Conte o objetivo e conheça valores, parcelas e custos da proposta."
+      ]
+    ],
+    "note": "Crédito sujeito à análise. O não pagamento pode levar à perda do imóvel oferecido em garantia.",
+    "imageTitle": "Patrimônio e novos projetos",
+    "imageDescription": "Inserir foto de um casal maduro em casa ou de um empresário em seu negócio. Composição natural, com espaço ao redor das pessoas."
+  },
+  "veiculo-fivecred": {
+    "name": "Crédito com garantia de veículo",
+    "headline": "Seu carro como garantia para o próximo passo.",
+    "intro": "Conheça uma possibilidade de crédito usando seu veículo como garantia. A Fivecred orienta você sobre a avaliação e as condições da proposta.",
+    "storyTitle": "Seu veículo faz parte da sua história.",
+    "storyIntro": "Antes de negociar, entenda o valor avaliado, as parcelas e o compromisso assumido com o bem.",
+    "facts": [
+      [
+        "car",
+        "Cada veículo tem uma avaliação",
+        "Modelo, ano, documentação e situação do financiamento são considerados."
+      ],
+      [
+        "chat",
+        "Condições explicadas pela equipe",
+        "Converse sobre o valor procurado e os próximos passos da análise."
+      ]
+    ],
+    "note": "Crédito sujeito à análise. O não pagamento pode levar à perda do veículo oferecido em garantia.",
+    "imageTitle": "Mobilidade no dia a dia",
+    "imageDescription": "Inserir foto de um adulto com seu veículo em um contexto cotidiano. Evitar imagens de carro de luxo ou de entrega de prêmio."
+  },
+  "contemplada.fivecred.com.br": {
+    "name": "Comprar uma carta contemplada",
+    "headline": "Uma carta contemplada para o bem que você procura.",
+    "intro": "Imóvel ou veículo: conte o que deseja comprar e consulte as possibilidades com a Fivecred. Entenda entrada, saldo e transferência antes de negociar.",
+    "storyTitle": "A compra começa conhecendo todos os valores.",
+    "storyIntro": "O crédito da carta é uma parte da conversa. Entrada, saldo e condições da cota também entram no planejamento.",
+    "facts": [
+      [
+        "home",
+        "Seu objetivo orienta a busca",
+        "Informe o tipo de bem para consultar a disponibilidade com a equipe."
+      ],
+      [
+        "document",
+        "Negociação acompanhada",
+        "Confira os documentos e as exigências da administradora."
+      ]
+    ],
+    "note": "Disponibilidade sujeita à consulta. A transferência depende da aprovação da administradora.",
+    "imageTitle": "O bem que faz parte dos planos",
+    "imageDescription": "Inserir foto de uma família adulta em frente a um imóvel, ou arte Fivecred que represente a compra de imóvel e veículo."
+  },
+  "fivecred-afiliados": {
+    "name": "Parceria Fivecred",
+    "headline": "Suas conexões podem abrir novas oportunidades.",
+    "intro": "Conheça o programa de afiliados Fivecred. Entenda como participar, acompanhar indicações e quais são as regras da parceria.",
+    "storyTitle": "Boas conexões começam com confiança.",
+    "storyIntro": "Apresente a Fivecred a quem procura atendimento e conheça o processo antes de começar a indicar.",
+    "facts": [
+      [
+        "people",
+        "Uma parceria com contexto",
+        "Conecte pessoas interessadas ao atendimento da equipe."
+      ],
+      [
+        "document",
+        "Regras claras desde o início",
+        "Consulte participação, acompanhamento e condições de remuneração."
+      ]
+    ],
+    "note": "Participação e eventual remuneração seguem as regras do programa. Não há promessa de ganhos.",
+    "imageTitle": "Parceria entre pessoas",
+    "imageDescription": "Inserir foto oficial de uma reunião da equipe Fivecred com um parceiro, ou arte institucional sobre conexão e atendimento."
+  },
+  "lp-venda-carta-contemplada": {
+    "name": "Venda da própria carta",
+    "headline": "Venda sua carta contemplada com tranquilidade.",
+    "intro": "Os planos mudaram? A Fivecred avalia a compra da sua carta. Conheça a proposta e escolha o que faz sentido para você.",
+    "storyTitle": "O que era um plano pode abrir espaço para outro.",
+    "storyIntro": "Uma nova prioridade na família ou no negócio pode mudar seus planos. Comece conhecendo uma proposta para a sua carta.",
+    "facts": [
+      [
+        "work",
+        "Um novo momento no negócio",
+        "Converse sobre a venda se os seus projetos profissionais mudaram."
+      ],
+      [
+        "people",
+        "Outras prioridades para a família",
+        "Conheça o valor oferecido antes de definir o próximo passo."
+      ]
+    ],
+    "note": "O valor do crédito e o preço de venda da cota são diferentes. A compra e a transferência estão sujeitas à análise.",
+    "imageTitle": "Novos planos para uma nova fase",
+    "imageDescription": "Inserir foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real."
+  }
+}

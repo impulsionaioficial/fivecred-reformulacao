@@ -28,6 +28,14 @@ A seção de confiança considera também a altura: em telas de computador de 12
 
 Os ajustes compartilhados ficam em `shared/responsive.css`, carregado depois dos estilos das LPs. `shared/content-panels.js` controla somente os tópicos de conteúdo. Os formulários e seus destinos de envio não são alterados.
 
+## Design e imagens
+
+As dez LPs usam a mesma identidade Fivecred: abertura em bege, conteúdo e orientação de imagem específicos por produto, seção de confiança em azul-marinho e chamada final laranja. A logo e a altura da navegação foram preservadas. Benefícios, etapas e orientações usam tópicos que abrem ao toque nas telas compactas.
+
+Os espaços de imagem estão identificados nas próprias páginas. O [mapa de imagens](docs/mapa-de-imagens.md) informa o material esperado, o nome do arquivo e a pasta `shared/assets/lps/`. Há dez imagens de contexto e uma imagem de equipe compartilhada. Os slots são substituídos pelas imagens durante a geração do HTML, quando o arquivo indicado estiver disponível. Não foram incluídos depoimentos ou indicadores sem comprovação.
+
+O conteúdo está em `work/content/visual-direction.json`, a renderização dos blocos em `work/visual-direction.cjs` e a camada visual em `shared/brand-refresh.css`. A saída Vercel permanece estática e os formulários não foram alterados. A [direção visual](docs/direcao-visual-2026-09-16.md) registra os critérios aplicados.
+
 ## Desenvolvimento
 
 1. Edite conteúdo em `work/content/`, textos de formulário em `work/form-copy.cjs`, templates em `work/build-sites.cjs`, `work/seller-page.cjs` e `work/legal-pages.cjs`.
@@ -41,6 +49,8 @@ Os três projetos Next mantêm entradas para execução local. Após mover a pas
 
 ## Verificações
 
+- Preservação de formulários e espaços de imagem: `node tests/design-refresh.cjs`.
+- Composição, contraste e tópicos no navegador: `node tests/brand-refresh-browser.cjs` (44 combinações e inserção de imagem simulada apenas durante o teste).
 - Altura disponível e tópicos: `node tests/viewport-height.cjs` (88 combinações, seção completa no computador, tópicos por toque/teclado no celular, sem cortes ou rolagem interna).
 - Layout responsivo: `node tests/responsive-layout.cjs` (110 combinações de página/largura, menus em telas baixas, ancoragem e ausência de sobreposição do WhatsApp; rode o build estático antes).
 - Estrutura, links e acessibilidade básica: `node tests/verify-sites.cjs`.

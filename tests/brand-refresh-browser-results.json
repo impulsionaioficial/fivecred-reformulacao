@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "pages": 11,
+  "viewportChecks": 44,
+  "markedSlots": 22,
+  "forms": "Original markup and submission scripts verified separately",
+  "darkTextContrast": "At least 4.5:1",
+  "mobileTopics": "Touch, keyboard and independent groups",
+  "suppliedImages": "Reserved space preserved",
+  "errors": []
+}

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   "title": "Comprar carta contemplada para imóvel ou veículo | Fivecred",
-  "description": "Quer comprar uma carta de consórcio contemplada? Entenda entrada, saldo a pagar e transferência antes de consultar opções com a Fivecred.",
+  "description": "Imóvel ou veículo: conte o que deseja comprar e consulte as possibilidades com a Fivecred. Entenda entrada, saldo e transferência antes de negociar.",
   "referrer": "no-referrer",
   "robots": {
     "index": true,

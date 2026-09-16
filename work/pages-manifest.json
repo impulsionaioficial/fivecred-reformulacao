@@ -3,14 +3,14 @@
     "slug": "fivecred-next",
     "type": "home",
     "title": "Fivecred | Encontre opções de crédito para seu momento",
-    "description": "Preencha seus dados, conte seu perfil e informe o crédito que procura. A Fivecred orienta você sobre as possibilidades e as condições da análise.",
+    "description": "Conte o que você precisa e conheça as opções que podem ser analisadas para o seu perfil. A Fivecred acompanha você nessa conversa.",
     "aliases": []
   },
   {
     "slug": "bolsa-fivecred",
     "type": "credit",
     "title": "Recebe Bolsa Família? Conheça opções de crédito | Fivecred",
-    "description": "Informe seus dados e as informações do benefício para simular uma possibilidade. O resultado é ilustrativo e não representa crédito aprovado. A disponibilidade depende da análise da instituição financeira.",
+    "description": "Recebe Bolsa Família? Informe sua situação e converse sobre o que pode ser analisado. O benefício, por si só, não garante aprovação de crédito.",
     "aliases": [
       "emprestimo-bolsa-familia.html"
     ]
@@ -19,7 +19,7 @@
     "slug": "consignado-fivecred",
     "type": "credit",
     "title": "Empréstimo consignado INSS: entenda suas opções | Fivecred",
-    "description": "Informe seus dados, o tipo e o valor do benefício para uma simulação inicial. Conheça as condições e avalie como as parcelas cabem no seu planejamento.",
+    "description": "É aposentado ou pensionista do INSS? Faça uma simulação inicial e conheça as condições que podem ser avaliadas para o seu benefício.",
     "aliases": [
       "emprestimo-consignado-inss.html"
     ]
@@ -28,7 +28,7 @@
     "slug": "luz-fivecred",
     "type": "credit",
     "title": "Empréstimo na conta de luz: como funciona | Fivecred",
-    "description": "Preencha seus dados e as informações da conta de energia para simular. A disponibilidade depende da região, da distribuidora e da análise da instituição financeira.",
+    "description": "Consulte uma modalidade em que as parcelas podem ser cobradas na fatura de energia. A equipe verifica as possibilidades para a sua região e seu perfil.",
     "aliases": [
       "emprestimo-conta-de-luz.html"
     ]
@@ -37,7 +37,7 @@
     "slug": "imovel-fivecred",
     "type": "credit",
     "title": "Empréstimo com garantia de imóvel | Fivecred",
-    "description": "Conte sobre você e seu imóvel para uma simulação inicial. A equipe explica avaliação, custos e condições antes de você decidir.",
+    "description": "Reorganizar as finanças ou investir em um projeto: conheça o crédito com garantia de imóvel e converse sobre uma proposta para o seu perfil.",
     "aliases": [
       "emprestimo-garantia-imovel.html"
     ]
@@ -46,35 +46,35 @@
     "slug": "veiculo-fivecred",
     "type": "credit",
     "title": "Empréstimo com garantia de veículo | Fivecred",
-    "description": "Informe seus dados e as características do veículo para simular. Entenda avaliação, valores e condições antes de escolher o próximo passo.",
+    "description": "Conheça uma possibilidade de crédito usando seu veículo como garantia. A Fivecred orienta você sobre a avaliação e as condições da proposta.",
     "aliases": []
   },
   {
     "slug": "fivecred-landing-page",
     "type": "home",
     "title": "Encontre um caminho para o seu crédito | Fivecred",
-    "description": "Informe seus dados e seu perfil para solicitar atendimento. A equipe Fivecred orienta você sobre as modalidades e condições disponíveis.",
+    "description": "Converse sobre o seu objetivo e entenda quais possibilidades podem ser avaliadas. A equipe Fivecred explica o que considerar em cada opção.",
     "aliases": []
   },
   {
     "slug": "contemplada.fivecred.com.br",
     "type": "buyer",
     "title": "Comprar carta contemplada para imóvel ou veículo | Fivecred",
-    "description": "Quer comprar uma carta de consórcio contemplada? Entenda entrada, saldo a pagar e transferência antes de consultar opções com a Fivecred.",
+    "description": "Imóvel ou veículo: conte o que deseja comprar e consulte as possibilidades com a Fivecred. Entenda entrada, saldo e transferência antes de negociar.",
     "aliases": []
   },
   {
     "slug": "fivecred-afiliados",
     "type": "affiliate",
     "title": "Programa de afiliados: conheça a parceria Fivecred",
-    "description": "Quer indicar pessoas à Fivecred? Conheça o programa de afiliados, consulte as regras de participação e converse com a equipe sobre a parceria.",
+    "description": "Conheça o programa de afiliados Fivecred. Entenda como participar, acompanhar indicações e quais são as regras da parceria.",
     "aliases": []
   },
   {
     "slug": "lp-venda-carta-contemplada",
     "type": "seller",
     "title": "Venda sua carta contemplada para a Fivecred | Solicite uma proposta",
-    "description": "A Fivecred compra cartas contempladas de quem deseja vender a própria cota. Solicite avaliação, entenda valor, pagamento e transferência antes de decidir.",
+    "description": "Os planos mudaram? A Fivecred avalia a compra da sua carta. Conheça a proposta e escolha o que faz sentido para você.",
     "aliases": []
   }
 ]

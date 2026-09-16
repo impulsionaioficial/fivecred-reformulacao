@@ -1,0 +1,50 @@
+{
+  "forms": {
+    "index.html": [
+      "f1d8c043f0c3d6d39612846e8ed9d39ca38e841cb6ab2102f6e2d31234739155"
+    ],
+    "fivecred-next/index.html": [
+      "f1d8c043f0c3d6d39612846e8ed9d39ca38e841cb6ab2102f6e2d31234739155"
+    ],
+    "bolsa-fivecred/index.html": [
+      "f9bb7052eccac7619521cd8a514956b3d34e1e9ca8e1f3e8ad03d0d836263527"
+    ],
+    "consignado-fivecred/index.html": [
+      "cbe7e207617bd90ab6ee0b51a1a5c2dd2434732c8c7bf7eb38023d44f4d47fa6"
+    ],
+    "luz-fivecred/index.html": [
+      "ee0a6a73c560333a231d0d49c5468d1a107cc194633c5610a2578c4374559766"
+    ],
+    "imovel-fivecred/index.html": [
+      "3db20dc422119564cff22bc82e230ab4eddf5ebf9654167aaec1396f6867da05"
+    ],
+    "veiculo-fivecred/index.html": [
+      "a05b158f2f65191d4f3c75d3e37b38cbc4422168a90d8481fb3bbcfa8e2f99a0"
+    ],
+    "fivecred-landing-page/index.html": [
+      "e16923b23b1d6b4c308846f154291e1a11a5bc9d46295c1a7ca136a15b0a69bc"
+    ],
+    "contemplada.fivecred.com.br/index.html": [
+      "1d40c3e4a2a43f8122e3d39043f5b40a19cab13be7d9c31f763e63b0b45c3aba",
+      "4314141e42c5e0c21bd3f28166ff26186e9bda1b6036e3273e6ccb0fa9fec337"
+    ],
+    "fivecred-afiliados/index.html": [
+      "cb0cb8f7fe399f4d4674a1272a5461b6e827c4c8a340468eab6aac59d6c475c6"
+    ],
+    "lp-venda-carta-contemplada/index.html": [
+      "1d1c476fde195bb4379865217658d917cd900d0b10b29e29ef8e11251ecaedcb"
+    ]
+  },
+  "scripts": {
+    "shared/connected-forms.js": "3668e90485fbda78ab62922e9e0ea97a65e81378dc367c5bf48cfef65129729c",
+    "shared/journey.js": "c94dffbb92ab7af5d8a5e7fba4d9bb9d5cede69b3b51a43306438c2fe0167563",
+    "shared/whatsapp-contact.js": "a35c69593b65ff682325ba14f273825d98be121d098c05e6332b478404398c6b",
+    "shared/site.js": "19f155cf6d0dc9912d0034a367514c0806b3dcf35fab334b837852e026029044",
+    "shared/original-forms/bolsa-fivecred.js": "0d86ac19388efb21817942881e5aa51fcfa4ebe10598550c601650c3fb26569d",
+    "shared/original-forms/consignado-fivecred.js": "63f8870899e7d4eab16b55404ab0fddbb6fdab4882ca2682de7ec01908ac9acc",
+    "shared/original-forms/fivecred-landing-page.js": "1c472eda4a0adcba19f80e94da9c67041d1de8f646930839b6a4c7d15f29a7ac",
+    "shared/original-forms/imovel-fivecred.js": "8706b2f35066a07ff6279fb302e1f04a214a27f59550daa1c4e015cada0df878",
+    "shared/original-forms/luz-fivecred.js": "eba8a1871d05501bc3430af031fdf6cfcbecc1511e5e4839bbf05b25adb2fd76",
+    "shared/original-forms/veiculo-fivecred.js": "4116da86663bbfe546eb0ecc4a7807b5a812bf73265f1daf868cedc744b5b2d3"
+  }
+}

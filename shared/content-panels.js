@@ -25,12 +25,12 @@
       panel.addEventListener('toggle', function () {
         if (!compact.matches || !panel.open) return;
         panels.forEach(function (other) {
-          if (other !== panel && other.closest('ul') === panel.closest('ul')) other.open = false;
+          if (other !== panel && other.closest('ul,ol,[data-reading-group]') === panel.closest('ul,ol,[data-reading-group]')) other.open = false;
         });
         requestAnimationFrame(function () {
           var header = document.querySelector('.header');
           var top = header ? header.getBoundingClientRect().bottom : 0;
-          var group = panel.closest('ul');
+          var group = panel.closest('ul,ol,[data-reading-group]');
           var target = group && group.getBoundingClientRect().height <= innerHeight - top - 32 ? group : panel;
           var rect = target.getBoundingClientRect();
           if (rect.bottom > innerHeight - 16 || rect.top < top + 16) {
