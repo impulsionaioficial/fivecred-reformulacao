@@ -7,5 +7,5 @@ const groups=[
 ];
 module.exports=function renderPartnerMarquee(esc){
  const items=groups.flatMap(group=>group.names.map(name=>`<li><strong>${esc(name)}</strong><span>${esc(group.category)}</span></li>`)).join('');
- return `<div class="partner-marquee" data-partner-marquee><div class="partner-marquee-viewport" aria-label="Instituições parceiras"><div class="partner-marquee-track"><ul class="partner-marquee-list" data-partner-original role="list">${items}</ul><ul class="partner-marquee-list" data-partner-copy aria-hidden="true" inert>${items}</ul></div></div><div class="partner-marquee-controls"><button type="button" class="partner-motion-toggle" data-partner-toggle aria-pressed="false" hidden><span class="partner-motion-symbol" aria-hidden="true">Ⅱ</span><span data-partner-toggle-label>Pausar movimento</span></button></div></div>`;
+ return `<div class="partner-marquee" data-partner-marquee><div class="partner-marquee-viewport" aria-label="Instituições parceiras"><div class="partner-marquee-track"><ul class="partner-marquee-list" data-partner-original role="list">${items}</ul><ul class="partner-marquee-list" data-partner-copy aria-hidden="true" inert>${items}</ul></div></div></div>`;
 };

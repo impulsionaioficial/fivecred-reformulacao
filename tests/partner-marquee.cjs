@@ -17,16 +17,16 @@ const names=['Banco BV','PAN','Daycoval','BMG','C6 Bank','Creditas','CashMe','Cr
    assert.equal(await marquee.locator('[aria-hidden="true"] strong').count(),12);assert.equal(await state(),'running');
    const before=await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform);await page.waitForTimeout(200);assert.notEqual(await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform),before);
    const geometry=await marquee.evaluate(e=>{const lists=e.querySelectorAll('ul');return{track:e.querySelector('.partner-marquee-track').getBoundingClientRect().width,first:lists[0].getBoundingClientRect().width,second:lists[1].getBoundingClientRect().width}});assert(Math.abs(geometry.first-geometry.second)<1);assert(Math.abs(geometry.track-geometry.first*2)<1);
-   const toggle=marquee.locator('[data-partner-toggle]');await toggle.click();assert.equal(await toggle.getAttribute('aria-pressed'),'true');assert.equal(await state(),'paused');
-   await page.keyboard.press('Enter');assert.equal(await toggle.getAttribute('aria-pressed'),'false');await page.mouse.move(0,0);assert.equal(await state(),'running');
-   await page.locator('.partner-marquee-viewport').hover();assert.equal(await state(),'paused');await page.mouse.move(0,0);
-   await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).animationName),'none');assert(!await toggle.isVisible());assert(!await marquee.locator('[data-partner-copy]').isVisible());
+   assert.equal(await marquee.locator('[data-partner-toggle]').count(),0,'No pause control');
+   await page.locator('.partner-marquee-viewport').hover();assert.equal(await state(),'running');
+   const hovered=await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform);await page.waitForTimeout(200);assert.notEqual(await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform),hovered,'Motion continues under pointer');await page.mouse.move(0,0);
+   await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).animationName),'none');assert(!await marquee.locator('[data-partner-copy]').isVisible());
    assert(await marquee.locator('[data-partner-original]').evaluate(e=>[...e.children].every(li=>{const a=li.getBoundingClientRect(),b=e.getBoundingClientRect();return a.left>=b.left-1&&a.right<=b.right+1})));assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await page.emulateMedia({reducedMotion:'no-preference'});await page.evaluate(()=>scrollTo(0,0));await page.waitForFunction(()=>document.querySelector('[data-partner-marquee]').dataset.visible==='false');assert.equal(await state(),'paused');checks++;
   }
   const pages=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json')));let lps=0;
   for(const item of pages){await page.goto(base+'/'+item.slug+'/index.html');assert.equal(await page.locator('[data-partner-marquee]').count(),item.type==='seller'?0:1);lps++;}
   const fallback=await browser.newContext({javaScriptEnabled:false});const plain=await fallback.newPage();await plain.goto(base+'/');assert.equal(await plain.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).animationName),'none');assert(!await plain.locator('[data-partner-toggle]').isVisible());assert(!await plain.locator('[data-partner-copy]').isVisible());await fallback.close();
-  assert.deepEqual(errors,[]);console.log(JSON.stringify({result:'PASS',viewports:checks,landingPages:lps,brands:12,continuousMotion:true,keyboardPause:true,hoverPause:true,reducedMotion:true,noJavaScriptFallback:true,offscreenPause:true,errors},null,2));
+  assert.deepEqual(errors,[]);console.log(JSON.stringify({result:'PASS',viewports:checks,landingPages:lps,brands:12,continuousMotion:true,pauseControlRemoved:true,continuesOnHover:true,reducedMotion:true,noJavaScriptFallback:true,offscreenPause:true,errors},null,2));
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exit(1)});
