@@ -10,7 +10,7 @@ function assetsFor(page,prefix='../') {
  if(page.formPage&&migratedSlugs.has(page.slug)){styles.push(prefix+'shared/migrated-forms.css?v=20260916');scripts.push(prefix+'shared/migrated-forms.js?v=20260916');}
  styles.push(prefix+'shared/responsive.css?v=20260916-height');
  styles.push(prefix+'shared/brand-refresh.css?v=20260916-editorial');
- styles.push(prefix+'shared/simulation-pages.css?v=20260916-forms');
+ styles.push(prefix+'shared/simulation-pages.css?v=20260916-green');
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){

@@ -41,3 +41,9 @@
  .simulation-back{gap:6px;font-size:15px}
  .simulation-cta{padding:22px 20px}
 }
+/* Calm, high-contrast green for the simulation actions on every product LP. */
+.brand-page{--simulation-green:#2f6f54;--simulation-green-hover:#255b44;--simulation-green-active:#1e4c39}
+.brand-page .button.button-simulate{background:var(--simulation-green);border-color:var(--simulation-green);color:#fff}
+.brand-page .button.button-simulate:hover{background:var(--simulation-green-hover);border-color:var(--simulation-green-hover);color:#fff;box-shadow:0 4px 14px #16314812}
+.brand-page .button.button-simulate:active{background:var(--simulation-green-active);border-color:var(--simulation-green-active)}
+.brand-page .button.button-simulate:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 7px #163148}
