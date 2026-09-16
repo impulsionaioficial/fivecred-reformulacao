@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   "description": "Quer comprar uma carta de consórcio contemplada? Entenda entrada, saldo a pagar e transferência antes de consultar opções com a Fivecred.",
   "referrer": "no-referrer",
   "robots": {
-    "index": false,
-    "follow": false,
-    "nocache": true,
+    "index": true,
+    "follow": true,
+    "nocache": false,
     "googleBot": {
-      "index": false,
-      "follow": false,
-      "noimageindex": true
+      "index": true,
+      "follow": true,
+      "noimageindex": false
     }
   }
 };

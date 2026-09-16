@@ -312,9 +312,9 @@
       return intro + '<dl class="j-summary" data-summary></dl>' +
         button('review', 'Revisar minhas respostas', true, 'j-review') +
         '<div class="j-actions">' + (seller ? '' : button('whatsapp', whatsLabel, false)) +
-        button('contact', seller ? 'Continuar solicitação pelo formulário' : 'Continuar pelo formulário', !seller) + '</div>' +
+        (root.dataset.integrationPending === 'true' ? '<button type="button" class="j-button" disabled>Continuar solicitação pelo formulário</button>' : button('contact', seller ? 'Continuar solicitação pelo formulário' : 'Continuar pelo formulário', !seller)) + '</div>' +
         '<p class="j-help">Sem compromisso. ' + (seller ? 'Continue para informar seus dados de contato.' : 'Você decide como continuar.') +
-        ' Esta versão é uma demonstração local e não envia dados.</p>' +
+        '</p>' + (root.dataset.integrationPending === 'true' ? '<p class="form-unavailable" role="status">O envio pelo formulário está temporariamente indisponível. Nenhuma solicitação foi enviada.</p>' : '') +
         navigation();
     }
 
@@ -557,7 +557,7 @@
         case 'back': back(); break;
         case 'restart': state.contextNote = initialProfile ? 'Suas respostas foram mantidas. Confirme seu perfil ou escolha outro.' : ''; go(steps()[0]); break;
         case 'review': go('amount'); break;
-        case 'contact': go('contact'); break;
+        case 'contact': if (root.dataset.integrationPending !== 'true') go('contact'); break;
         case 'whatsapp': whatsapp(); break;
         case 'skip-identity': go('success'); break;
         case 'unknown-administrator': state.administrator = ''; go('amount'); break;

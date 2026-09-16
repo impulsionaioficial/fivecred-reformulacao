@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   "description": "Quer indicar pessoas à Fivecred? Conheça o programa de afiliados, consulte as regras de participação e converse com a equipe sobre a parceria.",
   "referrer": "no-referrer",
   "robots": {
-    "index": false,
-    "follow": false,
-    "nocache": true,
+    "index": true,
+    "follow": true,
+    "nocache": false,
     "googleBot": {
-      "index": false,
-      "follow": false,
-      "noimageindex": true
+      "index": true,
+      "follow": true,
+      "noimageindex": false
     }
   }
 };

@@ -120,7 +120,7 @@ for(const slug of slugs){
  ['Crédito Liberado','Crédito estimado'],
  ['Continuar para aprovação','Continuar pelo WhatsApp'],
  ['Ao continuar, nossa equipe entrará em contato para a liberação do crédito.','Ao continuar, você abre o WhatsApp com os dados desta simulação para falar com a equipe.'],
- ['Ambiente seguro. Sem consulta ao SPC/Serasa.','Prévia local: este formulário não envia dados.'],
+ ['Ambiente seguro. Sem consulta ao SPC/Serasa.','Envio temporariamente indisponível.'],
  ['Descobrir Meu Saldo','Conferir informações'],
  ['O limite aprovado é proporcional ao valor da sua conta mensal de energia.','A estimativa é proporcional ao valor informado para a sua conta mensal de energia.'],
  ['Pré-aprovação Qualificada','Próximo passo: análise'],
@@ -141,7 +141,11 @@ for(const slug of slugs){
  }
  if(campaign){
   form.querySelector('.radio-group').setAttribute('role','group');form.querySelector('.radio-group').setAttribute('aria-label','Qual o seu perfil?');
-  script=script.replace("'Fazendo Varredura...'","'Conferindo informações...'").replace("'Varredura iniciada. Um especialista entrará em contato pelo WhatsApp com as suas opções de saque.'","'Esta é uma prévia local. Os dados não foram enviados. O atendimento depende da configuração do envio deste formulário.'");
+  script=script.slice(0,script.indexOf('// Form Submit'))+`document.getElementById('leadForm').addEventListener('submit',event=>{event.preventDefault();const notice=formRoot.querySelector('.form-unavailable');if(notice){notice.tabIndex=-1;notice.focus();}});`;
+  form.insertAdjacentHTML('afterbegin','<p class="form-unavailable" role="status">O envio deste formulário está temporariamente indisponível. Você pode falar com a equipe pelos canais de atendimento da página.</p>');
+  const fields=doc.createElement('fieldset');fields.disabled=true;
+  for(const child of [...form.children])if(!child.classList.contains('form-unavailable'))fields.appendChild(child);
+  form.appendChild(fields);
  }
  script=script.replaceAll('*Crédito Pré-Aprovado:*','*Crédito Estimado:*')
  .replaceAll('O benefício do INSS não pode ser menor que o salário mínimo (R$ 1.412,00).','O valor mínimo usado nesta simulação ilustrativa é R$ 1.412,00.')

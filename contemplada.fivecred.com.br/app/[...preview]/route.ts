@@ -50,7 +50,7 @@ const COMMON_HEADERS: Record<string, string> = {
   "Content-Security-Policy": CSP,
   "X-Content-Type-Options": "nosniff",
   "X-Frame-Options": "DENY",
-  "X-Robots-Tag": "noindex, nofollow, nosnippet",
+  "X-Robots-Tag": "index, follow",
   "Referrer-Policy": "no-referrer",
   "Cross-Origin-Resource-Policy": "same-origin",
   "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",

@@ -61,7 +61,7 @@ const COMMON_HEADERS: Record<string, string> = {
   "Content-Security-Policy": CSP,
   "X-Content-Type-Options": "nosniff",
   "X-Frame-Options": "DENY",
-  "X-Robots-Tag": "noindex, nofollow, nosnippet",
+  "X-Robots-Tag": "index, follow",
   "Referrer-Policy": "no-referrer",
   "Cross-Origin-Resource-Policy": "same-origin",
   "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=()",
@@ -259,10 +259,10 @@ function adaptNext(root, page) {
     description: page.description,
     referrer: "no-referrer",
     robots: {
-      index: false,
-      follow: false,
-      nocache: true,
-      googleBot: { index: false, follow: false, noimageindex: true },
+      index: true,
+      follow: true,
+      nocache: false,
+      googleBot: { index: true, follow: true, noimageindex: false },
     },
   };
 

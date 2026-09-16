@@ -2,26 +2,26 @@
 
 ## Como funciona o crédito na conta de luz?
 
-Explicar titularidade, disponibilidade por região, forma de cobrança e o que conferir nas parcelas.
+O pagamento pode ser vinculado à conta de energia. Consulte a disponibilidade para sua região e distribuidora e confira valores, parcelas e custo total na proposta.
 
-## Posso consultar crédito com o nome negativado?
+## Como começo minha solicitação?
 
-Mostrar que critérios variam por modalidade e instituição, sem prometer aprovação ou ausência de consulta.
+Informe seus dados e seu perfil no formulário. A equipe avalia as possibilidades de atendimento e explica as condições. Enviar uma solicitação não garante aprovação.
 
-## O que conferir antes de antecipar o FGTS?
+## A simulação já é uma aprovação?
 
-Explicar autorização, condições vigentes, valores vinculados e pontos que precisam de confirmação.
+Não. Os valores simulados são estimativas. Aprovação, taxas e prazos dependem da análise da instituição responsável e das condições da proposta.
 
 ## O que significa usar um bem como garantia?
 
-Apresentar avaliação, obrigações, custos e risco da perda do bem em caso de inadimplência.
+Imóvel ou veículo pode ser apresentado como garantia de uma operação. Antes de contratar, entenda a avaliação, os custos e as consequências do atraso no pagamento.
 
 ## Como vender minha carta contemplada?
 
-Diferenciar crédito e preço da cota, explicar análise, contrato e aprovação da transferência pela administradora.
+Informe modalidade, administradora e valor do crédito para solicitar uma avaliação de compra à Fivecred. Preço da cota e valor do crédito são diferentes; a transferência depende da administradora.
 
-## Como reconhecer um pedido de taxa antecipada?
+## A Fivecred cobra taxa antecipada?
 
-Reforçar os canais oficiais e o aviso de que a Fivecred não cobra depósito para liberar crédito.
+A Fivecred não cobra taxa, depósito ou PIX antecipado para análise ou liberação de crédito. Em caso de dúvida sobre um contato, confira os canais oficiais informados neste site.
 
 Estrutura por artigo: título por intenção de busca, resposta direta, requisitos, custos e riscos relevantes, dúvidas frequentes, fonte oficial, responsável e data de revisão. Sem autoria, avaliações ou certificações inventadas.

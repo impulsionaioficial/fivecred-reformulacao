@@ -47,21 +47,11 @@ const maskCPF = (value) => {
             });
         }
 
-        // Form Submit
-        document.getElementById('leadForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Conferindo informações...';
-            btn.style.opacity = '0.8';
-            
-            setTimeout(() => {
-                alert('Esta é uma prévia local. Os dados não foram enviados. O atendimento depende da configuração do envio deste formulário.');
-                btn.innerText = originalText;
-                btn.style.opacity = '1';
-                e.target.reset();
-            }, 1500);
+        // No request is accepted until the dedicated campaign webhook is configured.
+        document.getElementById('leadForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const notice = formRoot.querySelector('.form-unavailable');
+            if (notice) { notice.tabIndex = -1; notice.focus(); }
         });
 
 readyCallbacks.forEach(callback=>callback());

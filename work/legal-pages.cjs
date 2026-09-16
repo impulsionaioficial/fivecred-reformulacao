@@ -1,0 +1,18 @@
+module.exports=function legalPage({page,type,prefix,shell,html,icon}) {
+ const privacy=type==='politica-de-privacidade';
+ const title=privacy?'Política de privacidade':'Termos de uso';
+ const text=privacy?`<p>Esta política explica como as informações fornecidas neste site são utilizadas no atendimento da Fivecred.</p>
+ <h2>Informações que você fornece</h2><p>Conforme a solução escolhida, os formulários solicitam dados de identificação e contato, além de informações sobre seu perfil, benefício, imóvel, veículo ou carta de consórcio. Confira os campos e as autorizações antes de enviar.</p>
+ <h2>Finalidade e encaminhamento</h2><p>As informações são utilizadas para responder à sua solicitação, entrar em contato e orientar o atendimento. Para análise de propostas, os dados necessários podem ser encaminhados à instituição responsável pela modalidade solicitada e aos serviços utilizados pela Fivecred para receber e organizar o atendimento.</p>
+ <h2>Contato pelo WhatsApp</h2><p>Ao escolher o WhatsApp, seu nome, e-mail e o assunto do atendimento são incluídos na mensagem preparada para a Fivecred. Você pode conferir a mensagem antes de enviá-la. O uso do WhatsApp também está sujeito às políticas do próprio serviço.</p>
+ <h2>Dados no navegador</h2><p>Os formulários não utilizam armazenamento local do navegador para guardar suas respostas. O navegador pode oferecer preenchimento automático conforme suas próprias configurações. As informações enviadas passam a ser tratadas pelos serviços de atendimento correspondentes.</p>
+ <h2>Dúvidas sobre seus dados</h2><p>Para esclarecer o tratamento das suas informações, solicitar uma correção ou tratar de outra solicitação relacionada aos seus dados, entre em contato pelos canais oficiais informados abaixo.</p>`:
+ `<p>Este site apresenta soluções e canais de atendimento da Fivecred. Ao solicitar atendimento, confira as informações fornecidas e as condições da modalidade de seu interesse.</p>
+ <h2>Solicitações e simulações</h2><p>Preencher um formulário ou realizar uma simulação não representa aprovação de crédito ou contratação. Valores simulados são estimativas; taxas, prazos, custos e aprovação dependem da análise e da proposta da instituição responsável.</p>
+ <h2>Atuação da Fivecred</h2><p>A Fivecred atua como correspondente bancário. As operações de crédito são realizadas pelas instituições responsáveis, conforme seus critérios e as condições apresentadas ao cliente.</p>
+ <h2>Cartas contempladas</h2><p>Comprar uma carta e vender a própria cota são operações distintas. A aceitação depende da análise e das condições negociadas. O preço de venda da cota não se confunde com o valor do crédito; a transferência depende da aprovação da administradora.</p>
+ <h2>Formalização</h2><p>Antes de aceitar uma proposta, confira valores, parcelas, custos, responsabilidades e condições do contrato. A solicitação inicial não obriga você a contratar crédito, comprar ou vender uma carta.</p>
+ <h2>Canais oficiais</h2><p>A Fivecred não cobra taxa, depósito ou PIX antecipado para análise ou liberação de crédito. Caso receba uma cobrança desse tipo, interrompa o contato e confirme os canais oficiais.</p>`;
+ const body=`<article class="container legal-page"><p class="section-label">Fivecred</p><h1>${title}</h1>${text}<h2>Fale com a Fivecred</h2><p>Fivecred · CNPJ 50.267.345/0001-84.<br>Av. Brigadeiro Faria Lima, 1461, andar 4, Jardim Paulistano, São Paulo, SP, CEP 01452-921.<br>WhatsApp: (11) 98079-7255.</p><a class="text-link" href="${prefix}index.html">Voltar para a página inicial ${icon('arrow')}</a></article>`;
+ return html({...page,title:title+' | Fivecred',description:title+' do site Fivecred.'},shell(page,body,prefix),prefix);
+};

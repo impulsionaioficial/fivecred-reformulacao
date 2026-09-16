@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   "description": "Preencha seus dados, conte seu perfil e informe o crédito que procura. A Fivecred orienta você sobre as possibilidades e as condições da análise.",
   "referrer": "no-referrer",
   "robots": {
-    "index": false,
-    "follow": false,
-    "nocache": true,
+    "index": true,
+    "follow": true,
+    "nocache": false,
     "googleBot": {
-      "index": false,
-      "follow": false,
-      "noimageindex": true
+      "index": true,
+      "follow": true,
+      "noimageindex": false
     }
   }
 };

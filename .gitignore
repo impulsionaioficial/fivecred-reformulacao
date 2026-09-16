@@ -9,3 +9,8 @@ node_modules/
 # Retired marketplaces: retained only as local copies
 /fivecred-marketplace-imoveis/
 /fivecred-marketplace-veiculos/
+
+# Generated deployment bundle
+/public-site/
+
+/tests/screenshots/production-*.png

@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "htmlPages": 43,
+  "viewports": [
+    320,
+    390,
+    1440
+  ],
+  "root": "General LP with original working form",
+  "placeholders": "Photo/design slots preserved",
+  "homeWebhook": "HTTP error and retry checked with intercepted requests",
+  "pendingForms": "Blocked until dedicated webhooks are provided",
+  "realExternalSubmissions": 0,
+  "errors": []
+}
