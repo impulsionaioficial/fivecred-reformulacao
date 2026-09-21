@@ -1,6 +1,6 @@
-# Entrega e atendimento ao briefing — atualização em 15/09/2026
+# Entrega e atendimento ao briefing — atualização em 21/09/2026
 
-Fonte: C:/Users/auror/Downloads/FiveCred.pdf, 7 páginas. Texto extraído em work/briefing-extraido.txt. O documento foi tratado como briefing editorial e funcional. A instrução posterior do usuário autorizou preservar os formulários e integrações anteriores. A versão continua sem publicação; os testes não enviaram dados reais.
+Fonte: C:/Users/auror/Downloads/FiveCred.pdf, 7 páginas. Texto extraído em work/briefing-extraido.txt. O documento foi tratado como briefing editorial e funcional. A instrução posterior do usuário autorizou preservar os formulários e integrações anteriores. A versão é preparada para produção no repositório fivecred-reformulacao; os testes não enviaram dados reais.
 
 | Requisito | Implementação |
 |---|---|
@@ -15,10 +15,14 @@ Fonte: C:/Users/auror/Downloads/FiveCred.pdf, 7 páginas. Texto extraído em wor
 | SEO por intenção | Títulos e descrições próprios, conteúdo HTML no servidor, um H1, FAQ específico, aliases de produto e links internos |
 | Blog posterior por Rafa | Área editorial e pautas em docs/pautas-editoriais.md |
 | Quem somos, jurídico e redes | Rodapé comum; Resolução CMN 4.935/2021; Instagram encontrado no fonte e espaços para demais URLs |
-| Reformulação de todos os sites | 12 entradas no índice, incluindo os 11 projetos copiados e a nova LP |
+| Reformulação de todos os sites | 12 LPs, com a página geral na raiz; sem índice de apresentação |
 | Nova LP de compra da carta do vendedor | lp-venda-carta-contemplada, separada da página para quem quer comprar uma carta |
-| Catálogos | 9 exemplos de imóveis e 9 veículos, filtros, detalhes, estado vazio, contato por formulário e WhatsApp |
+| Catálogos | Marketplaces excluídos das páginas publicadas e da navegação |
 | Parceiros comerciais | Formulário próprio, sem quiz de empréstimo nem promessa de renda |
+
+## Jornada de orientação
+
+Home e campanha passam pela página própria de objetivo, perfil e valor antes do formulário. LPs de produtos continuam com acesso direto ao formulário original. As escolhas acompanham a navegação e os botões genéricos de WhatsApp; nome e e-mail continuam solicitados pelo diálogo existente. Parâmetros não alteram payloads dos formulários originais. Fotos/designs continuam identificados para inserção posterior.
 
 ## Materiais que ainda precisam ser fornecidos
 
@@ -26,7 +30,7 @@ Fonte: C:/Users/auror/Downloads/FiveCred.pdf, 7 páginas. Texto extraído em wor
 - Depoimentos com autorização, identificação e origem.
 - Logotipos oficiais dos parceiros e comprovação de certificações a apresentar.
 - Endereços oficiais de Facebook, LinkedIn, X e outras redes que a Fivecred queira incluir. Instagram encontrado: https://instagram.com/_fivecred.
-- Dados atuais do catálogo para substituir os exemplos, caso essas páginas sejam publicadas no futuro.
+- Webhooks específicos para campanha de crédito e venda da própria carta, que o usuário informou que fornecerá.
 - Política de privacidade definitiva e validação operacional dos destinos de atendimento. As integrações anteriores foram restauradas, com contratos verificados por interceptação.
 
 ## Ajustes editoriais necessários

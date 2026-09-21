@@ -3,7 +3,7 @@
     "slug": "fivecred-next",
     "type": "home",
     "title": "Fivecred | Encontre opções de crédito para seu momento",
-    "description": "Conte o que você precisa e conheça as opções que podem ser analisadas para o seu perfil. A Fivecred acompanha você nessa conversa.",
+    "description": "Comece pelo seu objetivo, escolha seu perfil e o valor que procura. Conheça um caminho antes de informar seus dados e decida como continuar com a Fivecred.",
     "aliases": [],
     "simulation": "fivecred-next/simulacao.html"
   },
@@ -59,7 +59,7 @@
     "slug": "fivecred-landing-page",
     "type": "home",
     "title": "Encontre um caminho para o seu crédito | Fivecred",
-    "description": "Converse sobre o seu objetivo e entenda quais possibilidades podem ser avaliadas. A equipe Fivecred explica o que considerar em cada opção.",
+    "description": "Comece pelo seu objetivo, escolha seu perfil e o valor que procura. Conheça um caminho antes de informar seus dados e decida como continuar com a Fivecred.",
     "aliases": [],
     "simulation": "fivecred-landing-page/simulacao.html"
   },

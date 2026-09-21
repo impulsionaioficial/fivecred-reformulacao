@@ -78,3 +78,7 @@
  .simulation-amount-limits{padding-inline:54px;font-size:12px}
  .simulation-selection{align-items:flex-start;flex-direction:column;gap:8px;padding:18px 20px}
 }
+
+.credit-context-summary{display:grid;gap:10px;margin:16px 0 0;padding-top:14px;border-top:1px solid #c7d8cc}
+.credit-context-summary dt{font-size:13px;color:#536171;line-height:1.5}
+.credit-context-summary dd{margin:2px 0 0;font-size:16px;color:#163148;line-height:1.5}

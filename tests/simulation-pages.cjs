@@ -11,7 +11,7 @@ for(const item of manifest){
   const card=d.querySelector('.simulation-cta');assert(card,landing+' CTA card');
   assert(card.querySelector('h2')&&card.querySelector('p')&&card.querySelector('a[data-simulation-link]'),landing+' clear simulation call');
   const targets=[...d.querySelectorAll('[data-simulation-link]')];assert(targets.length>=2,landing+' hero and closing');
-  for(const a of targets){assert.equal(new URL(a.href).pathname,'/'+item.slug+'/simulacao.html');links++;}
+  for(const a of targets){assert.equal(new URL(a.href).pathname,['fivecred-next','fivecred-landing-page'].includes(item.slug)?'/orientacao/index.html':'/'+item.slug+'/simulacao.html');links++;}
   assert(!d.querySelector('[data-start-profile]'),'Profile actions must navigate');
   assert(![...d.scripts].some(s=>/connected-forms|journey|original-forms|migrated-forms/.test(s.src)),landing+' should not load form code');
  }

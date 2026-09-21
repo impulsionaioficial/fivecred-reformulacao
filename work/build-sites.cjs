@@ -82,6 +82,11 @@ for(const page of pages){
   rendered.push({...page,body});
 }
 write('index.html',html(home,shell(home,content(home,''),''),''));
+const guidePage={type:'guide',guidePage:true,title:'Encontre seu caminho de crédito | Fivecred',description:'Escolha objetivo, perfil e valor de interesse antes de informar seus dados. Conheça um caminho para continuar com a Fivecred.'};
+const guideHeader=`<a class="skip" href="#conteudo">Ir para o conteúdo</a><header class="header simulation-header"><div class="container header-inner"><a class="logo" href="../index.html" aria-label="Fivecred, página inicial"><img src="../shared/assets/logo-navbar.png?v=825ef632" width="672" height="130" alt="Fivecred"></a><a class="simulation-back" href="../index.html">${icon('arrow')}<span>Voltar<span class="simulation-back-detail"> para a página</span></span></a></div></header>`;
+const guideFooter=footer('../','guide').replaceAll('href="politica-de-privacidade.html"','href="../politica-de-privacidade.html"').replaceAll('href="termos-de-uso.html"','href="../termos-de-uso.html"');
+write('orientacao/index.html',html(guidePage,guideHeader+require('./credit-guide.cjs')({esc,icon})+guideFooter+dialogs(false)));
+
 for(const type of ['politica-de-privacidade','termos-de-uso'])write(type+'.html',legal(home,type,''));
 const editorialPage={title:'Dúvidas sobre crédito e cartas contempladas | Fivecred',description:'Encontre respostas sobre solicitações, simulações, crédito com garantia e cartas contempladas. Fale com a equipe Fivecred.',type:'editorial'};
 const topics=[

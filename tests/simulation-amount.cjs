@@ -25,19 +25,19 @@ const pages=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json'
     const dimensions=await range.boundingBox();assert(dimensions.height>=44);
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     for(const link of await page.locator('[data-simulation-link]').all())assert.equal(new URL(await link.getAttribute('href'),base).searchParams.get('valor_simulacao'),String(max));
-    await page.locator('.simulation-cta [data-simulation-link]').click();await page.waitForURL('**/simulacao.html?*');
+    const guided=['fivecred-next','fivecred-landing-page'].includes(item.slug);await page.locator('.simulation-cta [data-simulation-link]').click();if(guided){await page.locator('[data-guide-goal=organizar]').click();await page.locator('[data-guide-profile=outro]').click();await page.locator('[data-guide-next]').click();await page.locator('[data-guide-form]').click();}await page.waitForURL('**/simulacao.html?*');
     assert.equal(new URL(page.url()).searchParams.get('valor_simulacao'),String(max));
     const summary=page.locator('[data-simulation-selection]');assert(await summary.isVisible());assert((await summary.textContent()).includes('R$'));
     assert.equal(await page.locator('main form').count(),1);
     await summary.locator('a').click();await page.waitForURL('**/index.html?*');
-    assert.equal(Number(await page.locator('[data-simulation-range]').inputValue()),max);checks++;
+    assert.equal(Number(await page.locator(guided?'[data-guide-range]':'[data-simulation-range]').inputValue()),max);checks++;
    }
   }
   for(const amount of ['abc','NaN','0','-1','99999999999999999','1250.5','1000&valor_simulacao=2000']){
    await page.goto(base+'/fivecred-next/simulacao.html?valor_simulacao='+amount);assert(!await page.locator('[data-simulation-selection]').isVisible());
   }
   await page.goto(base+'/');assert.equal(await page.locator('[data-simulation-range]').count(),1);
-  const nojs=await browser.newContext({javaScriptEnabled:false});const fallback=await nojs.newPage();await fallback.goto(base+'/');assert(!await fallback.locator('[data-simulation-amount]').isVisible());await fallback.locator('.simulation-cta [data-simulation-link]').click();assert(new URL(fallback.url()).pathname.endsWith('/simulacao.html'));await nojs.close();
+  const nojs=await browser.newContext({javaScriptEnabled:false});const fallback=await nojs.newPage();await fallback.goto(base+'/');assert(!await fallback.locator('[data-simulation-amount]').isVisible());await fallback.locator('.simulation-cta [data-simulation-link]').click();await fallback.locator('[data-guide-fallback]').waitFor({state:'visible'});assert(new URL(fallback.url()).pathname.endsWith('/orientacao/index.html'));await nojs.close();
   assert.deepEqual(errors,[]);console.log(JSON.stringify({result:'PASS',productViewportFlows:checks,keyboardAndButtons:true,valueKeptOnNextPageAndReturn:true,invalidQueryValuesIgnored:true,noJavaScriptFallback:true,realExternalSubmissions:0},null,2));
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exit(1)});

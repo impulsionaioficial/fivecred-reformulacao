@@ -3,15 +3,17 @@ const migratedSlugs = new Set(['clt-fivecred','fgts-fivecred']);
 const connectedSlugs = new Set(['fivecred-next','fivecred-afiliados','contemplada.fivecred.com.br']);
 function assetsFor(page,prefix='../') {
  const styles=[prefix+'shared/site.css',prefix+'shared/lp-design.css?v=20260916-products',prefix+'shared/whatsapp-contact.css?v=20260915-1'];
- const scripts=[prefix+'shared/content-panels.js?v=20260916-editorial',prefix+'shared/whatsapp-contact.js?v=20260915-1',prefix+'shared/site.js?v=20260916-production'];
+ const scripts=[prefix+'shared/credit-routing.js?v=20260921',prefix+'shared/content-panels.js?v=20260916-editorial',prefix+'shared/whatsapp-contact.js?v=20260915-1',prefix+'shared/site.js?v=20260916-production'];
  if(page.type==='seller'){styles.push(prefix+'shared/seller.css?v=20260915');if(page.formPage)scripts.push(prefix+'shared/journey.js');}
  if(page.formPage&&staticSlugs.has(page.slug)){const a=require('./original-static-forms.cjs').originalStaticFormAssets(page.slug,prefix);styles.push(a.css);scripts.push(a.script);}
  if(page.formPage&&connectedSlugs.has(page.slug)){styles.push(prefix+'shared/connected-forms.css');scripts.push(prefix+'shared/connected-forms.js?v=20260915-wa');}
  if(page.formPage&&migratedSlugs.has(page.slug)){styles.push(prefix+'shared/migrated-forms.css?v=20260916');scripts.push(prefix+'shared/migrated-forms.js?v=20260916');}
  styles.push(prefix+'shared/responsive.css?v=20260916-height');
  styles.push(prefix+'shared/brand-refresh.css?v=20260916-editorial');
- styles.push(prefix+'shared/simulation-pages.css?v=20260916-amount');
+ styles.push(prefix+'shared/simulation-pages.css?v=20260921-context');
  scripts.push(prefix+'shared/simulation-amount.js?v=20260916');
+ scripts.push(prefix+'shared/credit-context.js?v=20260921');
+ if(page.guidePage){styles.push(prefix+'shared/credit-guide.css?v=20260921');scripts.push(prefix+'shared/credit-guide.js?v=20260921');}
  if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260916-continuous');scripts.push(prefix+'shared/partner-marquee.js?v=20260916-continuous');}
  return {styles,scripts};
 }

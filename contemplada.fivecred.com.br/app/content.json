@@ -6,14 +6,16 @@
     "/shared/whatsapp-contact.css?v=20260915-1",
     "/shared/responsive.css?v=20260916-height",
     "/shared/brand-refresh.css?v=20260916-editorial",
-    "/shared/simulation-pages.css?v=20260916-amount",
+    "/shared/simulation-pages.css?v=20260921-context",
     "/shared/partner-marquee.css?v=20260916-continuous"
   ],
   "scripts": [
+    "/shared/credit-routing.js?v=20260921",
     "/shared/content-panels.js?v=20260916-editorial",
     "/shared/whatsapp-contact.js?v=20260915-1",
     "/shared/site.js?v=20260916-production",
     "/shared/simulation-amount.js?v=20260916",
+    "/shared/credit-context.js?v=20260921",
     "/shared/partner-marquee.js?v=20260916-continuous"
   ]
 }

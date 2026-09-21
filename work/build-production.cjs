@@ -3,7 +3,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json'),'utf8'));
-const pages=['index.html','politica-de-privacidade.html','termos-de-uso.html','conteudos/index.html','conteudos/politica-de-privacidade.html','conteudos/termos-de-uso.html'];
+const pages=['orientacao/index.html','index.html','politica-de-privacidade.html','termos-de-uso.html','conteudos/index.html','conteudos/politica-de-privacidade.html','conteudos/termos-de-uso.html'];
 for(const page of manifest){for(const file of ['index.html','simulacao.html','politica-de-privacidade.html','termos-de-uso.html',...(page.aliases||[])])pages.push(page.slug+'/'+file);if(page.type==='seller')for(const file of ['index.html','politica-de-privacidade.html','termos-de-uso.html'])pages.push(page.slug+'/dist/'+file);}
 const files=new Set(pages),queue=[...pages];
 while(queue.length){

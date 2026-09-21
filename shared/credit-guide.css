@@ -1,0 +1,35 @@
+/* Three short decisions, using the approved Fivecred visual language. */
+.guide-container{max-width:780px;margin-inline:auto;min-width:0}
+.guide-card{padding:32px;border:1px solid #e3d8cc;border-top:4px solid #ff6b00;border-radius:16px;background:#fff;box-shadow:0 12px 30px #16314808}
+.guide-card[hidden],.guide-panel[hidden],.guide-adjustment[hidden],.guide-back[hidden]{display:none}
+.guide-eyebrow{font-size:14px;font-weight:500;color:#a84000;margin:0 0 20px}
+.guide-progress{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;list-style:none;padding:0;margin:0 0 26px}
+.guide-progress li{display:flex;align-items:center;gap:8px;padding:0 0 12px;border-bottom:3px solid #dce2e7;color:#536171;font-size:15px;line-height:1.5}
+.guide-progress li.is-current{border-color:#ff6b00;color:#163148;font-weight:550}
+.guide-progress li.is-complete{border-color:#2f6f54;color:#255b44}
+.guide-card h1{font-size:32px;line-height:1.2;font-weight:550;letter-spacing:-.025em;margin:0;scroll-margin-top:calc(var(--header-height) + 18px)}
+.guide-card h1:focus{outline:none}
+.guide-description{font-size:17px;line-height:1.55;color:#536171;margin:14px 0 24px}
+.guide-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.guide-option{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;min-height:78px;border:1px solid #b8c4ce;border-radius:10px;background:#fff;padding:16px;color:#163148;text-align:left;font:500 17px/1.4 Outfit,Arial,sans-serif;cursor:pointer}
+.guide-option .icon{width:18px;height:18px;flex:none;color:#a84000}
+.guide-option:hover,.guide-option[aria-pressed=true]{border-color:#a84000;background:#fff7ef}
+.guide-option:focus-visible,.guide-back:focus-visible,.guide-edit:focus-visible{outline:3px solid #163148;outline-offset:4px}
+.guide-back,.guide-edit{display:inline-flex;align-items:center;gap:9px;min-height:44px;margin-top:16px;padding:8px 0;background:transparent;border:0;color:#41566a;font:500 16px/1.5 Outfit,Arial,sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.guide-back .icon{width:19px;height:19px;transform:rotate(180deg)}
+.guide-privacy{display:flex;align-items:flex-start;gap:9px;margin:22px 0 0;color:#536171;font-size:14px;line-height:1.5}
+.guide-privacy .icon{width:19px;height:19px;flex:none;margin-top:1px}
+.guide-primary{width:100%;min-height:54px}
+.guide-adjustment{padding:14px 16px;margin:0 0 16px;border-left:3px solid #ff6b00;background:#fff7ef;color:#485568;font-size:15px;line-height:1.5}
+.guide-result-intro,.guide-result-note{font-size:16px;line-height:1.6;color:#485568}
+.guide-summary{display:grid;gap:14px;padding:20px;margin:22px 0;border:1px solid #d8e4dc;border-radius:12px;background:#f3f8f4}
+.guide-summary div{display:grid;grid-template-columns:125px minmax(0,1fr);gap:12px}
+.guide-summary dt{color:#536171;font-size:15px;line-height:1.5}
+.guide-summary dd{margin:0;color:#163148;font-size:17px;line-height:1.45;font-weight:500;overflow-wrap:anywhere}
+.guide-result-actions{display:grid;gap:12px;margin-top:22px}
+.guide-result-actions .button{width:100%;min-height:54px;font-size:17px}
+.guide-result-actions .text-link{justify-self:center}
+.guide-fallback-links{display:grid;gap:12px;list-style:none;margin:24px 0 0;padding:0}
+.guide-fallback-links a{display:block;min-height:44px;padding:10px;border:1px solid #b8c4ce;border-radius:8px}
+@media(max-width:599px){.guide-card{padding:22px 20px;border-radius:12px}.guide-card h1{font-size:27px}.guide-eyebrow{margin-bottom:18px}.guide-progress{gap:8px;margin-bottom:22px}.guide-progress li{gap:5px;font-size:14px}.guide-description{font-size:16px;margin:12px 0 20px}.guide-options{gap:10px}.guide-option{font-size:16px;padding:13px 12px;min-height:80px}.guide-profiles .guide-option .icon{display:none}.guide-summary{padding:16px}.guide-summary div{grid-template-columns:1fr;gap:3px}.guide-result-actions .button{font-size:16px}.guide-privacy{margin-top:18px}}
+@media(max-width:359px){.guide-card{padding:20px 16px}.guide-option{font-size:15px;padding:12px 10px}.guide-options:not(.guide-profiles){grid-template-columns:1fr}}

@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   "title": "Fivecred | Encontre opções de crédito para seu momento",
-  "description": "Conte o que você precisa e conheça as opções que podem ser analisadas para o seu perfil. A Fivecred acompanha você nessa conversa.",
+  "description": "Comece pelo seu objetivo, escolha seu perfil e o valor que procura. Conheça um caminho antes de informar seus dados e decida como continuar com a Fivecred.",
   "referrer": "no-referrer",
   "robots": {
     "index": true,

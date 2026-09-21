@@ -21,7 +21,7 @@ const ROOT_DOCUMENTS = new Set([
   "index.html", "politica-de-privacidade.html", "termos-de-uso.html",
 ]);
 const PREFIXES = new Set([
-  "shared", "conteudos", "clt-fivecred", "fgts-fivecred",
+  "shared", "conteudos", "orientacao", "clt-fivecred", "fgts-fivecred",
   "bolsa-fivecred", "consignado-fivecred", "contemplada.fivecred.com.br",
   "fivecred-afiliados", "fivecred-landing-page",
   "fivecred-next", "imovel-fivecred",
