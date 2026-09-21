@@ -11,6 +11,8 @@ const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site'),man
   for(const item of manifest)for(const [width,height] of [[320,568],[390,844],[768,600],[1280,600],[1440,900]]){
    await page.setViewportSize({width,height});await page.goto(base+'/'+item.slug+'/index.html');await page.evaluate(()=>document.fonts.ready);
    assert.equal(await page.locator('main form,[data-journey]').count(),0);
+   const actions=page.locator('.section-action [data-simulation-link]');assert.equal(await actions.count(),item.type==='seller'?3:4,item.slug+' contextual actions');
+   for(const link of await actions.all()){await link.scrollIntoViewIfNeeded();const box=await link.boundingBox();assert(box&&box.height>=44&&box.x>=0&&box.x+box.width<=width+1,item.slug+' CTA fits '+width);assert.equal(new URL(await link.getAttribute('href'),base).pathname,['fivecred-next','fivecred-landing-page'].includes(item.slug)?'/orientacao/index.html':'/'+item.slug+'/simulacao.html');}
    const card=page.locator('.simulation-cta');assert(await card.isVisible());const a=card.locator('[data-simulation-link]');
    if(item.slug==='fivecred-next'&&[390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/simulation-landing-'+width+'.png')});
    if(width===320){await a.focus();await page.keyboard.press('Enter');}else await a.click();

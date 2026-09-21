@@ -82,3 +82,10 @@
 .credit-context-summary{display:grid;gap:10px;margin:16px 0 0;padding-top:14px;border-top:1px solid #c7d8cc}
 .credit-context-summary dt{font-size:13px;color:#536171;line-height:1.5}
 .credit-context-summary dd{margin:2px 0 0;font-size:16px;color:#163148;line-height:1.5}
+
+/* Contextual actions stay with the content, outside collapsible panels. */
+.brand-page .section-action{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid #d9ddd8}
+.brand-page .section-action p{margin:0;flex:1 1 220px;color:#41566a;font-size:16px;line-height:1.5}
+.brand-page .section-action .button{flex:0 1 auto;min-height:52px;max-width:100%;white-space:normal;text-align:center}
+.brand-page .faq-heading .section-action{margin-bottom:20px}
+@media(max-width:599px){.brand-page .section-action{gap:14px;margin-top:24px;padding-top:20px}.brand-page .section-action p{flex-basis:100%}.brand-page .section-action .button{width:100%}}

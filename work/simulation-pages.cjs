@@ -33,4 +33,9 @@ function selection(page,prefix){
 function settings(page){const [title,description,action,heading]=messages[page.slug];return {title,description,action,heading,note:page.type==='seller'?'Sem compromisso. Você decide se deseja vender.':page.type==='affiliate'?'Conheça as regras e as condições da parceria.':'Sem compromisso. Sujeito à análise e às condições da proposta.'};}
 function href(page,prefix='../'){return ['fivecred-next','fivecred-landing-page'].includes(page.slug)?prefix+'orientacao/index.html?origem='+page.slug:prefix+page.slug+'/simulacao.html';}
 function card(page,prefix,icon,esc){const c=settings(page);return `<aside class="simulation-cta" id="simulacao" aria-labelledby="simulation-call-title"><span class="simulation-cta-icon">${icon(page.type==='affiliate'?'people':'document')}</span><h2 id="simulation-call-title">${esc(c.title)}</h2><p class="simulation-cta-description">${esc(c.description)}</p>${amountControl(page,esc)}<a class="button simulation-cta-button${c.action==='Simule aqui'?' button-simulate':''}" data-simulation-link href="${href(page,prefix)}">${esc(c.action)}${icon('arrow')}</a><p class="simulation-cta-note">${icon('shield')}<span>${esc(c.note)}</span></p></aside>`;}
-module.exports={settings,href,card,selection,amountControl};
+function sectionAction(page,prefix,icon,esc,message=''){
+ const c=settings(page),label=c.action;
+ const text=message||(page.type==='seller'?'Conheça uma proposta para a sua carta.':page.type==='affiliate'?'Dê o próximo passo para conhecer a parceria.':'Veja o próximo passo para o seu momento.');
+ return `<div class="section-action"><p>${esc(text)}</p><a class="button button-simulate" data-simulation-link href="${href(page,prefix)}">${esc(label)}${icon('arrow')}</a></div>`;
+}
+module.exports={settings,href,card,selection,amountControl,sectionAction};
