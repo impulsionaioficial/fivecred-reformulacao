@@ -30,3 +30,5 @@ ViewBox dos SVGs ajustado aos limites da arte para remover margens. As cores dos
 CashMe: fundo removido com image_gen (ferramenta integrada); Me e detalhe do C em azul-escuro para contraste. Prompt: remover fundo para alpha transparente, preservar geometria e texto CashMe, manter Cash ciano, recolorir Me e detalhe branco para #052748. Ativo: shared/assets/partners/cashme-transparent.webp.
 
 Daycoval: imagem BancoDaycoval fornecida pelo usuário, fundo branco removido com image_gen integrado. Prompt: remover somente fundo para alpha transparente, preservar tipografia, cores e dois quadrados. Ativo: shared/assets/partners/daycoval-transparent.webp.
+
+Atendimento: duas imagens fornecidas em 22/09/2026. Primeira nos espaços de atendimento das LPs e no contexto da campanha; segunda no atendimento INSS. Descrições alternativas factuais, sem identificar as pessoas. Reunião de parceiros em afiliados permanece reservada.

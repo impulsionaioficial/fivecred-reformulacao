@@ -22,7 +22,10 @@
     "imageDescription": "Inserir foto de um adulto ou casal maduro planejando um projeto em casa, com expressão tranquila e ambiente acolhedor.",
     "imageFile": "casal-album.webp",
     "imageAlt": "Casal sentado no sofá olhando um álbum de fotografias.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "fivecred-landing-page": {
     "name": "Sua próxima conquista",
@@ -44,7 +47,13 @@
     ],
     "note": "A disponibilidade depende do perfil e da análise da instituição financeira.",
     "imageTitle": "Atendimento que aproxima",
-    "imageDescription": "Inserir foto oficial de um atendimento Fivecred ou arte da marca mostrando uma conversa sobre projetos pessoais."
+    "imageDescription": "Inserir foto oficial de um atendimento Fivecred ou arte da marca mostrando uma conversa sobre projetos pessoais.",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%",
+    "imageFile": "atendimento-fivecred.webp",
+    "imageAlt": "Atendimento com explicação de um documento sobre a mesa.",
+    "imagePosition": "50% 35%"
   },
   "bolsa-fivecred": {
     "name": "Orçamento da família",
@@ -69,7 +78,10 @@
     "imageDescription": "Inserir foto acolhedora de uma pessoa adulta organizando o orçamento da casa. Evitar imagens de dinheiro, urgência ou vulnerabilidade.",
     "imageFile": "familia-em-casa.webp",
     "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "consignado-fivecred": {
     "name": "Consignado INSS",
@@ -94,7 +106,10 @@
     "imageDescription": "Inserir foto de uma pessoa ou casal maduro, em situação cotidiana. Expressão natural, boa iluminação e representação respeitosa.",
     "imageFile": "casal-parque.webp",
     "imageAlt": "Casal sorrindo e se abraçando em um parque.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-inss.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 33%"
   },
   "luz-fivecred": {
     "name": "Crédito na conta de luz",
@@ -119,7 +134,10 @@
     "imageDescription": "Inserir foto de uma pessoa adulta em uma casa iluminada, conferindo a conta de energia, ou arte Fivecred sobre a modalidade.",
     "imageFile": "iluminacao-casa.webp",
     "imageAlt": "Mulher sorrindo ao lado de uma luminária acesa em casa.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "imovel-fivecred": {
     "name": "Crédito com garantia de imóvel",
@@ -144,7 +162,10 @@
     "imageDescription": "Inserir foto de um casal maduro em casa ou de um empresário em seu negócio. Composição natural, com espaço ao redor das pessoas.",
     "imageFile": "planejamento-escritorio.webp",
     "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
-    "imagePosition": "50% 72%"
+    "imagePosition": "50% 72%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "veiculo-fivecred": {
     "name": "Crédito com garantia de veículo",
@@ -169,7 +190,10 @@
     "imageDescription": "Inserir foto de um adulto com seu veículo em um contexto cotidiano. Evitar imagens de carro de luxo ou de entrega de prêmio.",
     "imageFile": "motorista.webp",
     "imageAlt": "Homem com cinto de segurança ao volante de um carro.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "contemplada.fivecred.com.br": {
     "name": "Comprar uma carta contemplada",
@@ -194,7 +218,10 @@
     "imageDescription": "Inserir foto de uma família adulta em frente a um imóvel, ou arte Fivecred que represente a compra de imóvel e veículo.",
     "imageFile": "familia-em-casa.webp",
     "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "fivecred-afiliados": {
     "name": "Parceria Fivecred",
@@ -216,7 +243,10 @@
     ],
     "note": "Participação e eventual remuneração seguem as regras do programa. Não há promessa de ganhos.",
     "imageTitle": "Parceria entre pessoas",
-    "imageDescription": "Inserir foto oficial de uma reunião da equipe Fivecred com um parceiro, ou arte institucional sobre conexão e atendimento."
+    "imageDescription": "Inserir foto oficial de uma reunião da equipe Fivecred com um parceiro, ou arte institucional sobre conexão e atendimento.",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "lp-venda-carta-contemplada": {
     "name": "Venda da própria carta",
@@ -241,7 +271,10 @@
     "imageDescription": "Inserir foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real.",
     "imageFile": "planejamento-escritorio.webp",
     "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
-    "imagePosition": "50% 72%"
+    "imagePosition": "50% 72%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "clt-fivecred": {
     "name": "Crédito para quem trabalha de carteira assinada",
@@ -266,7 +299,10 @@
     "imageDescription": "Inserir foto ou design Fivecred de um trabalhador adulto em ambiente profissional, com uma representação natural e acolhedora.",
     "imageFile": "planejamento-escritorio.webp",
     "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
-    "imagePosition": "50% 72%"
+    "imagePosition": "50% 72%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   },
   "fgts-fivecred": {
     "name": "Antecipação do saque-aniversário",
@@ -291,6 +327,9 @@
     "imageDescription": "Inserir foto de uma pessoa adulta planejando suas finanças ou design Fivecred sobre FGTS e calendário. Evitar promessas de liberação ou valores garantidos.",
     "imageFile": "planejamento-celular.webp",
     "imageAlt": "Homem com celular fazendo anotações em um caderno.",
-    "imagePosition": "50% 50%"
+    "imagePosition": "50% 50%",
+    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
+    "teamImagePosition": "50% 35%"
   }
 }
