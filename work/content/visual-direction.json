@@ -79,9 +79,9 @@
     "imageFile": "familia-em-casa.webp",
     "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
     "imagePosition": "50% 50%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "consignado-fivecred": {
     "name": "Consignado INSS",
@@ -107,9 +107,9 @@
     "imageFile": "casal-parque.webp",
     "imageAlt": "Casal sorrindo e se abraçando em um parque.",
     "imagePosition": "50% 50%",
-    "teamImageFile": "atendimento-inss.webp",
+    "teamImageFile": "atendimento-fivecred.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 33%"
+    "teamImagePosition": "50% 35%"
   },
   "luz-fivecred": {
     "name": "Crédito na conta de luz",
@@ -135,9 +135,9 @@
     "imageFile": "iluminacao-casa.webp",
     "imageAlt": "Mulher sorrindo ao lado de uma luminária acesa em casa.",
     "imagePosition": "50% 50%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "imovel-fivecred": {
     "name": "Crédito com garantia de imóvel",
@@ -191,9 +191,9 @@
     "imageFile": "motorista.webp",
     "imageAlt": "Homem com cinto de segurança ao volante de um carro.",
     "imagePosition": "50% 50%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "contemplada.fivecred.com.br": {
     "name": "Comprar uma carta contemplada",
@@ -219,9 +219,9 @@
     "imageFile": "familia-em-casa.webp",
     "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
     "imagePosition": "50% 50%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "fivecred-afiliados": {
     "name": "Parceria Fivecred",
@@ -272,9 +272,9 @@
     "imageFile": "planejamento-escritorio.webp",
     "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
     "imagePosition": "50% 72%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "clt-fivecred": {
     "name": "Crédito para quem trabalha de carteira assinada",
@@ -300,9 +300,9 @@
     "imageFile": "planejamento-escritorio.webp",
     "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
     "imagePosition": "50% 72%",
-    "teamImageFile": "atendimento-fivecred.webp",
+    "teamImageFile": "atendimento-inss.webp",
     "teamImageAlt": "Duas mulheres conversando sobre um documento durante um atendimento.",
-    "teamImagePosition": "50% 35%"
+    "teamImagePosition": "50% 33%"
   },
   "fgts-fivecred": {
     "name": "Antecipação do saque-aniversário",

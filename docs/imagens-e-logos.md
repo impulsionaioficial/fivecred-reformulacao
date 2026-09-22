@@ -32,3 +32,5 @@ CashMe: fundo removido com image_gen (ferramenta integrada); Me e detalhe do C e
 Daycoval: imagem BancoDaycoval fornecida pelo usuário, fundo branco removido com image_gen integrado. Prompt: remover somente fundo para alpha transparente, preservar tipografia, cores e dois quadrados. Ativo: shared/assets/partners/daycoval-transparent.webp.
 
 Atendimento: duas imagens fornecidas em 22/09/2026. Primeira nos espaços de atendimento das LPs e no contexto da campanha; segunda no atendimento INSS. Descrições alternativas factuais, sem identificar as pessoas. Reunião de parceiros em afiliados permanece reservada.
+
+Atualização: a pedido do usuário, as duas imagens de atendimento alternam nas 12 LPs, seis páginas para cada foto, na ordem do manifesto.
