@@ -4,10 +4,10 @@
  const amountOptions={
  'fivecred-next':[500,50000,500,10000],
  'fivecred-landing-page':[500,50000,500,10000],
- 'bolsa-fivecred':[500,2000,50,1000],
+ 'bolsa-fivecred':[100,750,50,750],
  'consignado-fivecred':[1000,100000,1000,15000],
  'luz-fivecred':[500,2500,50,1500],
- 'imovel-fivecred':[30000,1000000,5000,150000],
+ 'imovel-fivecred':[50000,1000000,5000,150000],
  'veiculo-fivecred':[5000,150000,1000,30000],
  'clt-fivecred':[1000,50000,500,10000],
  'fgts-fivecred':[100,1500,100,1000],

@@ -254,12 +254,11 @@ const formFields = ['nome', 'whatsapp', 'cpf', 'nascimento', 'email', 'valor_imo
 
             if (maxCredit > 5000000) maxCredit = 5000000;
 
-            const warnBox = document.getElementById('simulation-warning');
             if (maxCredit < 50000) {
-                warnBox.classList.remove('hidden');
-            } else {
-                warnBox.classList.add('hidden');
+                showFieldError(situacao === 'financiado' ? 'saldo_devedor' : 'valor_imovel', 'O crédito mínimo é de R$ 50.000,00. A margem disponível após o saldo devedor está abaixo desse valor.');
+                return;
             }
+            document.getElementById('simulation-warning').classList.add('hidden');
 
             const rate = 0.0099;
             const months = 180;

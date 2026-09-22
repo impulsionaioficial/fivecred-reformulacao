@@ -160,21 +160,16 @@ function clearErrors() {
 
             if (hasError) return;
 
-            // Calculations: Max credit is up to 2.5x average benefit value, capped at R$ 2.000,00
-            let estimatedCredit = Math.min(valBeneficio * 2.5, 2000);
-            
-            // Round credit to nearest 50 BRL
-            estimatedCredit = Math.round(estimatedCredit / 50) * 50;
-
-            // Monthly installment (over 24 months fixed)
-            // Coefficient for 24 months in microcredit is approx 0.067 (interest rate ~2.5% a.m.)
-            // So if R$ 1.500 -> R$ 100,50 installment
-            const coefficient = 0.067;
-            const installment = estimatedCredit * coefficient;
+            // Use the requested amount within the product limits. Without a selection,
+            // show the maximum available for analysis, not an approved offer.
+            const requestedValues = new URLSearchParams(window.location.search).getAll('valor_simulacao');
+            const requested = requestedValues.length === 1 && /^\d+$/.test(requestedValues[0]) ? Number(requestedValues[0]) : NaN;
+            const estimatedCredit = Number.isInteger(requested) && requested >= 100 && requested <= 750 && (requested - 100) % 50 === 0 ? requested : 750;
+            const maximumInstallment = 159;
 
             // Display results
             document.getElementById('res-credito').innerText = formatBRL(estimatedCredit);
-            document.getElementById('res-parcela').innerText = formatBRL(installment);
+            document.getElementById('res-parcela').innerText = 'Até ' + formatBRL(maximumInstallment);
 
             // Configure WhatsApp proposals
             const nome = document.getElementById('nome').value;
@@ -190,8 +185,8 @@ function clearErrors() {
 *CEP / Endereço:* ${cep} (${endereco})
 *NIS:* ${nis}
 *Valor do Benefício:* ${valBeneficioStr}
-*Crédito Estimado:* ${formatBRL(estimatedCredit)} em 24 parcelas
-*Parcela Descontada no Benefício:* ${formatBRL(installment)}`;
+*Crédito Estimado:* ${formatBRL(estimatedCredit)} em 12 parcelas
+*Parcela máxima:* ${'Até ' + formatBRL(maximumInstallment)}`;
 
             const encodedMessage = encodeURIComponent(message);
             const waLink = `https://wa.me/5511989956521?text=${encodedMessage}`;
