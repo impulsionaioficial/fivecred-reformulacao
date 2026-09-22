@@ -19,7 +19,10 @@
     ],
     "note": "Crédito sujeito à análise e às condições da instituição responsável.",
     "imageTitle": "Uma pessoa, um plano real",
-    "imageDescription": "Inserir foto de um adulto ou casal maduro planejando um projeto em casa, com expressão tranquila e ambiente acolhedor."
+    "imageDescription": "Inserir foto de um adulto ou casal maduro planejando um projeto em casa, com expressão tranquila e ambiente acolhedor.",
+    "imageFile": "casal-album.webp",
+    "imageAlt": "Casal sentado no sofá olhando um álbum de fotografias.",
+    "imagePosition": "50% 50%"
   },
   "fivecred-landing-page": {
     "name": "Sua próxima conquista",
@@ -63,7 +66,10 @@
     ],
     "note": "Benefício e crédito são diferentes. Esta página não oferece consignado descontado do Bolsa Família.",
     "imageTitle": "Família e cotidiano",
-    "imageDescription": "Inserir foto acolhedora de uma pessoa adulta organizando o orçamento da casa. Evitar imagens de dinheiro, urgência ou vulnerabilidade."
+    "imageDescription": "Inserir foto acolhedora de uma pessoa adulta organizando o orçamento da casa. Evitar imagens de dinheiro, urgência ou vulnerabilidade.",
+    "imageFile": "familia-em-casa.webp",
+    "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
+    "imagePosition": "50% 50%"
   },
   "consignado-fivecred": {
     "name": "Consignado INSS",
@@ -85,7 +91,10 @@
     ],
     "note": "Contratação sujeita à análise. As parcelas do consignado são descontadas do benefício.",
     "imageTitle": "Uma nova fase, novos planos",
-    "imageDescription": "Inserir foto de uma pessoa ou casal maduro, em situação cotidiana. Expressão natural, boa iluminação e representação respeitosa."
+    "imageDescription": "Inserir foto de uma pessoa ou casal maduro, em situação cotidiana. Expressão natural, boa iluminação e representação respeitosa.",
+    "imageFile": "casal-parque.webp",
+    "imageAlt": "Casal sorrindo e se abraçando em um parque.",
+    "imagePosition": "50% 50%"
   },
   "luz-fivecred": {
     "name": "Crédito na conta de luz",
@@ -107,7 +116,10 @@
     ],
     "note": "Disponibilidade e aprovação dependem de análise. O crédito acrescenta uma obrigação à fatura.",
     "imageTitle": "O conforto da sua casa",
-    "imageDescription": "Inserir foto de uma pessoa adulta em uma casa iluminada, conferindo a conta de energia, ou arte Fivecred sobre a modalidade."
+    "imageDescription": "Inserir foto de uma pessoa adulta em uma casa iluminada, conferindo a conta de energia, ou arte Fivecred sobre a modalidade.",
+    "imageFile": "iluminacao-casa.webp",
+    "imageAlt": "Mulher sorrindo ao lado de uma luminária acesa em casa.",
+    "imagePosition": "50% 50%"
   },
   "imovel-fivecred": {
     "name": "Crédito com garantia de imóvel",
@@ -129,7 +141,10 @@
     ],
     "note": "Crédito sujeito à análise. O não pagamento pode levar à perda do imóvel oferecido em garantia.",
     "imageTitle": "Patrimônio e novos projetos",
-    "imageDescription": "Inserir foto de um casal maduro em casa ou de um empresário em seu negócio. Composição natural, com espaço ao redor das pessoas."
+    "imageDescription": "Inserir foto de um casal maduro em casa ou de um empresário em seu negócio. Composição natural, com espaço ao redor das pessoas.",
+    "imageFile": "planejamento-escritorio.webp",
+    "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
+    "imagePosition": "50% 72%"
   },
   "veiculo-fivecred": {
     "name": "Crédito com garantia de veículo",
@@ -151,7 +166,10 @@
     ],
     "note": "Crédito sujeito à análise. O não pagamento pode levar à perda do veículo oferecido em garantia.",
     "imageTitle": "Mobilidade no dia a dia",
-    "imageDescription": "Inserir foto de um adulto com seu veículo em um contexto cotidiano. Evitar imagens de carro de luxo ou de entrega de prêmio."
+    "imageDescription": "Inserir foto de um adulto com seu veículo em um contexto cotidiano. Evitar imagens de carro de luxo ou de entrega de prêmio.",
+    "imageFile": "motorista.webp",
+    "imageAlt": "Homem com cinto de segurança ao volante de um carro.",
+    "imagePosition": "50% 50%"
   },
   "contemplada.fivecred.com.br": {
     "name": "Comprar uma carta contemplada",
@@ -173,7 +191,10 @@
     ],
     "note": "Disponibilidade sujeita à consulta. A transferência depende da aprovação da administradora.",
     "imageTitle": "O bem que faz parte dos planos",
-    "imageDescription": "Inserir foto de uma família adulta em frente a um imóvel, ou arte Fivecred que represente a compra de imóvel e veículo."
+    "imageDescription": "Inserir foto de uma família adulta em frente a um imóvel, ou arte Fivecred que represente a compra de imóvel e veículo.",
+    "imageFile": "familia-em-casa.webp",
+    "imageAlt": "Dois adultos e uma criança abraçados no sofá de casa.",
+    "imagePosition": "50% 50%"
   },
   "fivecred-afiliados": {
     "name": "Parceria Fivecred",
@@ -217,7 +238,10 @@
     ],
     "note": "O valor do crédito e o preço de venda da cota são diferentes. A compra e a transferência estão sujeitas à análise.",
     "imageTitle": "Novos planos para uma nova fase",
-    "imageDescription": "Inserir foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real."
+    "imageDescription": "Inserir foto de um empresário maduro planejando seu negócio ou de um casal avaliando novos projetos. Não representar a cena como cliente real.",
+    "imageFile": "planejamento-escritorio.webp",
+    "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
+    "imagePosition": "50% 72%"
   },
   "clt-fivecred": {
     "name": "Crédito para quem trabalha de carteira assinada",
@@ -239,7 +263,10 @@
     ],
     "note": "Condições sujeitas à análise do vínculo, da margem e da instituição financeira. As parcelas são descontadas em folha.",
     "imageTitle": "Seu trabalho, seus próximos planos",
-    "imageDescription": "Inserir foto ou design Fivecred de um trabalhador adulto em ambiente profissional, com uma representação natural e acolhedora."
+    "imageDescription": "Inserir foto ou design Fivecred de um trabalhador adulto em ambiente profissional, com uma representação natural e acolhedora.",
+    "imageFile": "planejamento-escritorio.webp",
+    "imageAlt": "Homem conferindo documentos com um notebook sobre a mesa.",
+    "imagePosition": "50% 72%"
   },
   "fgts-fivecred": {
     "name": "Antecipação do saque-aniversário",
@@ -261,6 +288,9 @@
     ],
     "note": "A antecipação é uma operação de crédito e envolve bloqueio de saldo do FGTS como garantia. Condições sujeitas à consulta e análise.",
     "imageTitle": "Planejamento com o seu FGTS",
-    "imageDescription": "Inserir foto de uma pessoa adulta planejando suas finanças ou design Fivecred sobre FGTS e calendário. Evitar promessas de liberação ou valores garantidos."
+    "imageDescription": "Inserir foto de uma pessoa adulta planejando suas finanças ou design Fivecred sobre FGTS e calendário. Evitar promessas de liberação ou valores garantidos.",
+    "imageFile": "planejamento-celular.webp",
+    "imageAlt": "Homem com celular fazendo anotações em um caderno.",
+    "imagePosition": "50% 50%"
   }
 }

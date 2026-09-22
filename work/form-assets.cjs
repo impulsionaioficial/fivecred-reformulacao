@@ -9,12 +9,12 @@ function assetsFor(page,prefix='../') {
  if(page.formPage&&connectedSlugs.has(page.slug)){styles.push(prefix+'shared/connected-forms.css');scripts.push(prefix+'shared/connected-forms.js?v=20260915-wa');}
  if(page.formPage&&migratedSlugs.has(page.slug)){styles.push(prefix+'shared/migrated-forms.css?v=20260916');scripts.push(prefix+'shared/migrated-forms.js?v=20260916');}
  styles.push(prefix+'shared/responsive.css?v=20260916-height');
- styles.push(prefix+'shared/brand-refresh.css?v=20260916-editorial');
+ styles.push(prefix+'shared/brand-refresh.css?v=20260922-photos');
  styles.push(prefix+'shared/simulation-pages.css?v=20260921-section-actions');
  scripts.push(prefix+'shared/simulation-amount.js?v=20260916');
  scripts.push(prefix+'shared/credit-context.js?v=20260921');
  if(page.guidePage){styles.push(prefix+'shared/credit-guide.css?v=20260921');scripts.push(prefix+'shared/credit-guide.js?v=20260921');}
- if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260916-continuous');scripts.push(prefix+'shared/partner-marquee.js?v=20260916-continuous');}
+ if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260922-logos');scripts.push(prefix+'shared/partner-marquee.js?v=20260916-continuous');}
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){

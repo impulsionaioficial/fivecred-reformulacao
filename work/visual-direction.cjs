@@ -7,11 +7,11 @@ function imageSlot(page,prefix,kind,icon,esc){
  const d=directions[page.slug];
  const team=kind==='team';
  const stem=team?'equipe-fivecred':page.slug+'-contexto';
- const filename=['webp','jpg','png'].map(ext=>stem+'.'+ext).find(name=>fs.existsSync(path.join(root,'shared/assets/lps',name)));
+ const filename=(!team&&d.imageFile)||['webp','jpg','png'].map(ext=>stem+'.'+ext).find(name=>fs.existsSync(path.join(root,'shared/assets/lps',name)));
  const cls=team?(page.type==='seller'?'s-team-placeholder':'brand-placeholder'):'context-placeholder';
  const title=team?'A equipe que atende você':d.imageTitle;
  const description=team?'Inserir foto oficial da equipe Fivecred em atendimento no escritório, ou uma arte institucional da marca.':d.imageDescription;
- if(filename)return `<figure class="media-slot ${cls} has-image" data-image-slot="${kind}"><img src="${prefix}shared/assets/lps/${filename}" width="1200" height="900" loading="lazy" alt="${esc(team?'Equipe Fivecred em atendimento':d.imageTitle)}"></figure>`;
+ if(filename)return `<figure class="media-slot ${cls} has-image" data-image-slot="${kind}"><img src="${prefix}shared/assets/lps/${filename}" width="1200" height="900" loading="lazy" style="object-position:${esc(team?'center':d.imagePosition||'center')}" alt="${esc(team?'Equipe Fivecred em atendimento':d.imageAlt||d.imageTitle)}"></figure>`;
  return `<figure class="media-slot ${cls}" data-image-slot="${kind}" aria-label="Espaço reservado para foto ou design da Fivecred"><span class="media-label">Imagem a inserir</span><div class="media-direction">${icon('photo')}<strong>${esc(title)}</strong><p>${esc(description)}</p></div><span class="media-signature" aria-hidden="true">Fivecred</span></figure>`;
 }
 function story(page,prefix,icon,esc){

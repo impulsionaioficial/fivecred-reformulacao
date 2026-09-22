@@ -21,3 +21,8 @@
 }
 @keyframes fivecred-partners{to{transform:translateX(-50%)}}
 @media(max-width:599px){.partner-marquee-list strong{font-size:23px}.partner-marquee-list li{padding:18px 8px}.partner-marquee-list span{font-size:12px}}
+
+.partner-logo{display:block;width:160px;max-width:100%;height:48px;object-fit:contain;margin-inline:auto}
+.partner-marquee-list strong{display:flex;align-items:center;justify-content:center;min-height:48px}
+.partner-strip .partner-logo{width:112px;height:38px}
+@media(max-width:599px){.partner-strip .partner-logo{width:88px;height:32px}.partner-marquee-list .partner-logo{width:142px}}

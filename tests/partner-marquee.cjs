@@ -13,8 +13,8 @@ const names=['Banco BV','PAN','Daycoval','BMG','C6 Bank','Creditas','CashMe','Cr
   for(const width of [320,390,768,1440]){
    await page.setViewportSize({width,height:900});await page.goto(base+'/');const marquee=page.locator('[data-partner-marquee]');assert.equal(await marquee.count(),1,'Partner marquee exists');
    await marquee.scrollIntoViewIfNeeded();await page.mouse.move(0,0);await page.waitForFunction(()=>document.querySelector('[data-partner-marquee]').dataset.visible==='true');
-   assert.deepEqual(await marquee.locator('[data-partner-original] strong').allTextContents(),names);
-   assert.equal(await marquee.locator('[aria-hidden="true"] strong').count(),12);assert.equal(await state(),'running');
+   assert.deepEqual(await marquee.locator('[data-partner-original] li').evaluateAll(es=>es.map(e=>e.querySelector('img')?.alt||e.querySelector('strong').textContent)),names);
+   assert.equal(await marquee.locator('[data-partner-copy] li').count(),12);assert.equal(await state(),'running');
    const before=await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform);await page.waitForTimeout(200);assert.notEqual(await page.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).transform),before);
    const geometry=await marquee.evaluate(e=>{const lists=e.querySelectorAll('ul');return{track:e.querySelector('.partner-marquee-track').getBoundingClientRect().width,first:lists[0].getBoundingClientRect().width,second:lists[1].getBoundingClientRect().width}});assert(Math.abs(geometry.first-geometry.second)<1);assert(Math.abs(geometry.track-geometry.first*2)<1);
    assert.equal(await marquee.locator('[data-partner-toggle]').count(),0,'No pause control');
@@ -25,7 +25,7 @@ const names=['Banco BV','PAN','Daycoval','BMG','C6 Bank','Creditas','CashMe','Cr
    await page.emulateMedia({reducedMotion:'no-preference'});await page.evaluate(()=>scrollTo(0,0));await page.waitForFunction(()=>document.querySelector('[data-partner-marquee]').dataset.visible==='false');assert.equal(await state(),'paused');checks++;
   }
   const pages=JSON.parse(fs.readFileSync(path.join(root,'work/pages-manifest.json')));let lps=0;
-  for(const item of pages){await page.goto(base+'/'+item.slug+'/index.html');assert.equal(await page.locator('[data-partner-marquee]').count(),item.type==='seller'?0:1);lps++;}
+  for(const item of pages){await page.goto(base+'/'+item.slug+'/index.html');assert.equal(await page.locator('[data-partner-marquee]').count(),item.type==='seller'?0:1);const photo=page.locator('[data-image-slot=context] img');if(await photo.count()){await photo.scrollIntoViewIfNeeded();await photo.evaluate(e=>e.decode());assert(await photo.evaluate(e=>e.naturalWidth>0));}assert.equal(await page.locator('[data-image-slot=team] img').count(),0);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));lps++;}
   const fallback=await browser.newContext({javaScriptEnabled:false});const plain=await fallback.newPage();await plain.goto(base+'/');assert.equal(await plain.locator('.partner-marquee-track').evaluate(e=>getComputedStyle(e).animationName),'none');assert(!await plain.locator('[data-partner-toggle]').isVisible());assert(!await plain.locator('[data-partner-copy]').isVisible());await fallback.close();
   assert.deepEqual(errors,[]);console.log(JSON.stringify({result:'PASS',viewports:checks,landingPages:lps,brands:12,continuousMotion:true,pauseControlRemoved:true,continuesOnHover:true,reducedMotion:true,noJavaScriptFallback:true,offscreenPause:true,errors},null,2));
  }finally{await browser.close();await new Promise(r=>server.close(r));}
