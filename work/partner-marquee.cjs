@@ -5,10 +5,11 @@ const groups=[
  {category:'Crédito estruturado',names:['Creditas','CashMe','Crefisa']},
  {category:'Soluções especializadas',names:['CREFAZ','ICred','Nossa Fintech','Grandino']}
 ];
+const sizes=require('./content/partner-logo-sizes.json');
 const logos={'Banco BV':'bv.svg','PAN':'pan.svg','Daycoval':'daycoval-transparent.webp','BMG':'bmg.svg','C6 Bank':'c6.svg','Creditas':'creditas.webp','CashMe':'cashme-transparent.webp','Crefisa':'crefisa.webp','CREFAZ':'crefaz.webp','ICred':'icred.webp','Nossa Fintech':'nossa-fintech.webp','Grandino':'grandino.webp'};
 function brand(name,esc,prefix='../'){return logos[name]?`<img class="partner-logo" src="${prefix}shared/assets/partners/${logos[name]}" width="160" height="48" loading="lazy" alt="${esc(name)}">`:`<strong>${esc(name)}</strong>`;}
 module.exports=function renderPartnerMarquee(esc,prefix='../'){
- const items=groups.flatMap(group=>group.names.map(name=>`<li>${brand(name,esc,prefix)}<span>${esc(group.category)}</span></li>`)).join('');
+ const items=groups.flatMap(group=>group.names.map(name=>`<li style="--logo-width:${sizes[logos[name]].width}px;--logo-height:${sizes[logos[name]].height}px"><div class="partner-mark">${brand(name,esc,prefix)}</div><span>${esc(group.category)}</span></li>`)).join('');
  return `<div class="partner-marquee" data-partner-marquee><div class="partner-marquee-viewport" aria-label="Instituições parceiras"><div class="partner-marquee-track"><ul class="partner-marquee-list" data-partner-original role="list">${items}</ul><ul class="partner-marquee-list" data-partner-copy aria-hidden="true" inert>${items}</ul></div></div></div>`;
 };
 

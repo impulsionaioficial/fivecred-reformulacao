@@ -11,11 +11,11 @@
  .partner-marquee[data-motion="enabled"] .partner-marquee-viewport{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 32px,#000 calc(100% - 32px),transparent)}
  .partner-marquee[data-motion="enabled"] .partner-marquee-track{display:flex;width:max-content;animation:fivecred-partners 80s linear infinite;animation-play-state:paused}
  .partner-marquee[data-motion="enabled"] .partner-marquee-list{display:flex;flex:0 0 auto;gap:0}
- .partner-marquee[data-motion="enabled"] .partner-marquee-list li{flex:0 0 220px;width:220px;padding:28px 20px 26px}
+ .partner-marquee[data-motion="enabled"] .partner-marquee-list li{flex:0 0 auto;width:calc(var(--logo-width) + 64px);padding:20px 32px 64px}
  .partner-marquee[data-motion="enabled"]:where([data-visible="true"][data-page-visible="true"]) .partner-marquee-track{animation-play-state:running}
  @media(max-width:599px){
   .partner-marquee[data-motion="enabled"] .partner-marquee-viewport{mask-image:linear-gradient(to right,transparent,#000 14px,#000 calc(100% - 14px),transparent)}
-  .partner-marquee[data-motion="enabled"] .partner-marquee-list li{flex-basis:180px;width:180px;padding-inline:14px}
+  .partner-marquee[data-motion="enabled"] .partner-marquee-list li{flex-basis:auto;width:calc(var(--logo-width) + 56px);padding-inline:28px}
   .partner-marquee[data-motion="enabled"] .partner-marquee-track{animation-duration:72s}
  }
 }
@@ -27,4 +27,9 @@
 .partner-strip .partner-logo{width:112px;height:38px}
 @media(max-width:599px){.partner-strip .partner-logo{width:88px;height:32px}.partner-marquee-list .partner-logo{width:142px}}
 
-.partner-marquee-list .partner-logo[alt="Grandino"]{height:72px;margin-block:-12px}
+.partner-marquee-list li{position:relative}
+.partner-mark{height:72px;display:flex;align-items:center;justify-content:center}
+.partner-marquee-list .partner-logo{width:var(--logo-width);height:var(--logo-height);max-width:100%;margin:0}
+@media(prefers-reduced-motion:no-preference){
+ .partner-marquee[data-motion="enabled"] .partner-marquee-list li>span{position:absolute;top:100px;left:12px;right:12px;margin:0;line-height:1.5}
+}
