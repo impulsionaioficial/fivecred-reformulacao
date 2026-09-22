@@ -26,3 +26,5 @@ Logos: https://github.com/Tgentil/Bancos-em-SVG
 Logos complementares fornecidas pelo usuário: Creditas, CashMe, Crefisa, CREFAZ, ICred, Nossa Fintech e Grandino. Cópias WebP com margens externas reduzidas para exibição; originais preservados.
 
 ViewBox dos SVGs ajustado aos limites da arte para remover margens. As cores dos arquivos foram preservadas.
+
+CashMe: fundo removido com image_gen (ferramenta integrada); Me e detalhe do C em azul-escuro para contraste. Prompt: remover fundo para alpha transparente, preservar geometria e texto CashMe, manter Cash ciano, recolorir Me e detalhe branco para #052748. Ativo: shared/assets/partners/cashme-transparent.webp.
