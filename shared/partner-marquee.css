@@ -26,3 +26,5 @@
 .partner-marquee-list strong{display:flex;align-items:center;justify-content:center;min-height:48px}
 .partner-strip .partner-logo{width:112px;height:38px}
 @media(max-width:599px){.partner-strip .partner-logo{width:88px;height:32px}.partner-marquee-list .partner-logo{width:142px}}
+
+.partner-marquee-list .partner-logo[alt="Grandino"]{height:72px;margin-block:-12px}

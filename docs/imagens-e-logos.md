@@ -23,6 +23,6 @@ Logos: https://github.com/Tgentil/Bancos-em-SVG
 - bmg: Banco BMG/banco-bmg-logo -nome.svg
 - c6: Banco C6 S.A/c6 bank- nome- preto .svg
 
-Os demais parceiros continuam representados pelo nome.
+Logos complementares fornecidas pelo usuário: Creditas, CashMe, Crefisa, CREFAZ, ICred, Nossa Fintech e Grandino. Cópias WebP com margens externas reduzidas para exibição; originais preservados.
 
 ViewBox dos SVGs ajustado aos limites da arte para remover margens. As cores dos arquivos foram preservadas.

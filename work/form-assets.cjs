@@ -14,7 +14,7 @@ function assetsFor(page,prefix='../') {
  scripts.push(prefix+'shared/simulation-amount.js?v=20260916');
  scripts.push(prefix+'shared/credit-context.js?v=20260921');
  if(page.guidePage){styles.push(prefix+'shared/credit-guide.css?v=20260921');scripts.push(prefix+'shared/credit-guide.js?v=20260921');}
- if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260922-logos');scripts.push(prefix+'shared/partner-marquee.js?v=20260916-continuous');}
+ if(!page.formPage&&page.type!=='seller'){styles.push(prefix+'shared/partner-marquee.css?v=20260922-all-logos');scripts.push(prefix+'shared/partner-marquee.js?v=20260916-continuous');}
  return {styles,scripts};
 }
 function formFor(page,prefix='../',placement='hero'){
