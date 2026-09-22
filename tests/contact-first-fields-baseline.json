@@ -1,0 +1,342 @@
+{
+  "bolsa-fivecred": [
+    {
+      "html": "<input type=\"text\" id=\"nome\" name=\"nome\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Como está no seu documento\" aria-describedby=\"error-nome\">",
+      "label": [
+        "Nome Completo"
+      ]
+    },
+    {
+      "html": "<input type=\"tel\" id=\"whatsapp\" name=\"whatsapp\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"(00) 00000-0000\" aria-describedby=\"error-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" name=\"cpf\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"000.000.000-00\" aria-describedby=\"error-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"nascimento\" name=\"nascimento\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"DD/MM/AAAA\" aria-describedby=\"error-nascimento\" inputmode=\"numeric\">",
+      "label": [
+        "Data de Nascimento"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cep\" name=\"cep\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"00000-000\" aria-describedby=\"error-cep\" inputmode=\"numeric\">",
+      "label": [
+        "CEP"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"endereco\" name=\"endereco\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: Rua das Flores, 123\" aria-describedby=\"error-endereco\">",
+      "label": [
+        "Endereço (Rua / Número)"
+      ]
+    },
+    {
+      "html": "<input type=\"email\" id=\"email\" name=\"email\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"seu@email.com\" aria-describedby=\"error-email\">",
+      "label": [
+        "E-mail (Opcional)"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_beneficio\" name=\"valor_beneficio\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 600,00\" aria-describedby=\"error-valor-beneficio\" inputmode=\"decimal\">",
+      "label": [
+        "Valor Mensal do Bolsa Família"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"nis\" name=\"nis\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"000.00000.00-0\" aria-describedby=\"error-nis\" inputmode=\"numeric\">",
+      "label": [
+        "Número do NIS"
+      ]
+    }
+  ],
+  "consignado-fivecred": [
+    {
+      "html": "<input type=\"text\" id=\"nome\" name=\"nome\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Insira seu nome completo\" aria-describedby=\"error-nome\">",
+      "label": [
+        "Nome Completo"
+      ]
+    },
+    {
+      "html": "<input type=\"tel\" id=\"whatsapp\" name=\"whatsapp\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"(00) 00000-0000\" aria-describedby=\"error-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" name=\"cpf\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"000.000.000-00\" aria-describedby=\"error-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"nascimento\" name=\"nascimento\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"DD/MM/AAAA\" aria-describedby=\"error-nascimento\" inputmode=\"numeric\">",
+      "label": [
+        "Data de Nascimento"
+      ]
+    },
+    {
+      "html": "<input type=\"email\" id=\"email\" name=\"email\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"seu@email.com\" aria-describedby=\"error-email\">",
+      "label": [
+        "E-mail"
+      ]
+    },
+    {
+      "html": "<select id=\"tipo_beneficio\" name=\"tipo_beneficio\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm appearance-none cursor-pointer\" data-of-event-change=\"of-event-2\">\n                                                <option value=\"aposentado\">Aposentado INSS</option>\n                                                <option value=\"pensionista\">Pensionista INSS</option>\n                                                <option value=\"bpc\">Beneficiário BPC/LOAS</option>\n                                            </select>",
+      "label": [
+        "Perfil de Benefício"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_beneficio\" name=\"valor_beneficio\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 1.412,00\" data-of-event-input=\"of-event-3\" aria-describedby=\"error-valor-beneficio\" inputmode=\"decimal\">",
+      "label": [
+        "Valor Mensal do Benefício"
+      ]
+    },
+    {
+      "html": "<select id=\"opcao_margem\" name=\"opcao_margem\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm appearance-none cursor-pointer\" data-of-event-change=\"of-event-4\">\n                                                <option value=\"margem_livre\">Tenho Margem Livre</option>\n                                                <option value=\"portabilidade\">Quero Portabilidade / Refinanciar</option>\n                                            </select>",
+      "label": [
+        "Opção de Simulação"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_margem\" name=\"valor_margem\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 400,00\" aria-describedby=\"error-valor-margem\" inputmode=\"decimal\">",
+      "label": [
+        "Margem Livre Estimada (/mês)"
+      ]
+    }
+  ],
+  "luz-fivecred": [
+    {
+      "html": "<input type=\"text\" id=\"nome\" name=\"nome\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Como está no seu RG\" aria-describedby=\"error-nome\">",
+      "label": [
+        "Nome Completo"
+      ]
+    },
+    {
+      "html": "<input type=\"tel\" id=\"whatsapp\" name=\"whatsapp\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"(00) 00000-0000\" aria-describedby=\"error-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" name=\"cpf\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"000.000.000-00\" aria-describedby=\"error-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"nascimento\" name=\"nascimento\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"DD/MM/AAAA\" aria-describedby=\"error-nascimento\" inputmode=\"numeric\">",
+      "label": [
+        "Data de Nascimento"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cep\" name=\"cep\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"00000-000\" aria-describedby=\"error-cep\" inputmode=\"numeric\">",
+      "label": [
+        "CEP"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"endereco\" name=\"endereco\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: Av. Paulista, 1000\" aria-describedby=\"error-endereco\">",
+      "label": [
+        "Endereço (Rua / Número)"
+      ]
+    },
+    {
+      "html": "<input type=\"email\" id=\"email\" name=\"email\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"seu@email.com\" aria-describedby=\"error-email\">",
+      "label": [
+        "E-mail (Opcional)"
+      ]
+    },
+    {
+      "html": "<select id=\"distribuidora\" name=\"distribuidora\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm appearance-none cursor-pointer\">\n                                                <option value=\"enel_sp\">Enel SP</option>\n                                                <option value=\"enel_rj\">Enel RJ</option>\n                                                <option value=\"enel_ce\">Enel Ceará</option>\n                                                <option value=\"light_rj\">Light RJ</option>\n                                                <option value=\"cpfl_paulista\">CPFL Paulista</option>\n                                                <option value=\"cpfl_piratininga\">CPFL Piratininga</option>\n                                                <option value=\"cemig\">Cemig MG</option>\n                                                <option value=\"copel\">Copel PR</option>\n                                                <option value=\"celesc\">Celesc SC</option>\n                                                <option value=\"coelba\">Neoenergia Coelba</option>\n                                                <option value=\"elektro\">Neoenergia Elektro</option>\n                                            </select>",
+      "label": [
+        "Distribuidora de Energia"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"codigo_cliente\" name=\"codigo_cliente\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: 12345678\" aria-describedby=\"error-codigo-cliente\">",
+      "label": [
+        "Nº de Instalação / Código de Cliente"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_conta\" name=\"valor_conta\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 150,00\" aria-describedby=\"error-valor-conta\" inputmode=\"decimal\">",
+      "label": [
+        "Valor Médio da Sua Conta de Luz"
+      ]
+    }
+  ],
+  "imovel-fivecred": [
+    {
+      "html": "<input type=\"text\" id=\"nome\" name=\"nome\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Insira seu nome completo\" aria-describedby=\"error-nome\">",
+      "label": [
+        "Nome Completo"
+      ]
+    },
+    {
+      "html": "<input type=\"tel\" id=\"whatsapp\" name=\"whatsapp\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"(00) 00000-0000\" aria-describedby=\"error-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" name=\"cpf\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"000.000.000-00\" aria-describedby=\"error-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"nascimento\" name=\"nascimento\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"DD/MM/AAAA\" aria-describedby=\"error-nascimento\" inputmode=\"numeric\">",
+      "label": [
+        "Data de Nascimento"
+      ]
+    },
+    {
+      "html": "<input type=\"email\" id=\"email\" name=\"email\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"seu@email.com\" aria-describedby=\"error-email\">",
+      "label": [
+        "E-mail"
+      ]
+    },
+    {
+      "html": "<select id=\"tipo_imovel\" name=\"tipo_imovel\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm appearance-none cursor-pointer\">\n                                                <option value=\"casa\">Casa Residencial</option>\n                                                <option value=\"apartamento\">Apartamento Residencial</option>\n                                                <option value=\"comercial\">Imóvel Comercial</option>\n                                                <option value=\"terreno\">Terreno em Condomínio</option>\n                                            </select>",
+      "label": [
+        "Tipo do Imóvel"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_imovel\" name=\"valor_imovel\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 500.000,00\" aria-describedby=\"error-valor-imovel\" inputmode=\"decimal\">",
+      "label": [
+        "Valor Estimado do Imóvel"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"localidade\" name=\"localidade\" required=\"\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: São Paulo / SP\" aria-describedby=\"error-localidade\">",
+      "label": [
+        "Cidade / UF"
+      ]
+    },
+    {
+      "html": "<select id=\"situacao_imovel\" name=\"situacao_imovel\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm appearance-none cursor-pointer\" data-of-event-change=\"of-event-2\">\n                                                <option value=\"quitado\">Quitado (Sem ônus pendente)</option>\n                                                <option value=\"financiado\">Financiado (Ainda pagando parcelas)</option>\n                                            </select>",
+      "label": [
+        "Situação de Financiamento"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"saldo_devedor\" name=\"saldo_devedor\" class=\"w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white text-slate-900 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-haptic text-sm placeholder-slate-400\" placeholder=\"Ex: R$ 120.000,00\" aria-describedby=\"error-saldo-devedor\" inputmode=\"decimal\">",
+      "label": [
+        "Saldo Devedor do Financiamento"
+      ]
+    }
+  ],
+  "veiculo-fivecred": [
+    {
+      "html": "<input type=\"text\" id=\"nome\" name=\"nome\" required=\"\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none\" placeholder=\"Como devemos te chamar?\" aria-describedby=\"error-nome\">",
+      "label": [
+        "Seu Nome"
+      ]
+    },
+    {
+      "html": "<input type=\"tel\" id=\"whatsapp\" name=\"whatsapp\" required=\"\" maxlength=\"15\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none\" placeholder=\"(00) 00000-0000\" aria-describedby=\"error-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" name=\"cpf\" required=\"\" maxlength=\"14\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none\" placeholder=\"000.000.000-00\" aria-describedby=\"error-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"email\" id=\"email\" name=\"email\" required=\"\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all outline-none\" placeholder=\"seu@email.com\" aria-describedby=\"error-email\">",
+      "label": [
+        "E-mail"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"modelo\" name=\"modelo\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none\" placeholder=\"Ex: Onix 1.0\" aria-describedby=\"error-modelo\">",
+      "label": [
+        "Modelo do Veículo"
+      ]
+    },
+    {
+      "html": "<input type=\"number\" id=\"ano\" name=\"ano\" min=\"2005\" max=\"2027\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none\" placeholder=\"Ex: 2020\" aria-describedby=\"error-ano\">",
+      "label": [
+        "Ano"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"placa\" name=\"placa\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none uppercase\" placeholder=\"Ex: ABC1D23\" maxlength=\"8\" aria-describedby=\"error-placa\">",
+      "label": [
+        "Placa do Veículo"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"valor_estimado\" name=\"valor_estimado\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none\" placeholder=\"R$ 50.000,00\" aria-describedby=\"error-valor-estimado\" inputmode=\"decimal\">",
+      "label": [
+        "Valor Estimado (Tabela FIPE)"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"uf_cidade\" name=\"uf_cidade\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none\" placeholder=\"Ex: SP / São Paulo\" aria-describedby=\"error-uf-cidade\">",
+      "label": [
+        "UF / Cidade"
+      ]
+    },
+    {
+      "html": "<select id=\"financiamento\" name=\"financiamento\" class=\"w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-500 outline-none appearance-none bg-no-repeat bg-[right_1rem_center]\">\n                                            <option value=\"nao\">Não, já está quitado</option>\n                                            <option value=\"sim\">Sim, ainda estou pagando</option>\n                                        </select>",
+      "label": [
+        "Possui Financiamento?"
+      ]
+    }
+  ],
+  "fivecred-landing-page": [
+    {
+      "html": "<input type=\"text\" class=\"form-input\" placeholder=\"Como consta no documento\" required=\"\" aria-labelledby=\"of-label-nome\">",
+      "label": []
+    },
+    {
+      "html": "<input type=\"text\" id=\"cpf\" class=\"form-input\" placeholder=\"000.000.000-00\" required=\"\" aria-labelledby=\"of-label-cpf\" inputmode=\"numeric\">",
+      "label": [
+        "CPF"
+      ]
+    },
+    {
+      "html": "<input type=\"text\" id=\"whatsapp\" class=\"form-input\" placeholder=\"(00) 00000-0000\" required=\"\" aria-labelledby=\"of-label-whatsapp\" inputmode=\"tel\">",
+      "label": [
+        "WhatsApp"
+      ]
+    },
+    {
+      "html": "<input type=\"radio\" name=\"perfil\" id=\"inss\" class=\"radio-input\" required=\"\">",
+      "label": [
+        "INSS / Aposentado"
+      ]
+    },
+    {
+      "html": "<input type=\"radio\" name=\"perfil\" id=\"fgts\" class=\"radio-input\">",
+      "label": [
+        "Saldo FGTS"
+      ]
+    },
+    {
+      "html": "<input type=\"radio\" name=\"perfil\" id=\"clt\" class=\"radio-input\">",
+      "label": [
+        "CLT"
+      ]
+    },
+    {
+      "html": "<input type=\"radio\" name=\"perfil\" id=\"conta-luz\" class=\"radio-input\">",
+      "label": [
+        "Conta de Luz"
+      ]
+    }
+  ]
+}

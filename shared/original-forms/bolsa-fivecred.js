@@ -45,10 +45,6 @@ function clearErrors() {
             if (step === 2) {
                 const nome = document.getElementById('nome').value.trim();
                 const whatsapp = document.getElementById('whatsapp').value.trim();
-                const cpf = document.getElementById('cpf').value.trim();
-                const nascimento = document.getElementById('nascimento').value.trim();
-                const cep = document.getElementById('cep').value.trim();
-                const endereco = document.getElementById('endereco').value.trim();
                 const email = document.getElementById('email').value.trim();
                 
                 let hasError = false;
@@ -59,22 +55,6 @@ function clearErrors() {
                 }
                 if (whatsapp.length < 14) {
                     showFieldError('whatsapp', 'Insira seu número de celular com DDD válido.');
-                    hasError = true;
-                }
-                if (cpf.length < 14) {
-                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
-                    hasError = true;
-                }
-                if (nascimento.length < 10) {
-                    showFieldError('nascimento', 'Insira sua data de nascimento.');
-                    hasError = true;
-                }
-                if (cep.length < 9) {
-                    showFieldError('cep', 'Insira um CEP válido.');
-                    hasError = true;
-                }
-                if (endereco.length < 5) {
-                    showFieldError('endereco', 'Por favor, insira o seu endereço completo.');
                     hasError = true;
                 }
                 if (email.length > 0 && (email.length < 5 || !email.includes('@'))) {
@@ -131,8 +111,34 @@ function clearErrors() {
             return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
+        function validateAdditionalData() {
+                const cpf = document.getElementById('cpf').value.trim();
+                const nascimento = document.getElementById('nascimento').value.trim();
+                const cep = document.getElementById('cep').value.trim();
+                const endereco = document.getElementById('endereco').value.trim();
+                let hasError = false;
+                if (cpf.length < 14) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
+                    hasError = true;
+                }
+                if (nascimento.length < 10) {
+                    showFieldError('nascimento', 'Insira sua data de nascimento.');
+                    hasError = true;
+                }
+                if (cep.length < 9) {
+                    showFieldError('cep', 'Insira um CEP válido.');
+                    hasError = true;
+                }
+                if (endereco.length < 5) {
+                    showFieldError('endereco', 'Por favor, insira o seu endereço completo.');
+                    hasError = true;
+                }
+                return !hasError;
+        }
+
         function calculateSimulation() {
             clearErrors();
+            if (!validateAdditionalData()) return;
             const valBeneficioStr = document.getElementById('valor_beneficio').value;
             const valBeneficio = parseMoneyString(valBeneficioStr);
             const nis = document.getElementById('nis').value.trim();

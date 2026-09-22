@@ -54,6 +54,16 @@ const maskCPF = (value) => {
             if (notice) { notice.tabIndex = -1; notice.focus(); }
         });
 
+const first=formRoot.querySelector('#step-1'), second=formRoot.querySelector('#step-2');
+function showStep(next) {
+ first.classList.toggle('hidden',next===2); second.classList.toggle('hidden',next===1);
+ syncAccessibility(); (next===1?first:second).querySelector('h4').focus();
+}
+formRoot.querySelector('[data-contact-next]').addEventListener('click',()=>{
+ for(const input of first.querySelectorAll('input'))if(!input.reportValidity())return;
+ showStep(2);
+});
+formRoot.querySelector('[data-contact-back]').addEventListener('click',()=>showStep(1));
 readyCallbacks.forEach(callback=>callback());
 syncAccessibility();
 }

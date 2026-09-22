@@ -10,7 +10,7 @@
     1440
   ],
   "keyboardActivation": true,
-  "formScriptsPreserved": true,
+  "contactFirstStages": true,
   "affiliateWebhook": "Intercepted; original destination and payload retained",
   "realExternalSubmissions": 0,
   "errors": []

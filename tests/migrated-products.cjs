@@ -3,7 +3,7 @@ const {JSDOM}=require('C:/Users/auror/Downloads/fivecred.com.br-main/node_module
 const {chromium}=require('C:/Users/auror/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const root=path.resolve(__dirname,'..'),output=path.join(root,'public-site'),source=path.join(root,'work/migrated-form-src');
 const contract=JSON.parse(fs.readFileSync(path.join(source,'original-contract.json')));
-for(const [file,sha] of Object.entries(contract.files)){assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(source,file),'utf8').replaceAll('\r\n','\n')).digest('hex'),sha,'Original form module preserved: '+file);}
+for(const [file,sha] of Object.entries(contract.files).filter(([file])=>file.startsWith('lib/'))){assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(source,file),'utf8').replaceAll('\r\n','\n')).digest('hex'),sha,'Original form module preserved: '+file);}
 for(const product of ['clt','fgts']){
  const doc=new JSDOM(fs.readFileSync(path.join(output,product+'-fivecred/index.html'),'utf8')).window.document;
  assert.equal(doc.querySelectorAll('main form').length,0);assert.equal(doc.querySelectorAll('[data-image-slot]').length,2);assert(doc.querySelector('.simulation-cta [href="../'+product+'-fivecred/simulacao.html"]'));
@@ -24,9 +24,9 @@ for(const product of ['clt','fgts']){
    if([390,1440].includes(width))await page.screenshot({path:path.join(root,'tests/screenshots/migration-'+product+'-landing-'+width+'.png')});
    await page.locator('.simulation-cta [data-simulation-link]').click();await page.waitForURL(url=>url.pathname==='/'+product+'-fivecred/simulacao.html');await page.waitForFunction(()=>document.querySelector('[data-migrated-form]')?.dataset.formReady==='true');
    const form=page.locator('[data-migrated-form]'),next=form.getByRole('button',{name:'Continuar para a etapa 2'});const invalidPosts=posts.length;await next.click();assert(await form.getByRole('alert').isVisible());assert.equal(posts.length,invalidPosts);
-   await form.getByLabel('Nome completo',{exact:true}).fill('Pessoa Teste');await form.getByLabel('Telefone / WhatsApp',{exact:true}).fill('11987654321');await form.getByLabel('E-mail',{exact:true}).fill('teste@example.com');await form.getByLabel('CPF',{exact:true}).fill('52998224725');await form.getByLabel('Data de nascimento',{exact:true}).fill('1980-01-01');
+   await form.getByLabel('Nome completo',{exact:true}).fill('Pessoa Teste');await form.getByLabel('Telefone / WhatsApp',{exact:true}).fill('11987654321');await form.getByLabel('E-mail',{exact:true}).fill('teste@example.com');assert.equal(await form.getByLabel('CPF',{exact:true}).count(),0);
    if([390,1440].includes(width)){await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(root,'tests/screenshots/migration-'+product+'-form-'+width+'.png')});}
-   await next.click();await form.getByRole('radio',{name:product==='clt'?'Ativo':'Sim',exact:true}).check();
+   await next.click();await form.getByLabel('CPF',{exact:true}).fill('52998224725');await form.getByLabel('Data de nascimento',{exact:true}).fill('1980-01-01');await form.getByRole('radio',{name:product==='clt'?'Ativo':'Sim',exact:true}).check();
    if(product==='clt'){await form.getByLabel('CEP',{exact:true}).fill('01001000');await form.getByLabel('Endereço completo',{exact:true}).fill('Rua Teste, 123, Centro, São Paulo/SP');await form.getByLabel('Tempo de registro em carteira',{exact:true}).selectOption('Mais de 2 anos');}
    await form.locator('#lf-anchor').fill(product==='clt'?'5000':'3500');
    if(product==='clt'){await form.locator('#lf-months').focus();await form.locator('#lf-requested').fill('2000');assert.equal(await form.locator('#lf-requested').inputValue(),'2000');await form.locator('#lf-months').selectOption('24');assert(await form.locator('[aria-live=polite]').isVisible());}
@@ -41,6 +41,6 @@ for(const product of ['clt','fgts']){
    const wa=new URL(await page.evaluate(()=>window.__wa[0]));assert.equal(wa.origin,'https://wa.me');assert.equal(wa.pathname,'/5511940083152');assert(wa.searchParams.get('text').includes('Pessoa Teste'));
    await form.getByRole('button',{name:'Voltar',exact:true}).click();assert.equal(await form.getByLabel('Nome completo',{exact:true}).inputValue(),'Pessoa Teste');await page.locator('.simulation-back').click();assert.equal(new URL(page.url()).pathname,'/'+product+'-fivecred/index.html');
   }
-  assert.deepEqual(errors,[]);const report={result:'PASS',migratedProducts:2,originalModulesUnchanged:Object.keys(contract.files).length,viewports:5,formFlows:10,interceptedPosts:posts.length,failedDeliveryRetry:true,consentAndFieldValidation:true,originalWebhookAndWhatsApp:true,localProductLinks:true,realExternalSubmissions:0,errors};fs.writeFileSync(path.join(root,'tests/migrated-products-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+  assert.deepEqual(errors,[]);const report={result:'PASS',migratedProducts:2,originalModulesUnchanged:Object.keys(contract.files).filter(f=>f.startsWith('lib/')).length,viewports:5,formFlows:10,interceptedPosts:posts.length,failedDeliveryRetry:true,consentAndFieldValidation:true,originalWebhookAndWhatsApp:true,localProductLinks:true,realExternalSubmissions:0,errors};fs.writeFileSync(path.join(root,'tests/migrated-products-results.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exit(1)});

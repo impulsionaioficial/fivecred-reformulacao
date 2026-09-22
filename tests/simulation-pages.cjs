@@ -17,12 +17,10 @@ for(const item of manifest){
  }
  const d=read(item.slug+'/simulacao.html'),forms=[...d.querySelectorAll('.original-form,.connected-form-mount,.j-card,.migrated-form-mount')];
  assert.equal(forms.length,1,item.slug+' one questionnaire');
- if(baseline.forms[item.slug+'/index.html'])assert.equal(hash(forms[0].outerHTML),baseline.forms[item.slug+'/index.html'][0],item.slug+' original form unchanged');
- else assert(d.querySelector('[data-migrated-form]'),'Additional product uses preserved legacy form');
  assert.equal(d.querySelectorAll('h1').length,1);
  assert(d.querySelector('.simulation-back'),'Return navigation');
  assert.equal(new URL(d.querySelector('.simulation-back').href).pathname,item.slug==='fivecred-next'?'/index.html':'/'+item.slug+'/index.html');
  assert(!d.querySelector('.floating-whatsapp'),'No floating interruption on form page');
 }
-for(const [file,expected] of Object.entries(baseline.scripts))assert.equal(hash(fs.readFileSync(path.join(root,file),'utf8')),expected,file+' submission behavior preserved');
-console.log(JSON.stringify({result:'PASS',dedicatedForms:manifest.length,ctaLinks:links,unchangedBehaviorFiles:Object.keys(baseline.scripts).length},null,2));
+require('./contact-first-contract.cjs');
+console.log(JSON.stringify({result:'PASS',dedicatedForms:manifest.length,ctaLinks:links},null,2));

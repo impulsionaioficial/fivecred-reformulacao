@@ -108,8 +108,6 @@ const formFields = ['nome', 'whatsapp', 'cpf', 'nascimento', 'email', 'valor_imo
             if (step === 2) {
                 const nome = document.getElementById('nome').value.trim();
                 const whatsapp = document.getElementById('whatsapp').value.trim();
-                const cpf = document.getElementById('cpf').value.trim();
-                const nascimento = document.getElementById('nascimento').value.trim();
                 const email = document.getElementById('email').value.trim();
                 
                 let hasError = false;
@@ -120,14 +118,6 @@ const formFields = ['nome', 'whatsapp', 'cpf', 'nascimento', 'email', 'valor_imo
                 }
                 if (whatsapp.length < 14) {
                     showFieldError('whatsapp', 'Por favor, insira um número de WhatsApp válido.');
-                    hasError = true;
-                }
-                if (!validarCPF(cpf)) {
-                    showFieldError('cpf', 'Por favor, insira um CPF válido e com todos os dígitos.');
-                    hasError = true;
-                }
-                if (!validarDataNascimento(nascimento)) {
-                    showFieldError('nascimento', 'Idade mínima 18 anos. Use o formato DD/MM/AAAA.');
                     hasError = true;
                 }
                 if (!validarEmail(email)) {
@@ -200,8 +190,24 @@ const formFields = ['nome', 'whatsapp', 'cpf', 'nascimento', 'email', 'valor_imo
             return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
+        function validateAdditionalData() {
+                const cpf = document.getElementById('cpf').value.trim();
+                const nascimento = document.getElementById('nascimento').value.trim();
+                let hasError = false;
+                if (!validarCPF(cpf)) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido e com todos os dígitos.');
+                    hasError = true;
+                }
+                if (!validarDataNascimento(nascimento)) {
+                    showFieldError('nascimento', 'Idade mínima 18 anos. Use o formato DD/MM/AAAA.');
+                    hasError = true;
+                }
+                return !hasError;
+        }
+
         function calculateSimulation() {
             clearErrors();
+            if (!validateAdditionalData()) return;
             const valImovelStr = document.getElementById('valor_imovel').value;
             const valImovel = parseMoneyString(valImovelStr);
             const localidade = document.getElementById('localidade').value.trim();

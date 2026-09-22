@@ -143,7 +143,7 @@
     var mode = ['credit', 'seller', 'buyer'].indexOf(root.dataset.mode) >= 0 ? root.dataset.mode : 'credit';
     var initialProfile = owns(profiles, root.dataset.profile) ? root.dataset.profile : '';
     var state = {
-      step: mode === 'credit' ? 'objective' : (mode === 'buyer' ? 'purpose' : 'modality'),
+      step: mode === 'credit' ? 'objective' : (mode === 'buyer' ? 'purpose' : 'contact'),
       goal: owns(goals, root.dataset.goal) ? root.dataset.goal : 'credito',
       profile: initialProfile,
       modality: '',
@@ -166,7 +166,7 @@
     }
 
     function steps() {
-      if (mode === 'seller') return ['modality', 'administrator', 'amount'];
+      if (mode === 'seller') return ['contact', 'identity', 'modality', 'administrator', 'amount'];
       if (mode === 'buyer') return ['purpose', 'entry', 'amount'];
       return ['objective', kind() === 'seller' ? 'modality' : 'profile', 'amount'];
     }
@@ -212,7 +212,7 @@
 
     function progress() {
       var personal = ['contact', 'identity', 'success'].indexOf(state.step) >= 0;
-      var ordered = personal ? ['contact', 'identity', 'success'] : steps();
+      var ordered = mode === 'seller' ? (personal ? ['contact', 'identity'] : ['modality', 'administrator', 'amount']) : (personal ? ['contact', 'identity', 'success'] : steps());
       var labels = {
         objective: 'Objetivo', profile: 'Seu perfil', modality: 'Modalidade',
         administrator: 'Administradora', purpose: 'Finalidade', entry: 'Sua entrada',
@@ -313,7 +313,7 @@
         button('review', 'Revisar minhas respostas', true, 'j-review') +
         '<div class="j-actions">' + (seller ? '' : button('whatsapp', whatsLabel, false)) +
         (root.dataset.integrationPending === 'true' ? '<button type="button" class="j-button" disabled>Continuar solicitação pelo formulário</button>' : button('contact', seller ? 'Continuar solicitação pelo formulário' : 'Continuar pelo formulário', !seller)) + '</div>' +
-        '<p class="j-help">Sem compromisso. ' + (seller ? 'Continue para informar seus dados de contato.' : 'Você decide como continuar.') +
+        '<p class="j-help">Sem compromisso. ' + (seller ? (mode === 'seller' ? 'Confira suas respostas antes de continuar.' : 'Continue para informar seus dados de contato.') : 'Você decide como continuar.') +
         '</p>' + (root.dataset.integrationPending === 'true' ? '<p class="form-unavailable" role="status">O envio pelo formulário está temporariamente indisponível. Nenhuma solicitação foi enviada.</p>' : '') +
         navigation();
     }
@@ -385,7 +385,7 @@
       if (state.step === 'result') return resultContent();
       if (state.step === 'contact') {
         var consentId = prefix + '-consent';
-        return heading('Como podemos falar com você?', 'O direcionamento já está pronto. Se quiser, experimente a próxima etapa com dados fictícios.') +
+        return heading('Como podemos falar com você?', mode === 'seller' ? 'Comece pelos seus dados de contato. Depois, informe os detalhes da sua carta.' : 'O direcionamento já está pronto. Se quiser, experimente a próxima etapa com dados fictícios.') +
           field('fullName', 'Nome completo', { maxLength: 100, required: true, placeholder: 'Ex.: Ana de Souza' }) +
           field('email', 'E-mail', { type: 'email', inputMode: 'email', maxLength: 120, required: true, placeholder: 'Ex.: ana@example.com' }) +
           field('phone', 'WhatsApp com DDD', { type: 'tel', inputMode: 'tel', maxLength: 22, required: true, placeholder: 'Ex.: (11) 99999-1234' }) +
@@ -394,18 +394,18 @@
           '<label for="' + consentId + '">Autorizo a Fivecred a entrar em contato por WhatsApp ou e-mail sobre ' +
           escapeHTML(context()) + '.</label></div>' +
           (errors.consent ? '<p class="j-error" id="' + consentId + '-error">' + errors.consent + '</p>' : '') +
-          '<p class="j-help">Demonstração local: os dados e essa autorização não são enviados. Use apenas dados fictícios.</p>' +
+          (mode === 'seller' ? '<p class="form-unavailable">O envio está temporariamente indisponível. Nenhum dado preenchido será enviado.</p>' : '<p class="j-help">Demonstração local: os dados e essa autorização não são enviados. Use apenas dados fictícios.</p>') +
           '<div class="j-actions">' + submitButton('Continuar para identificação') + '</div>' + navigation();
       }
       if (state.step === 'identity') {
-        return heading('Identificação, somente se você quiser testar', 'Esta etapa vem depois do contato. Na demonstração, você pode continuar sem preencher.') +
+        return heading(mode === 'seller' ? 'Identificação' : 'Identificação, somente se você quiser testar', 'Esta etapa vem depois do contato. Você pode continuar sem preencher.') +
           '<p class="j-note">Use somente dados fictícios. Nenhuma consulta de crédito será realizada. O CPF é opcional nesta demonstração' +
           (kind() === 'seller' ? '.' : ' e não entra na mensagem de WhatsApp.') + '</p>' +
           field('cpf', 'CPF (opcional na demonstração)', {
             inputMode: 'numeric', maxLength: 14, placeholder: '000.000.000-00',
             help: 'Se preencher, os dígitos serão validados apenas neste navegador.'
           }) +
-          '<div class="j-actions">' + submitButton('Concluir demonstração') +
+          '<div class="j-actions">' + submitButton(mode === 'seller' ? 'Continuar para os dados da carta' : 'Concluir demonstração') +
           button('skip-identity', 'Continuar sem CPF', true) + '</div>' + navigation();
       }
       return '<div class="j-success">' + heading('Demonstração concluída', 'Você experimentou o caminho do objetivo ao atendimento.') +
@@ -421,7 +421,7 @@
     function render(shouldFocus) {
       root.setAttribute('aria-labelledby', prefix + '-title');
       root.innerHTML = '<div class="j-card"><p class="j-kicker">' +
-        (['contact', 'identity', 'success'].indexOf(state.step) >= 0 ? 'Demonstração do atendimento' : 'Seu próximo passo começa aqui') +
+        (mode !== 'seller' && ['contact', 'identity', 'success'].indexOf(state.step) >= 0 ? 'Demonstração do atendimento' : 'Seu próximo passo começa aqui') +
         '</p>' + progress() + '<form novalidate autocomplete="off"><section class="j-step" data-step="' + state.step + '">' +
         (Object.keys(errors).length ? '<p class="j-error" role="alert" aria-live="assertive">Confira os campos destacados para continuar.</p>' : '') +
         content() + '</section></form></div>';
@@ -441,7 +441,7 @@
 
     function back() {
       if (state.step === 'identity') return go('contact');
-      if (state.step === 'contact') return go('result');
+      if (state.step === 'contact') return mode === 'seller' ? undefined : go('result');
       if (state.step === 'result' || state.step === 'success') return go('amount');
       var ordered = steps();
       var stepIndex = ordered.indexOf(state.step);
@@ -504,7 +504,7 @@
         if (!Object.keys(errors).length) return go('identity');
       } else if (state.step === 'identity') {
         if (!validCPF(identityValue)) errors.cpf = 'Confira os dígitos do CPF fictício ou continue sem preencher.';
-        if (!Object.keys(errors).length) return go('success');
+        if (!Object.keys(errors).length) return go(mode === 'seller' ? 'modality' : 'success');
       }
       render(true);
     }
@@ -559,7 +559,7 @@
         case 'review': go('amount'); break;
         case 'contact': if (root.dataset.integrationPending !== 'true') go('contact'); break;
         case 'whatsapp': whatsapp(); break;
-        case 'skip-identity': go('success'); break;
+        case 'skip-identity': go(mode === 'seller' ? 'modality' : 'success'); break;
         case 'unknown-administrator': state.administrator = ''; go('amount'); break;
         case 'unknown-entry': state.entryUnknown = true; go('amount'); break;
         default: break;

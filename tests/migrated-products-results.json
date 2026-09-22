@@ -1,7 +1,7 @@
 {
   "result": "PASS",
   "migratedProducts": 2,
-  "originalModulesUnchanged": 9,
+  "originalModulesUnchanged": 8,
   "viewports": 5,
   "formFlows": 10,
   "interceptedPosts": 20,

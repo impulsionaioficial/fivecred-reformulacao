@@ -45,8 +45,6 @@ function clearErrors() {
             if (step === 2) {
                 const nome = document.getElementById('nome').value.trim();
                 const whatsapp = document.getElementById('whatsapp').value.trim();
-                const cpf = document.getElementById('cpf').value.trim();
-                const nascimento = document.getElementById('nascimento').value.trim();
                 const email = document.getElementById('email').value.trim();
                 
                 let hasError = false;
@@ -57,14 +55,6 @@ function clearErrors() {
                 }
                 if (whatsapp.length < 14) {
                     showFieldError('whatsapp', 'Insira seu número de celular com DDD válido.');
-                    hasError = true;
-                }
-                if (cpf.length < 14) {
-                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
-                    hasError = true;
-                }
-                if (nascimento.length < 10) {
-                    showFieldError('nascimento', 'Insira sua data de nascimento.');
                     hasError = true;
                 }
                 if (email.length < 5 || !email.includes('@')) {
@@ -158,8 +148,24 @@ function clearErrors() {
             }
         }
 
+        function validateAdditionalData() {
+                const cpf = document.getElementById('cpf').value.trim();
+                const nascimento = document.getElementById('nascimento').value.trim();
+                let hasError = false;
+                if (cpf.length < 14) {
+                    showFieldError('cpf', 'Por favor, insira um CPF válido.');
+                    hasError = true;
+                }
+                if (nascimento.length < 10) {
+                    showFieldError('nascimento', 'Insira sua data de nascimento.');
+                    hasError = true;
+                }
+                return !hasError;
+        }
+
         function calculateSimulation() {
             clearErrors();
+            if (!validateAdditionalData()) return;
             const valBeneficioStr = document.getElementById('valor_beneficio').value;
             const valBeneficio = parseMoneyString(valBeneficioStr);
 

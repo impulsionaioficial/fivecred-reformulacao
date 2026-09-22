@@ -76,8 +76,8 @@ function HomeForm({placement}: {placement:string}) {
   const [step,setStep]=useState(1);
   const submission=useSubmission(ENDPOINTS.home);
   const set=(key:string,value:string|boolean)=>setD(p=>({...p,[key]:value}));
-  const ok1=d.name.trim().length>2 && d.whatsapp.length>=14 && d.cpf.length>=14 && d.birthdate.length===10;
-  const ok2=!!d.profile && d.hasLoan!=='';
+  const ok1=d.name.trim().length>2 && d.whatsapp.length>=14;
+  const ok2=d.cpf.length>=14 && d.birthdate.length===10 && !!d.profile && d.hasLoan!=='';
   const ok3=!!d.bank && !!d.amount && !!d.contactTime && d.term1 && d.term2;
   const stepHeading=useRef<HTMLHeadingElement>(null);
   useEffect(()=>{if(step>1)stepHeading.current?.focus();},[step]);
@@ -90,10 +90,11 @@ function HomeForm({placement}: {placement:string}) {
       {step===1&&<div className="cf-stack">
         <TextField prefix={prefix} name="name" label="Nome completo" placeholder="Ex: João da Silva" autoComplete="name" value={d.name} onChange={(v:string)=>set('name',v)}/>
         <TextField prefix={prefix} name="whatsapp" label="WhatsApp (com DDD)" type="tel" placeholder="(11) 99999-9999" autoComplete="tel-national" value={d.whatsapp} onChange={(v:string)=>set('whatsapp',maskPhone(v))}/>
-        <div className="cf-row"><TextField prefix={prefix} name="cpf" label="CPF" inputMode="numeric" placeholder="000.000.000-00" value={d.cpf} onChange={(v:string)=>set('cpf',maskCPF(v))}/><TextField prefix={prefix} name="birthdate" label="Data de nascimento" inputMode="numeric" autoComplete="bday" placeholder="DD/MM/AAAA" value={d.birthdate} onChange={(v:string)=>set('birthdate',maskDate(v))}/></div>
+
         <button className="cf-submit" type="button" disabled={!ok1} onClick={()=>setStep(2)}>Continuar →</button>
       </div>}
       {step===2&&<div className="cf-stack">
+        <div className="cf-row"><TextField prefix={prefix} name="cpf" label="CPF" inputMode="numeric" placeholder="000.000.000-00" value={d.cpf} onChange={(v:string)=>set('cpf',maskCPF(v))}/><TextField prefix={prefix} name="birthdate" label="Data de nascimento" inputMode="numeric" autoComplete="bday" placeholder="DD/MM/AAAA" value={d.birthdate} onChange={(v:string)=>set('birthdate',maskDate(v))}/></div>
         <RadioField name="profile" label="Você se enquadra em qual opção?" options={['Aposentado INSS','Pensionista INSS','Trabalhador CLT','Possuo saldo FGTS','Conta de luz no meu nome','Busco empréstimo pessoal']} value={d.profile} onChange={(v:string)=>set('profile',v)}/>
         <RadioField name="hasLoan" label="Possui empréstimo ativo?" options={['Sim','Não']} value={d.hasLoan} onChange={(v:string)=>set('hasLoan',v)} columns/>
         <div className="cf-actions"><button type="button" className="cf-back" onClick={()=>setStep(1)}>← Voltar</button><button type="button" className="cf-submit" disabled={!ok2} onClick={()=>setStep(3)}>Continuar →</button></div>
@@ -114,16 +115,24 @@ function HomeForm({placement}: {placement:string}) {
 function AffiliateForm({placement}: {placement:string}) {
   const prefix=`cf-affiliate-${placement}`;
   const [form,setForm]=useState({nome:'',whatsapp:'',email:'',cidade:'',trabalhaVendas:'',canais:[] as string[],cnpj:'',volume:'',comoConheceu:'',aceite:false});
+  const [step,setStep]=useState(1);
+  const stepHeading=useRef<HTMLHeadingElement>(null);
+  useEffect(()=>{if(step>1)stepHeading.current?.focus();},[step]);
   const submission=useSubmission(ENDPOINTS.affiliate);
   const set=(key:string,value:string|boolean)=>setForm(p=>({...p,[key]:value}));
   const toggle=(canal:string)=>setForm(p=>({...p,canais:p.canais.includes(canal)?p.canais.filter(c=>c!==canal):[...p.canais,canal]}));
-  async function submit(e:React.FormEvent){e.preventDefault();if(!form.aceite){submission.setError('Você precisa aceitar os termos para continuar.');return;}await submission.send({...form,canais:form.canais.join(', '),origem:'landing-afiliados',data:new Date().toISOString(),pagina:window.location.href});}
+  async function submit(e:React.FormEvent){e.preventDefault();if(step===1){setStep(2);return;}if(!form.aceite){submission.setError('Você precisa aceitar os termos para continuar.');return;}await submission.send({...form,canais:form.canais.join(', '),origem:'landing-afiliados',data:new Date().toISOString(),pagina:window.location.href});}
   if(submission.done)return <div className="cf-card"><Success title="Cadastro realizado!"><p>Entraremos em contato pelo WhatsApp com seu link exclusivo de afiliado.</p></Success></div>;
   return <div className="cf-card cf-affiliate"><FormHeader title="Programa de Afiliados Fivecred" description="Preencha seus dados e comece a ganhar indicando"/>
     <form onSubmit={submit} aria-label="Cadastro no Programa de Afiliados Fivecred" aria-busy={submission.loading}><ReadyFields loading={submission.loading}><div className="cf-stack">
+      <h3 className="cf-step-title" ref={stepHeading} tabIndex={-1}>Etapa {step} de 2 — {step===1?'Seus dados de contato':'Informações complementares'}</h3>
+      {step===1&&<>
       <TextField prefix={prefix} name="nome" label="Nome completo" placeholder="Seu nome completo" autoComplete="name" value={form.nome} onChange={(v:string)=>set('nome',v)}/>
       <TextField prefix={prefix} name="whatsapp" label="WhatsApp (com DDD)" type="tel" placeholder="(00) 00000-0000" maxLength={15} autoComplete="tel-national" value={form.whatsapp} onChange={(v:string)=>set('whatsapp',maskAffiliatePhone(v))}/>
       <TextField prefix={prefix} name="email" label="E-mail" type="email" placeholder="seu@email.com" autoComplete="email" value={form.email} onChange={(v:string)=>set('email',v)}/>
+      <button type="submit" className="cf-submit">Continuar →</button>
+      </>}
+      {step===2&&<>
       <TextField prefix={prefix} name="cidade" label="Cidade / Estado" placeholder="Ex: Belo Horizonte / MG" value={form.cidade} onChange={(v:string)=>set('cidade',v)}/>
       <RadioField name="trabalhaVendas" label="Você já trabalha com indicações ou vendas?" options={['Sim','Não']} value={form.trabalhaVendas} onChange={(v:string)=>set('trabalhaVendas',v)} columns/>
       <fieldset className="cf-field"><legend>Onde pretende divulgar suas indicações?</legend><div className="cf-choices cf-choices-row">{['WhatsApp','Instagram','Facebook','TikTok','YouTube','Rede de contatos pessoais','Outros'].map(canal=><label key={canal} className={`cf-choice${form.canais.includes(canal)?' cf-choice-selected':''}`}><input type="checkbox" name="canais" value={canal} checked={form.canais.includes(canal)} onChange={()=>toggle(canal)}/><span>{canal}</span></label>)}</div></fieldset>
@@ -131,7 +140,9 @@ function AffiliateForm({placement}: {placement:string}) {
       <RadioField name="volume" label="Quantas pessoas você acredita que consegue indicar por mês?" options={['1 a 5','5 a 10','10 a 20','Mais de 20']} value={form.volume} onChange={(v:string)=>set('volume',v)} columns/>
       <TextField prefix={prefix} name="comoConheceu" label="Como conheceu o Programa de Afiliados Fivecred?" placeholder="Ex: indicação de amigo, redes sociais..." value={form.comoConheceu} onChange={(v:string)=>set('comoConheceu',v)}/>
       <div className="cf-terms"><h3>Termo de aceite</h3><label className="cf-check"><input type="checkbox" name="aceite" checked={form.aceite} onChange={e=>set('aceite',e.target.checked)}/><span>Declaro que li e concordo com as regras do Programa de Afiliados <strong>Fivecred</strong> e autorizo o contato da equipe para ativação do meu cadastro.</span></label></div>
+      <button type="button" className="cf-back" onClick={()=>setStep(1)}>← Voltar</button>
       <Feedback error={submission.error}/><button type="submit" className="cf-submit" disabled={submission.loading}>{submission.loading?'Enviando...':'Enviar cadastro →'}</button><p className="cf-note">Gratuito. Sem obrigação de meta. Ganhe no seu ritmo.</p>
+      </>}
     </div></ReadyFields></form>
   </div>;
 }
@@ -140,17 +151,27 @@ function AffiliateForm({placement}: {placement:string}) {
 function BuyerForm({placement}: {placement:string}) {
   const isCta=placement==='cta';const prefix=`cf-buyer-${placement}`;
   const [form,setForm]=useState({name:'',phone:'',type:''});
+  const [step,setStep]=useState(1);
+  const stepHeading=useRef<HTMLHeadingElement>(null);
+  useEffect(()=>{if(step>1)stepHeading.current?.focus();},[step]);
   const submission=useSubmission(ENDPOINTS.buyer);
   const msg=`Olá! Tenho interesse em carta contemplada.\n\nNome: ${form.name}\nWhatsApp: ${form.phone}\nTipo de bem: ${form.type}`;
   const whatsapp=`https://wa.me/5511961614215?text=${encodeURIComponent(msg)}`;
-  async function submit(e:React.FormEvent){e.preventDefault();const scope=e.currentTarget.closest('[data-connected-form]');const trigger=e.currentTarget.querySelector('button[type=submit]');await submission.send({...form,source:isCta?'FiveCred Contemplada - CTA':'FiveCred Contemplada - Hero',timestamp:new Date().toISOString()},()=>{window.dispatchEvent(new CustomEvent('fivecred:whatsapp',{detail:{url:whatsapp,name:form.name,scope,trigger}}));});}
+  async function submit(e:React.FormEvent){e.preventDefault();if(step===1){setStep(2);return;}const scope=e.currentTarget.closest('[data-connected-form]');const trigger=e.currentTarget.querySelector('button[type=submit]');await submission.send({...form,source:isCta?'FiveCred Contemplada - CTA':'FiveCred Contemplada - Hero',timestamp:new Date().toISOString()},()=>{window.dispatchEvent(new CustomEvent('fivecred:whatsapp',{detail:{url:whatsapp,name:form.name,scope,trigger}}));});}
   if(submission.done)return <div className="cf-card"><Success title={isCta?'Solicitação enviada!':'Enviado com sucesso!'}><p>Para conversar no WhatsApp, confirme seu nome e e-mail no próximo passo.</p><a className="cf-submit" data-contact-name={form.name} href={whatsapp} target="_blank" rel="noopener noreferrer">Continuar no WhatsApp</a></Success></div>;
   return <div className="cf-card cf-buyer"><FormHeader title={isCta?'Falar com um Consultor de Crédito':'Ver Cartas Disponíveis'} description={isCta?'Seg a Sex, 8h às 18h · Barra Funda, São Paulo – SP':'Preencha e um especialista entra em contato hoje'}/>
     <form onSubmit={submit} aria-label={isCta?'Contato sobre carta contemplada':'Consulta de cartas contempladas'} aria-busy={submission.loading}><ReadyFields loading={submission.loading}><div className="cf-stack">
+      <h3 className="cf-step-title" ref={stepHeading} tabIndex={-1}>Etapa {step} de 2 — {step===1?'Seus dados de contato':'Informações complementares'}</h3>
+      {step===1&&<>
       <TextField prefix={prefix} name="name" label="Nome" placeholder="Seu nome" autoComplete="name" value={form.name} onChange={(v:string)=>setForm(p=>({...p,name:v}))}/>
       <TextField prefix={prefix} name="phone" label="WhatsApp" type="tel" placeholder="(11) 96161-4215" autoComplete="tel-national" value={form.phone} onChange={(v:string)=>setForm(p=>({...p,phone:v}))}/>
+      <button type="submit" className="cf-submit">Continuar →</button>
+      </>}
+      {step===2&&<>
       <div className="cf-field"><label htmlFor={`${prefix}-type`}>{isCta?'Bem':'Tipo de bem'}</label><select id={`${prefix}-type`} name="type" required value={form.type} onChange={e=>setForm(p=>({...p,type:e.target.value}))}><option value="" disabled>Selecione</option><option value="Veículo">{isCta?'Veículo':'Veículo (R$60k–150k)'}</option><option value="Imóvel">{isCta?'Imóvel':'Imóvel (R$200k–450k)'}</option><option value="Caminhão/Frota">Caminhão/Frota</option></select></div>
+      <button type="button" className="cf-back" onClick={()=>setStep(1)}>← Voltar</button>
       <Feedback error={submission.error}/><button type="submit" className="cf-submit" disabled={submission.loading}>{submission.loading?'Enviando...':isCta?'Falar com um Consultor de Crédito →':'Ver cartas disponíveis →'}</button>
+      </>}
     </div></ReadyFields></form>
   </div>;
 }

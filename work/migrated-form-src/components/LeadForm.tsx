@@ -292,16 +292,11 @@ export default function LeadForm({ product }: { product: Product }) {
     if (nome.trim().length < 3) return failValidation('nome', 'Informe seu nome completo.');
     if (!isValidBrazilianWhatsapp(telefone)) return failValidation('whatsapp', 'Informe um WhatsApp válido com DDD.');
     if (!isValidEmail(email)) return failValidation('email', 'Informe um e-mail válido.');
-    if (!isValidCpf(cpf)) return failValidation('cpf', 'Informe um CPF válido.');
-    if (!isValidAdultBirthDate(nascimento)) {
-      return failValidation('nascimento', 'Informe uma data válida para uma pessoa maior de 18 anos.');
-    }
-
     setError('');
     trackFormStepComplete({ formName, product, step: 1 });
     setStep(2);
     window.requestAnimationFrame(() => {
-      document.getElementById(isLuz ? 'lf-classificacao-luz' : `lf-choice-${product}`)?.focus();
+      document.getElementById(`lf-cpf-${product}`)?.focus();
     });
   }
 
@@ -565,6 +560,26 @@ export default function LeadForm({ product }: { product: Product }) {
               className="mt-2 flex min-h-12 w-full rounded-xl border border-slate-200 bg-white px-4 font-semibold text-slate-700 focus:ring-4 focus:ring-brand-100"
             />
           </div>
+            </div>
+
+            {error ? (
+              <p role="alert" className="mt-4 font-semibold text-red-655">
+                {error}
+              </p>
+            ) : null}
+
+            <button
+              type="button"
+              onClick={continueToQualification}
+              className="mt-6 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 px-6 font-extrabold text-white transition hover:bg-brand-700 active:scale-[0.98]"
+            >
+              Continuar para a etapa 2
+              <ArrowRight weight="bold" aria-hidden="true" />
+            </button>
+          </>
+        ) : (
+          <>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div>
             <label htmlFor={`lf-cpf-${product}`} className="text-sm font-extrabold text-slate-900">
               CPF
@@ -609,24 +624,6 @@ export default function LeadForm({ product }: { product: Product }) {
             />
           </div>
             </div>
-
-            {error ? (
-              <p role="alert" className="mt-4 font-semibold text-red-655">
-                {error}
-              </p>
-            ) : null}
-
-            <button
-              type="button"
-              onClick={continueToQualification}
-              className="mt-6 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 px-6 font-extrabold text-white transition hover:bg-brand-700 active:scale-[0.98]"
-            >
-              Continuar para a etapa 2
-              <ArrowRight weight="bold" aria-hidden="true" />
-            </button>
-          </>
-        ) : (
-          <>
             {isLuz ? (
               <div className="mt-6">
                 <label htmlFor="lf-classificacao-luz" className="text-lg font-extrabold text-slate-900">
